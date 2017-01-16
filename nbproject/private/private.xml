@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="17">
+        <file>
+            <url>src/android_connector/MySQLConnection.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>551</line>
+                <key/>
+            </bookmark>
+            <bookmark id="3">
+                <name/>
+                <line>655</line>
+                <key/>
+            </bookmark>
+            <bookmark id="4">
+                <name/>
+                <line>724</line>
+                <key/>
+            </bookmark>
+            <bookmark id="2">
+                <name/>
+                <line>822</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>src/android_connector/ConfigWindow.fxml</url>
+            <bookmark id="9">
+                <name/>
+                <line>8</line>
+                <key/>
+            </bookmark>
+            <bookmark id="11">
+                <name/>
+                <line>31</line>
+                <key/>
+            </bookmark>
+            <bookmark id="13">
+                <name/>
+                <line>32</line>
+                <key/>
+            </bookmark>
+            <bookmark id="14">
+                <name/>
+                <line>36</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>src/android_connector/FXMLDocumentController.java</url>
+            <bookmark id="6">
+                <name/>
+                <line>71</line>
+                <key/>
+            </bookmark>
+            <bookmark id="17">
+                <name/>
+                <line>148</line>
+                <key/>
+            </bookmark>
+            <bookmark id="15">
+                <name/>
+                <line>339</line>
+                <key/>
+            </bookmark>
+            <bookmark id="8">
+                <name/>
+                <line>511</line>
+                <key/>
+            </bookmark>
+            <bookmark id="5">
+                <name/>
+                <line>811</line>
+                <key/>
+            </bookmark>
+            <bookmark id="16">
+                <name/>
+                <line>899</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>src/android_connector/config/ConfigWindowController.java</url>
+            <bookmark id="7">
+                <name/>
+                <line>52</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Eric/SkyDrive/Kanu_s.a.M/src/android_connector/ConfigWindowController.java</file>
+        </group>
+    </open-files>
+</project-private>
