@@ -1,0 +1,32 @@
+\select@language {ngerman}
+\contentsline {section}{\numberline {1}Einleitung}{1}{section.6}
+\contentsline {subsection}{\numberline {1.1}Zeitmessung im Kanusport/Problemstellung}{1}{subsection.7}
+\contentsline {subsection}{\numberline {1.2}Konzeption}{2}{subsection.9}
+\contentsline {section}{\numberline {2}Vorgehensweise}{3}{section.10}
+\contentsline {subsection}{\numberline {2.1}Grundprinzip der Vernetzung der verschiedenen Ger\"ate}{3}{subsection.11}
+\contentsline {subsection}{\numberline {2.2}Aufbau und Funktionsweise der verwendeten MySQL-Datenbank}{4}{subsection.13}
+\contentsline {subsection}{\numberline {2.3}Das Hauptprogramm}{5}{subsection.18}
+\contentsline {subsubsection}{\numberline {2.3.1}Features}{6}{subsubsection.19}
+\contentsline {subsubsection}{\numberline {2.3.2}Anlegen und Verwalten der Datenbank}{6}{subsubsection.21}
+\contentsline {subsubsection}{\numberline {2.3.3}Datenverarbeitung und Auswertung}{7}{subsubsection.22}
+\contentsline {subsection}{\numberline {2.4}Die Android-App}{7}{subsection.24}
+\contentsline {subsubsection}{\numberline {2.4.1}Funktionen}{8}{subsubsection.25}
+\contentsline {subsubsection}{\numberline {2.4.2}Umsetzung des Verbindungsaufbaus}{8}{subsubsection.27}
+\contentsline {subsection}{\numberline {2.5}Der PHP-Server}{9}{subsection.28}
+\contentsline {subsubsection}{\numberline {2.5.1}Aufgabe}{9}{subsubsection.29}
+\contentsline {subsubsection}{\numberline {2.5.2}Umsetzung des Zugriffes auf die Datenbank}{9}{subsubsection.30}
+\contentsline {subsection}{\numberline {2.6}Technische Umsetzung der Synchronisation}{10}{subsection.31}
+\contentsline {subsection}{\numberline {2.7}Beschreibung des Ablaufs einer Verwendung des Softwaresystems}{11}{subsection.32}
+\contentsline {subsection}{\numberline {2.8}Aufgetretene Probleme und ihre L\"osungen}{12}{subsection.33}
+\contentsline {section}{\numberline {3}Zusammenfassung und Schluss}{14}{section.34}
+\contentsline {subsection}{\numberline {3.1}Umsetzung der Konzeption}{14}{subsection.35}
+\contentsline {subsection}{\numberline {3.2}Ausblick}{15}{subsection.36}
+\contentsline {section}{Literatur}{16}{subsection.36}
+\contentsline {section}{\numberline {4}Anhang}{17}{section.37}
+\contentsline {subsection}{\numberline {4.1}Funktionsweise der Hauptmethode, welche alle Daten zusammenf\"uhrt}{17}{subsection.38}
+\contentsline {subsection}{\numberline {4.2}Protokollierung und Wiederherstellungsmodus}{17}{subsection.39}
+\contentsline {subsection}{\numberline {4.3}Screenshots}{17}{subsection.40}
+\contentsline {subsubsection}{\numberline {4.3.1}Hauptprogramm}{17}{subsubsection.41}
+\contentsline {subsubsection}{\numberline {4.3.2}App}{20}{subsubsection.48}
+\contentsline {subsubsection}{\numberline {4.3.3}Protokolle}{22}{subsubsection.53}
+\contentsline {subsection}{\numberline {4.4}Sourcecode}{22}{subsection.55}

@@ -1,0 +1,31 @@
+\BOOKMARK [1][]{section.6}{1 Einleitung}{}% 1
+\BOOKMARK [2][]{subsection.7}{1.1 Zeitmessung im Kanusport/Problemstellung}{section.6}% 2
+\BOOKMARK [2][]{subsection.9}{1.2 Konzeption}{section.6}% 3
+\BOOKMARK [1][]{section.10}{2 Vorgehensweise}{}% 4
+\BOOKMARK [2][]{subsection.11}{2.1 Grundprinzip der Vernetzung der verschiedenen Ger\344te}{section.10}% 5
+\BOOKMARK [2][]{subsection.13}{2.2 Aufbau und Funktionsweise der verwendeten MySQL-Datenbank}{section.10}% 6
+\BOOKMARK [2][]{subsection.18}{2.3 Das Hauptprogramm}{section.10}% 7
+\BOOKMARK [3][]{subsubsection.19}{2.3.1 Features}{subsection.18}% 8
+\BOOKMARK [3][]{subsubsection.21}{2.3.2 Anlegen und Verwalten der Datenbank}{subsection.18}% 9
+\BOOKMARK [3][]{subsubsection.22}{2.3.3 Datenverarbeitung und Auswertung}{subsection.18}% 10
+\BOOKMARK [2][]{subsection.24}{2.4 Die Android-App}{section.10}% 11
+\BOOKMARK [3][]{subsubsection.25}{2.4.1 Funktionen}{subsection.24}% 12
+\BOOKMARK [3][]{subsubsection.27}{2.4.2 Umsetzung des Verbindungsaufbaus}{subsection.24}% 13
+\BOOKMARK [2][]{subsection.28}{2.5 Der PHP-Server}{section.10}% 14
+\BOOKMARK [3][]{subsubsection.29}{2.5.1 Aufgabe}{subsection.28}% 15
+\BOOKMARK [3][]{subsubsection.30}{2.5.2 Umsetzung des Zugriffes auf die Datenbank}{subsection.28}% 16
+\BOOKMARK [2][]{subsection.31}{2.6 Technische Umsetzung der Synchronisation}{section.10}% 17
+\BOOKMARK [2][]{subsection.32}{2.7 Beschreibung des Ablaufs einer Verwendung des Softwaresystems}{section.10}% 18
+\BOOKMARK [2][]{subsection.33}{2.8 Aufgetretene Probleme und ihre L\366sungen}{section.10}% 19
+\BOOKMARK [1][]{section.34}{3 Zusammenfassung und Schluss}{}% 20
+\BOOKMARK [2][]{subsection.35}{3.1 Umsetzung der Konzeption}{section.34}% 21
+\BOOKMARK [2][]{subsection.36}{3.2 Ausblick}{section.34}% 22
+\BOOKMARK [1][]{subsection.36}{Literatur}{}% 23
+\BOOKMARK [1][]{section.37}{4 Anhang}{}% 24
+\BOOKMARK [2][]{subsection.38}{4.1 Funktionsweise der Hauptmethode, welche alle Daten zusammenf\374hrt}{section.37}% 25
+\BOOKMARK [2][]{subsection.39}{4.2 Protokollierung und Wiederherstellungsmodus}{section.37}% 26
+\BOOKMARK [2][]{subsection.40}{4.3 Screenshots}{section.37}% 27
+\BOOKMARK [3][]{subsubsection.41}{4.3.1 Hauptprogramm}{subsection.40}% 28
+\BOOKMARK [3][]{subsubsection.48}{4.3.2 App}{subsection.40}% 29
+\BOOKMARK [3][]{subsubsection.53}{4.3.3 Protokolle}{subsection.40}% 30
+\BOOKMARK [2][]{subsection.55}{4.4 Sourcecode}{section.37}% 31

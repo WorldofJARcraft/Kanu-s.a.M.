@@ -1,0 +1,4505 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\RequirePackage[ngerman=ngerman-x-latest]{hyphsubst}
+\usepackage{caption}
+\usepackage{lmodern}
+\usepackage[bottom]{footmisc}
+\usepackage{setspace} 
+\onehalfspacing
+\hyphenation{Dreh-mo-men-ten-gleich-ge-wicht} 
+\newtheorem{defi}{Definition}[section]
+\usepackage{url}
+\usepackage{ucs}
+\PrerenderUnicode{öäüÖÄÜ}
+\makeatletter
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\usepackage{pdfpages}
+\usepackage{acronym}
+\usepackage{graphicx}
+\usepackage[colorlinks=false,
+pdfpagelabels,
+pdfstartview = FitH,
+bookmarksopen = true,
+bookmarksnumbered = true,
+linkcolor = black,
+plainpages = false,
+hypertexnames = false,
+citecolor = black] {hyperref}
+\setlength{\parindent}{0pt}
+\renewcommand{\nomname}{Glossar}
+\end_preamble
+\options intoc
+\use_default_options true
+\begin_modules
+eqs-within-sections
+tabs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "helvet" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family sfdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 11
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2cm
+\rightmargin 2.5cm
+\bottommargin 2cm
+\secnumdepth 5
+\tocdepth 5
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\listings_params "language=Java,numbers=left,numberstyle={\tiny},numbersep=5pt,literate={{Ö}{{\&quot;O}}1 {Ä}{{\&quot;A}}1 {Ü}{{\&quot;U}}1 {ß}{{\ss}}1 {ü}{{\&quot;u}}1 {ä}{{\&quot;a}}1 {ö}{{\&quot;o}}1 {~}{{\textasciitilde}}1},basicstyle={\small},showstringspaces=false"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+includepdf{Deckblatt.pdf}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{Roman}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+\noindent
+Kurzfassung
+\end_layout
+
+\begin_layout Standard
+\noindent
+Professionelle Zeitmesssysteme für den Kanusport sind teuer und meist komplizier
+t einzurichten.
+ Kleinere Vereine, die sich ein solches System nicht leisten können, sind
+ auf Papierlisten für Strafzeiten und die Zeitmessung per Hand angewiesen.
+ Dies bedeutet einen hohen Zeit- und Organisationsaufwand bei Training und
+ Wettbewerben.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Ziel dieses Projekts ist die Entwicklung eines Softwaresystems, welches
+ auf vorhandener bzw.
+ kostengünstig anzuschaffender Hardware funktioniert, einfach zu bedienen
+ ist und die Zeitmessung für Kanu-Sportvereine optimiert.
+ Im Mittelpunkt steht die Entwicklung einer Android-App, die das Eintragen
+ von Strafzeiten sowie Start- und Zielzeit für die einzelnen Startnummern
+ und Tore mit einem Klick leistet.
+ Die in der App erhobenen Daten werden über ein lokales WLAN-Netzwerk unter
+ Zuhilfenahme eines lokalen PHP- und MySQL- kompatiblen Servers mit einem
+ zentralen Laptop synchronisiert.
+ Auf diesem läuft eine eigens entwickelte Desktopanwendung, die alle Daten
+ zusammenführt, jederzeit anzeigt und nach dem Wettkampf mit einem Klick
+ übersichtlich auswertet.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+\noindent
+Abkürzungsverzeichnis
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{acronym}[HTTP]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+acro{s.a.M.}{semi-automatisches Messsystem} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+acro{PHP}{Hypertext PreProcessor}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+acro{SQL}{Structured Query Language}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+acro{IP}{Internet-Protokoll}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+acro{HTTP}{Hypertext Transfer Protocol}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+acro{IDE}{Integrated Development Environment}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+acro{POI}{Poor Obfuscation Implementation}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{acronym}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset FloatList table
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{arabic} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\noindent
+Einleitung
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Zeitmessung im Kanusport/Problemstellung
+\end_layout
+
+\begin_layout Standard
+Beim Kanusport müssen sowohl im Training als auch im Wettkampf viele Zeiten
+ gemessen und zugeordnet werden.
+ Dies erfolgt bei kleinen Vereinen, so auch beim Jenaer Kanu- und Ruderverein
+ und beim Kanu-Slalom-Teil des SV Schott, bisher meist manuell.
+ Beispielsweise werden an der Jenaer Saale auf einer Strecke von 200 m insgesamt
+ 18-25 Messtore (siehe Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Sportler-beim-Befahren"
+
+\end_inset
+
+) festgesetzt.
+ Diesen sind 8 Messstationen zugeteilt.
+ Von denen aus können Helfer mehrere Tore überblicken und Startern Strafzeiten
+ für falsches Passieren oder Berühren der Torstäbe zuweisen, wie dies laut
+ den Wettkampfregeln vorgeschrieben ist.
+ Die erhobenen Strafzeiten müssen bei bis zu 27 einzelnen Rennen in jeweils
+ zwei Läufen für viele Sportler erfasst und zugeordnet werden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename kanu426_v-ardgalerie.jpg
+	width 10cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Sportler-beim-Befahren"
+
+\end_inset
+
+Sportler beim Befahren eines Messtores
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Foto_Kanu"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zur Wettkampfauswertung werden sie zu den gemessenen Laufzeiten addiert.
+ Üblicherweise zählt der beste Lauf.
+ Die Gesamtzeiten aller Starter einer Kategorie (festgelegt nach Alter und
+ Bootstyp) werden verglichen, um eine Rangfolge zu ermitteln.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+All dies bedeutet einen hohen Organisationsaufwand in der Wettbewerbsauswertung.
+ Bisher wurden alle Zeiten per Hand aufgeschrieben und z.B.
+ in Excel ausgewertet.
+ Dieses Verfahren erhöht den Zeitaufwand, ist fehleranfällig und langwierig.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Es existieren kommerzielle Systeme zur automatischen Zeiterfassung.
+ Eine vollwertige Anlage ist z.B.
+ mit dem 
+\begin_inset Quotes gld
+\end_inset
+
+Time System Professional
+\begin_inset Quotes grd
+\end_inset
+
+ von IMAS
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Komplettsystem,InfoSysteme"
+
+\end_inset
+
+ erwerbbar.
+ Die Zeiterfassung erfolgt per Kamera (im Ziel, siehe Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Zeitmesssystem-Basic"
+
+\end_inset
+
+) und optional einer automatischer Startanlage bzw.
+ einem Startkoffer.
+ Es gibt eine Funktion zur Erfassung von Zwischenzeiten an den Messstationen.
+ Dafür muss an jeder solchen Station ein Helfer einen Laptop bedienen.
+ Ein anderes Programm (
+\begin_inset Quotes gld
+\end_inset
+
+Regatta Manager
+\begin_inset Quotes grd
+\end_inset
+
+) verwaltet die Starter.
+ Die aktuellen Laufzeiten können ins Internet gestreamt oder lokal auf LCD-Anzei
+gen ausgegeben werden.
+ Die Laptops, Kameras und anderen Anlagen müssen über LAN oder WLAN vernetzt
+ werden.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename laptop_600.png
+	height 5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Fotofinish und Laufzeitmessung beim Zeitmesssystem 
+\begin_inset Quotes gld
+\end_inset
+
+Professional
+\begin_inset Quotes grd
+\end_inset
+
+ von IMAS, vgl.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Basissystem"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Zeitmesssystem-Basic"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Das System kann jedoch keine Strafzeiten synchronisieren, diese werden überhaupt
+ nicht erfasst.
+\end_layout
+
+\begin_layout Standard
+\noindent
+IMAS gibt keinen Festpreis an, da Teile des Systems wie Startanlage und
+ Kamera optional gegen Mehrkosten erworben werden müssen.
+ Ein vergleichbares System von Lynx kostet mindestens 41.595,- € zzgl.
+ MwSt, in der günstigsten Variante noch 11.995,- € zzgl.
+ MwSt
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Info_Preise"
+
+\end_inset
+
+.
+ Dieses kann ebenfalls keine Strafzeiten synchronisieren.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Es wurde bei einer gezielten Recherche kein kostengünstigeres System für
+ kleine Vereine gefunden.
+ Kommerzielle Systeme bieten auf der einen Seite meist mehr Funktionen als
+ grundlegend nötig und sind deswegen teuer.
+ Auf der anderen Seite lassen sie wichtige Features, besonders die Erfassung
+ von Strafzeiten, vermissen.
+ Der Grund dafür ist, dass sie für eine andere Form des Kanusports gedacht
+ sind (Kanu-Rennsport).
+ Bei dieser starten alle Sportler parallel und fahren eine gerade Strecke
+ möglichst schnell entlang.
+ Für die Sportart Kanu-Slalom geeignete Systeme waren selbst bei langer
+ Recherche auf dem freien Markt nicht zu finden und sind meist Spezialanfertigun
+gen gegen noch höheren Preis, welche auf einem der o.g.
+ Systeme basieren.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die dieser Arbeit zugrunde liegende Frage lautet deshalb: Lässt sich ein
+ Zeitmesssystem für den Kanuslalom entwickeln, das mit freier oder selbst
+ entwickelter Software und günstiger Hardware funktioniert?
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Konzeption
+\end_layout
+
+\begin_layout Standard
+\noindent
+Das zu entwickelnde Softwaresytem soll das Problem der Starterverwaltung,
+ Wettkampfzeiterhebung, Strafzeitensynchronisation und Wettkampfauswertung
+ beim Kanuslalom möglichst günstig und einfach lösen.
+ Dafür werden als Hardware nur Android-Smartphones und ein einziger Windows-Rech
+ner verwendet.
+ Smartphones sind weit verbreitet, und auch mindestens ein Windows-Laptop
+ ist in jedem Kanuverein verfügbar.
+ Auf diesen zu installierende oder zu verwendende Software soll gratis verfügbar
+ sein.
+ Die Geräte werden ggf.
+ mit einem drahtlosen Netzwerk untereinander verbunden.
+ Aus Gründen der Manipulierbarkeit muss das System ohne Internetverbindung
+ funktionieren.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\noindent
+Vorgehensweise
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Grundprinzip der Vernetzung der verschiedenen Geräte
+\end_layout
+
+\begin_layout Standard
+\noindent
+Der zentrale Laptop ist das wichtigste Gerät im entworfenen Softwaresystem
+ 
+\begin_inset Quotes gld
+\end_inset
+
+Kanu s.a.M.
+\begin_inset Quotes grd
+\end_inset
+
+ (für semi-automatisches Messsystem).
+ Es handelte sich dabei bei allen Tests um ein Windows- Gerät.
+ Nötige Software ist von Windows XP bis Windows 10 lauffähig und im Rahmen
+ der Grundfunktionalität auch zu Apple- oder Linuxgeräten kompatibel.
+ Einige Zusatzfunktionen gehen dann jedoch verloren.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Der Laptop muss ein WLAN-Netz für die Vernetzung der Geräte aufbauen.
+ Ein Internetzugriff ist jedoch nicht nötig.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Schema_Vernetzung.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Schema der Vernetzung der verschiedenen Geräte, vgl.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "(Illustrationen)"
+key "Bild_boeser_Roboter,Bild_Laptop,Bild_Smartphone,Bild_WLAN"
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Schema-der-Vernetzung"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die wichtigste Fremdsoftware ist eine MySQL
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "MySQL"
+description "Sprache, die zur Erzeugung und Anlegung von Datenbanken genutzt wird."
+
+\end_inset
+
+-Datenbank, die alle Daten speichert, welche für die Verbindung der einzelnen
+ Geräte gebraucht werden (siehe Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Schema-der-Vernetzung"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\noindent
+Diese Datenbank wird durch MariaDB
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "MariaDB"
+description "\\glqq freies, relationales Open-Source-Datenbank­verwaltungs­system, das durch eine Abspaltung (Fork) aus MySQL entstanden ist\\grqq \\cite{WikMariaDB}"
+
+\end_inset
+
+ verwaltet (ein freier Ableger von MySQL mit gleicher technischer Grundlage).
+ Parallel zur Datenbank läuft ein PHP-Server, hier der Apache Webserver.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die Helfer halten sich mit ihren Smartphones in ihren Messstationen auf.
+ Auf den Smartphones wird eine eigens entwickelte Android-App ausgeführt,
+ die das Starten und Stoppen der Laufzeitmessung oder das Eintragen von
+ Strafzeiten ermöglicht.
+ Die App kommuniziert über den PHP-Server mit der Datenbank.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Auf dem Hauptrechner läuft das in JavaFX geschriebene Hauptprogramm 
+\begin_inset Quotes gld
+\end_inset
+
+Kanu s.a.M.
+\begin_inset Quotes grd
+\end_inset
+
+.
+ Es verbindet sich direkt mit der Datenbank und kann seine Laufzeit- und
+ Strafzeitdaten über sie mit der App synchronisieren.
+ Es verwaltet zudem Starter und Rennen, ermittelt während eines Laufs immer
+ die aktuellen Laufzeiten der laufenden Starter und wertet am Ende den Wettkampf
+ aus.
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Aufbau und Funktionsweise der verwendeten MySQL-Datenbank
+\end_layout
+
+\begin_layout Standard
+\noindent
+MariaDB kann nur auf einem Webserver ausgeführt werden.
+ Der zentrale Laptop, der hier auch als Server fungiert, wird darum zum
+ Anlegen eines solchen genutzt.
+ Dafür ist die Installation der Software XAMPP
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "XAMPP"
+description "\\glqq XAMPP ermöglicht das einfache Installieren und Konfigurieren des Webservers Apache mit der Datenbank MariaDB bzw. SQLite und den Skriptsprachen Perl und PHP (mit PEAR). \\grqq \\cite{WikXAMPP}"
+
+\end_inset
+
+ erforderlich.
+ Sie simuliert einen Server, der unter Anderem das Verwalten einer Datenbank
+ und die Ausführung von PHP ermöglicht.
+ Der Webserver bleibt dabei rein lokal.
+ Er kann innerhalb des lokalen Netzes adressiert werden, aber nicht vom
+ Internet aus, solange kein Gerät eine Internet-Verbindung besitzt.
+ Dies dient der Datensicherheit und dem Schutz vor Manipulationen.
+ Eine direkte Internet-Zugriffsmöglichkeit ist nicht zu empfehlen, da XAMPP
+ für den einfachen und schnellen lokalen Betrieb konzipiert ist und nicht
+ für den Betrieb als echter Server.
+ Viele von ihm vorgenommene Konfigurationsdetails der Teilprogramme dienen
+ mehr der Geschwindigkeit als der Sicherheit.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die Datenbank (siehe Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Übersicht-DB"
+
+\end_inset
+
+) enthält die Tabellen 
+\begin_inset Quotes gld
+\end_inset
+
+
+\series bold
+namen
+\series default
+
+\begin_inset Quotes grd
+\end_inset
+
+, 
+\begin_inset Quotes gld
+\end_inset
+
+
+\series bold
+allgemein
+\series default
+
+\begin_inset Quotes grd
+\end_inset
+
+, für jede Messstation eine, sowie eine für die Auswertung (
+\begin_inset Quotes gld
+\end_inset
+
+
+\series bold
+auswertung
+\series default
+
+\begin_inset Quotes grd
+\end_inset
+
+).
+ Die Startnummer ist in allen Tabellen Primärschlüssel.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Screenshots/DB_overview.PNG
+	width 16cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Übersicht über die Datenbank 
+\begin_inset Quotes gld
+\end_inset
+
+
+\series bold
+android_connect
+\series default
+
+\begin_inset Quotes grd
+\end_inset
+
+ und ihre Tabellen in einer Beispielbelegung, Darstellung durch verwendetes
+ Datenbankverwaltungsprogramm PHPMyAdmin (Teil von XAMPP)
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Übersicht-DB"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die Tabelle 
+\begin_inset Quotes gld
+\end_inset
+
+
+\series bold
+allgemein
+\series default
+
+\begin_inset Quotes grd
+\end_inset
+
+ speichert Informationen, die für die Initialisierung und korrekte Eintragungen
+ der Handy-App relevant sind.
+ Namentlich (siehe Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Beispielbelegung-allgemein"
+
+\end_inset
+
+) sind dies:
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+ob der erste Starter bereits gestartet ist (ab dann Eintragung von Strafen
+ möglich in der App)
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+die Nummer des aktuellen Laufs (wird zur Orientierung in der App eingeblendet)
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+die Tore, welche zu den einzelnen Messstationen gehören
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+die Startzeit des Wettkampfes als Java-Timestamp und
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+die Anzahl der Messstationen, damit Benutzer der App sich an jede davon
+ anmelden können.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Screenshots/DB_Tabelle_allgemein.PNG
+	width 7.5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Beispielbelegung der Datenbanktabelle 
+\begin_inset Quotes gld
+\end_inset
+
+
+\series bold
+allgemein
+\series default
+
+\begin_inset Quotes grd
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Beispielbelegung-allgemein"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die Tabelle 
+\begin_inset Quotes gld
+\end_inset
+
+
+\series bold
+namen
+\series default
+
+\begin_inset Quotes grd
+\end_inset
+
+ (siehe Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Beispielbelegung-namen"
+
+\end_inset
+
+) speichert Namen und Startnummern der Starter für die Anzeige oder Auswahl
+ der Starter in der App, eine ggf.
+ von der App per Script eingetragene Start- oder Zielzeit als PHP-Timestamp
+ sowie eine Zusammenfassung der einzelnen Läufe für eine spätere Auswertung
+ als String.
+ Zudem ist die Information, welchen Lauf ein Wiederholungslauf ggf.
+ ersetzt, enthalten.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Screenshots/DB_Tabelle_Namen - Kopie.PNG
+	width 10cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Beispielbelegung der Datenbanktabelle 
+\begin_inset Quotes gld
+\end_inset
+
+
+\series bold
+namen
+\series default
+
+\begin_inset Quotes grd
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Beispielbelegung-namen"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die Tabellen für die jeweiligen Messtore (Nummer in Computerzählweise ab
+ 0, siehe Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Beispielbelegung-Messtor"
+
+\end_inset
+
+) speichern an diesem Tor je die Startnummer und ihre Strafzeit in Sekunden.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Screenshots/DB_Tabelle_Messtor_0.PNG
+	width 10cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Beispielbelegung der Tabelle eines Messtores
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Beispielbelegung-Messtor"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die Tabelle 
+\begin_inset Quotes gld
+\end_inset
+
+
+\series bold
+auswertung
+\series default
+
+\begin_inset Quotes grd
+\end_inset
+
+ ist angelegt wie die Tabelle 
+\begin_inset Quotes gld
+\end_inset
+
+
+\series bold
+namen
+\series default
+
+\begin_inset Quotes grd
+\end_inset
+
+, nur dass sie alle Startnummern enthält und bei allen die Kategorie mit
+ angegeben ist.
+ Es gibt dort keine Spalten für Start- und Zielzeit.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Screenshots/Auswertung.PNG
+	scale 60
+	BoundingBox 0cm 0bp 1350bp 188bp
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Beispielbelegung der Tabelle für die Auswertung
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Beispielbelegung-Auswertung"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Das Hauptprogramm 
+\begin_inset Quotes gld
+\end_inset
+
+Kanu s.a.M.
+\begin_inset Quotes grd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Das auf dem zentralen Laptop laufende Programm wurde entwickelt mit NetBeans
+ IDE 8.2 und läuft in einer Java Virtual Machine.
+ 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "Java Virtual Machine"
+description "Laufzeitumgebung, in der Java-Programme ausgeführt werden. Simuliert eine Maschine in der Maschine, die sich in allen untestützten Plattformen nach innen gleich verhält. Somit laufen Java-Programme auf allen Systemen gleich. Zudem stabiler gegenüber Fehlern."
+
+\end_inset
+
+ Damit ist es zu allen Betriebssystemen kompatibel, die von Java unterstützt
+ werden (Windows, Linux, MacOS, Solaris u.ä.).
+ Es funktioniert 
+\begin_inset Quotes gld
+\end_inset
+
+semi-automatisch
+\begin_inset Quotes grd
+\end_inset
+
+, muss also vor dem Wettkampfstart mit den Starterdaten, der Torkonfiguration
+ und den Netzwerkparametern eingerichtet werden und benötigt nach dem Start
+ nur noch einen Bediener, der den nächsten Lauf startet oder die nächste
+ Kategorie auswählt.
+ Es ist über die Datenbank, den PHP-Server und WLAN indirekt mit der App
+ verbunden.
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+Features
+\end_layout
+
+\begin_layout Standard
+\noindent
+Tabelle 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Features-des-Hauptprogramms"
+
+\end_inset
+
+ zeigt alle Features des Hauptprogramms zusammengefasst.
+ Bei Interesse an der Umsetzung steht der Quellcode gern zum Nachlesen zur
+ Verfügung.
+ Klassen und Methoden, welche die Features umsetzen, sind angegeben.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="14" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="7cm">
+<column alignment="center" valignment="middle" width="10cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Feature
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size small
+Realisierung mittels Java-Klasse(n) und Methode(n)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Einlesen von Starterdaten aus Excel-Dateien
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Prozedur ConfigWindowController.readExcel(), Klasse ExcelReader, Library
+ Apache POI
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Anzeige, Veränderbarkeit eingelesener Daten
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Klasse ConfigWindowController, Klasse javafx.scene.control.TableView (und assoziier
+te Klassen), Klasse Person, Klasse EditabletableCell
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+automatisches Leeren der Datenbank
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Prozedur MySQLConnection.reset
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+automatisches Starten und Stoppen von XAMPP
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Prozeduren ConfigWindowController.xampp_start, xampp_stopp
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+automatisches Kopieren von nötigen PHP-Scripten, Überschreiben der PHP-Konfigura
+tion
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Prozedur ConfigWindowController.overridePHPConfig
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Erstellen von Sicherungsprotokollen
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Prozedur MySQLConnection.werteFesthalten
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Prüfen des Netzwerkzugriffs, Ermittlung der eigenen IP-Adresse
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Klasse NetworkUtil
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Zugriff auf MySQL-Datenbank (allgemein)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Klasse MySQLConnection, Klasse com.mysql.jdbc.Driver (Teil der verwendeten
+ Library), Klasse java.sql.Statement (für eigentliche Abfragen)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Verwaltung der Starter, Zuordnung zu Kategorien, Start dieser
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Klasse ConfigWindowController
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Verwaltung der Daten der einzelnen Läufe, Start und Stopp dieser
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Klasse FXMLDocumentController
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Anzeige der aktuellen Laufaten der jeweiligen Starter
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Klasse MySQLConnection, Klasse javafx.scene.control.ListView
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Anzeige der Daten im angegebenen Intervall
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Klasse java.util.concurrent.ScheduledExecutorService, Klasse java.util.concurrent.Sche
+duledFuture, Klasse java.lang.Runnable
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Auswertung der Rennen
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size small
+Prozedur ConfigWindowController.printResults, Funktion MySQLConnection.getAuswertu
+ng
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Features des Hauptprogramms 
+\begin_inset Quotes gld
+\end_inset
+
+Android_Connector
+\begin_inset Quotes grd
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Features-des-Hauptprogramms"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+Anlegen und Verwalten der Datenbank
+\end_layout
+
+\begin_layout Standard
+\noindent
+Der Verbindungsaufbau zur Datenbank erfolgt im Konstruktor der Klasse 
+\series bold
+MySQLConnection
+\series default
+.
+ Dieser speichert übergebene Konfigurationswerte global in der aktuellen
+ Instanz der Klasse und legt eine Instanz der Klasse 
+\series bold
+java.sql.Connection
+\series default
+ namens 
+\series bold
+conn
+\series default
+ an.
+ Diese stellt die eigentliche Verbindung zur Datenbank her.
+ Ab jetzt können Abfragen ausgeführt werden.
+ Es gibt dabei 2 Arten von Datenbankbfragen in SQL: Schreibafragen, die
+ z.B.
+ über den Befehl 
+\series bold
+CREATE
+\series default
+ eine neue Tabelle anlegen oder über 
+\series bold
+UPDATE
+\series default
+ Werte in einer Tabelle ändern, und Leseabfragen, die ein Ergebnis liefern
+ sollen.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+conn
+\series default
+ stellt nun die Methode 
+\series bold
+createStatement
+\series default
+ bereit, welche eine Instanz von 
+\series bold
+java.sql.Statement
+\series default
+ zurückgibt.
+ 
+\series bold
+Statement
+\series default
+ stellt die Methode 
+\series bold
+execute
+\series default
+ bereit, welche einen übergebenen String als Datenbankabfrage in der adressierte
+n Datenbank ausführt.
+ Sie lässt nur Schreibzugriffe zu.
+ Für Leseabfragen existiert die Methode executeQuery, welche eine übergebene
+ SQL-Abfrage in der Datenbank ausführt und eine Instanz von 
+\series bold
+java.sql.ResultSet
+\series default
+ zurückgibt.
+ Dieses repräsentiert die von der Datenbank erzeugte Antworttabelle und
+ kann zeilenweise gelesen werden.
+ Der Zugriff auf einzelne Spalten der Zeile, welche eine gewünschte Information
+ enthalten, und eine Speicherung als String für eine weitere Verarbeitung
+ ist ebenfalls möglich.
+ Andere Datenformate wie 
+\series bold
+Boolean
+\series default
+ oder 
+\series bold
+Timestamp
+\series default
+ (in SQL-Syntax) müssen erst geparst oder umgewandelt werden, da sie von
+ MySQL in anderen Formaten gespeichert werden.
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+Datenverarbeitung und Auswertung
+\end_layout
+
+\begin_layout Standard
+\noindent
+Das Ende des Wettkampfs wird dadurch erkannt, dass keine Kategorien verbleiben,
+ die noch nicht gestartet sind.
+ Alle Läufe müssen dann abgeschlossen sein.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Zunächst wird die Prozedur
+\series bold
+ printResults
+\series default
+ im 
+\series bold
+ConfigWindowController
+\series default
+ aufgerufen.
+ Diese ruft nun zuerst die Methode 
+\series bold
+getAuswertung
+\series default
+ von 
+\series bold
+MySQLConnection
+\series default
+ auf.
+ Sie liest die gespeicherten Laufzusammenfassungen aus der Tabelle 
+\begin_inset Quotes gld
+\end_inset
+
+
+\series bold
+auswertung
+\series default
+
+\begin_inset Quotes grd
+\end_inset
+
+ der Datenbank aus, welche vorher aus 
+\begin_inset Quotes gld
+\end_inset
+
+
+\series bold
+namen
+\series default
+
+\begin_inset Quotes grd
+\end_inset
+
+ kopiert wurden (siehe Abbildung 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Beispielbelegung-Auswertung"
+
+\end_inset
+
+).
+ Grund für das Kopieren ist, dass alle Tabellen außer 
+\begin_inset Quotes gld
+\end_inset
+
+
+\series bold
+auswertung
+\series default
+
+\begin_inset Quotes grd
+\end_inset
+
+ bei jedem neuen Lauf gelöscht werden.
+ Die Prozedur ersetzt Läufe ggf.
+ bereits durch den Wiederholungslauf (wie in der Datenbank angegeben) und
+ gibt ein Array mit allen Werten aller Starter zurück.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+printResults
+\series default
+ nimmt nun die Laufzusammenfassungen mittels einer Untermethode auseinander
+ und extrahiert die reine Laufzeit, die Gesamtstrafen, die Gesamtlaufzeit
+ und die Strafen an den einzelnen Toren.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die Library 
+\series bold
+Apache POI
+\series default
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "Apache POI"
+description "\\glqq POI ist Open-Source-Software, die Java-APIs zum Lesen und Schreiben von Dateien im Dateiformat von Microsoft Office wie z. B. Word und Excel bereitstellt. \\grqq \\cite{Info_POI}"
+
+\end_inset
+
+ wird jetzt verwendet, um aus den Werten eine Excel-Datei (siehe Abbildung
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Auswertung-Datei"
+
+\end_inset
+
+) zu erzeugen.
+ Dabei wird für jede Kategorie eine Mappe angelegt, welche die Angaben für
+ die jeweiligen Starter dieser enthält.
+ Eine Auswertung ist nun z.B.
+ per Funktion 
+\begin_inset Quotes gld
+\end_inset
+
+sortieren
+\begin_inset Quotes grd
+\end_inset
+
+ möglich.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Screenshots/Auswertung - Kopie.PNG
+	width 12.5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Ausschnitt aus einer Auswertungsdatei mit Beispieldaten, dargestellt von
+ LibreOffice
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Auswertung-Datei"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Die Android-App 
+\begin_inset Quotes gld
+\end_inset
+
+Kanu s.a.M.
+ App
+\begin_inset Quotes grd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Es handelt sich bei der App, die auf den Smartphones der Helfer ausgeführt
+ wird, um eine reine Android-App.
+ Sie wurde entwickelt mit Android Studio 2.2, der offiziellen IDE von Google.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die verwendete Programmiersprache ist auch hier Java.
+ Die Interpretation auf den Smartphones erfolgt durch Dalvik Virtual Machine
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "Dalvik Virtual Machine"
+description "Von Google entwickelte Java-Laufzeitumgebung für Android-Apps. Angepasst an kleine, verschiedene Bildschirmgrößen, Skalierung von Inhalten und optimiertes Bugtracing."
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Sie ist lauffähig ab Android 2.3.3 auf allen Smartphones und Tablets mit WLAN.
+ Auch Android Wear- Unterstützung ist theoretisch möglich, sodass die App
+ auch auf Smartwatches oder einer Google Glass ausgeführt werden könnte.
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+Funktionen
+\end_layout
+
+\begin_layout Standard
+\noindent
+Tabelle 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Features-der-App"
+
+\end_inset
+
+ zeigt alle Features der App zusammengefasst.
+ Bei Interesse an der Umsetzung steht der Quellcode gern zur Verfügung.
+ Klassen und Methoden sowie PHP-Scripte sind den durch sie realisierten
+ Features zugeordnet.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="middle" width="7cm">
+<column alignment="center" valignment="middle" width="10cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Feature
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Realisierung mittels
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Verbindungsaufbau zur Datenbank über den PHP-Server
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Activity ConnectionActivity, Klasse HTTP_Connection, Interface AsyncResponse,
+ PHP-Script 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+Abfrage_Stationen.php
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Anzeige des aktuellen Laufs
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Klasse HTTP_Connection, Interface AsyncResponse, PHP-Script 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+Abfrage_Lauf.php
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Handstarten eines ausgewählten Starters
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Activity StartActivity, Klasse HTTP_Connection, Interface AsyncResponse,
+ PHP-Script 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+Abfrage_Startnummern.php
+\end_layout
+
+\end_inset
+
+, PHP-Script 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+Startzeit_eintragen.php
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Handstoppen eines ausgewählten Starters
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Activity StoppActivity, Klasse HTTP_Connection, Interface AsyncResponse,
+ PHP-Script 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+Abfrage_Startnummern.php
+\end_layout
+
+\end_inset
+
+, PHP-Script 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+Zielzeit_eintragen.php
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Anzeigen der vergangenen Zeit seit Wettbewerbsstart
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Klasse HTTP_Connection, Interface AsyncResponse, PHP-Script 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+Abfrage_Startzeit.php
+\end_layout
+
+\end_inset
+
+, Klasse Thread, Instanz 
+\begin_inset Quotes gld
+\end_inset
+
+uhr
+\begin_inset Quotes grd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Auswahl der aktuellen Startnummer und ihren Strafen an den lokalen Toren
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Activity MainActivity, Klasse android.widget.Spinner, Klasse android.widget.TableLay
+out
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Eintragen der gewählten Strafzeiten an den gewählten Toren für die gewählte
+ Startnummer
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Methode MainActivity.onClick, Klasse HTTP_Connection, Interface AsyncResponse,
+ PHP-Script 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+Zeit_eintragen.php
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Features der App 
+\begin_inset Quotes gld
+\end_inset
+
+Android Connector App HTTP
+\begin_inset Quotes grd
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Features-der-App"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+Umsetzung des Verbindungsaufbaus
+\end_layout
+
+\begin_layout Standard
+\noindent
+Android hat 
+\begin_inset Quotes gld
+\end_inset
+
+von Haus aus
+\begin_inset Quotes grd
+\end_inset
+
+ keine Möglichkeit, direkt auf MySQL-Datenbanken auf fremden Geräten zuzugreifen.
+ Ein solcher Verbindungsaufbau könnte auch von einer Firewall geblockt werden.
+ Android kann aber HTTP-GET-Anfragen senden.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Das Problem dabei: solche Anfragen dürfen ab Android 3.0 nicht mehr auf dem
+ Main- oder UI-Thread
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "UI-Thread/Mainthread"
+description "Thread, in dem die eigentlichen Activities der App ausgeführt werden. Jede App erhält bei Start einen solchen Thread zugewiesen. Seine Hauptaufgabe ist die Verknüpfung von Oberflächenelementen mit dem Programmcode, der ihren verschiedenen Events zugewiesen ist. Außerdem ist er für die Modifikation der Oberflächenelemente wie neue Texte in einem TextView verantwortlich."
+
+\end_inset
+
+ ausgeführt werden, siehe hierzu 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Info_Crash"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Der Hintergrund ist: längere Operationen wie Netzwerkzugriffe (mit Verzögerungen
+ der Antwort durch Timeouts bis mehrere Sekunden) würden den Thread blockieren
+ und somit die GUI 
+\begin_inset Quotes gld
+\end_inset
+
+einfrieren
+\begin_inset Quotes grd
+\end_inset
+
+.
+ Dies stellt eine unangenehme Situation für den Benutzer dar, der denkt,
+ die App hätte sich 
+\begin_inset Quotes gld
+\end_inset
+
+aufgehängt
+\begin_inset Quotes grd
+\end_inset
+
+.
+ Außerdem zeigt Android nach 5 Sekunden 
+\begin_inset Quotes gld
+\end_inset
+
+Frost
+\begin_inset Quotes grd
+\end_inset
+
+ eine App-not-responding-Meldung an und bietet an, die App zu beenden.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Eine Alternative hierzu bietet das Interface 
+\series bold
+AsyncTask
+\series default
+, das zunächst beerbt werden muss (so geschehen in Klasse 
+\series bold
+HTTPConnection
+\series default
+).
+ Es legt einen zweiten Thread an, der parallel zum Mainthread läuft und
+ auf dem Abfragen ausgeführt werden können.
+ Damit blockiert er die UI nicht.
+ 
+\series bold
+AsyncTask
+\series default
+ stellt die abstrakte Methode 
+\series bold
+doInBackground
+\series default
+ bereit, welche auf diesem zweiten Thread läuft.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die Klasse 
+\series bold
+URLConnection
+\series default
+ kann unter Verwendung von 
+\series bold
+URL*openConnection()
+\series default
+ nun die als String übergebene HTTP-Abfrage senden.
+ Es handelt sich dabei um eine GET-Anfrage an ein Script des PHP-Servers
+ auf dem zentralen Laptop, zusammengesetzt nach dem Schema 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://IP-Adresse_des_Rechners/AndroidConnectorAppHTTPScripts/Scriptname.php?Para
+meter="Wert"
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Der Apache-Server nimmt die Anfrage entgegen, führt das Script aus und gibt
+ ein HTML-Dokument zurück, das ggf.
+ die Ausgaben des Scriptes enthält (bei Leseanfragen).
+\end_layout
+
+\begin_layout Standard
+\noindent
+Das Dokument kann als 
+\series bold
+InputStream
+\series default
+ von der Instanz von 
+\series bold
+URLConnection
+\series default
+ eingelesen werden.
+ Es wird dabei als String zeilenweise gelesen.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Mit dem Ende des Einlesens erfolgt der Aufruf der Methode 
+\series bold
+onPostExecute
+\series default
+ im 
+\series bold
+AsyncTask
+\series default
+, die im Mainthread läuft und zur Rückgabe und Weiterverarbeitung der ausgelesen
+en Informationen gedacht ist.
+ Das Problem dabei: die Antwort muss nun zurück in das Activity, das die
+ Abfrage gestartet hat.
+ Android selbst stellt dafür keine Lösung bereit.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Für diese Aufgabe wurde das Interface 
+\series bold
+AsyncResponse
+\series default
+ erstellt.
+ Es enthält die Methode 
+\series bold
+processFinish
+\series default
+, der ein String übergeben wird.
+ HTTP_Connection enthält nun eine Instanz des Interfaces, die von außen
+ gesetzt werden kann.
+ In 
+\series bold
+onPostExecute
+\series default
+ ruft sie nun 
+\series bold
+processFinish
+\series default
+ der aggregierten Instanz auf und übergibt den Inhalt des HTML-Dokuments
+ als String.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Das Interface muss von dem Activity implementiert werden, das die Antwort
+ der Abfrage verarbeitet.
+ Dabei wird die leere Standardmethode wie bei einem Listener überschrieben
+ und die Antwort kann nun in der Methode weiter verarbeitet und z.B.
+ in Oberflächenelemente geschrieben werden.
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Der PHP-Server
+\end_layout
+
+\begin_layout Standard
+\noindent
+Der PHP-Server
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "PHP"
+description "Abkürzung von Hypertext PreProcessor. Scriptsprache, die hauptsächlich auf Servern ausgeführt wird. Nimmt eine POST- oder GET-Request entgegen, verarbeitet sie z.B. mit einem Zugriff auf eine MySQL-Datenbank und gibt eine HTML-Seite an den anfragenden Client zurück."
+
+\end_inset
+
+ läuft im Apache Webserver, der Teil von XAMPP ist, auf dem zentralen Laptop.
+ Er kann nur im lokalen Netzwerk durch Anfragen (lediglich von den App-Instanzen
+) angesprochen werden.
+ Der 
+\begin_inset Quotes gld
+\end_inset
+
+htdocs
+\begin_inset Quotes grd
+\end_inset
+
+-Ordner von XAMPP
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "htdocs-Ordner"
+description "\\glqq HyperText Documents \\grqq , Ordner in XAMPP. Dort liegen alle Skripte und HTML-Seiten, die über den Webserver aufgerufen werden können."
+
+\end_inset
+
+ enthält die erstellten Scripte, welche Anfragen der App verarbeiten.
+ Diese müssen auf die Datenbank zugreifen können und benötigen dafür ihre
+ Konfigurationswerte.
+ Diese sind in einer separaten Datei gespeichert.
+ Diese und die Scripte werden bei der Initialisierung durch das Hauptprogramm
+ automatisch überschrieben.
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+Aufgabe
+\end_layout
+
+\begin_layout Standard
+\noindent
+Der Server muss Anfragen der App entgegennehmen und Zugriffe auf die Datenbank
+ ausführen.
+ Anfragen werden dabei per HTTP-GET gestellt.
+ Die ausgeführten Zugriffe können sowohl Schreib- als auch Lesezugriffe
+ sein.
+ Bei einer Leseanfrage muss eine Antwort an die App gesendet werden.
+ Dies geschieht per HTML-Seite, welche allgemein bei jeder POST- oder GET-Anfrag
+e an den Client zurückgegeben wird und vom Script manipuliert werden kann.
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+Umsetzung des Zugriffes auf die Datenbank
+\end_layout
+
+\begin_layout Standard
+Zuerst wird die Datei 
+\begin_inset Quotes gld
+\end_inset
+
+Konfiguration.php
+\begin_inset Quotes grd
+\end_inset
+
+ mit dem Befehl 
+\begin_inset Quotes gld
+\end_inset
+
+
+\series bold
+require_once
+\series default
+
+\begin_inset Quotes grd
+\end_inset
+
+ eingelesen.
+ Sie enthält die Konfiguration in Bezug auf Host, Port, User, Passwort und
+ Datenbankname als PHP-Variablen.
+ Danach wird der eigentliche Zugriff auf die Datenbank mittels der Methode
+ 
+\begin_inset Quotes gld
+\end_inset
+
+
+\series bold
+mysqli_connect
+\series default
+
+\begin_inset Quotes grd
+\end_inset
+
+ realisiert, welche diese Werte entgegen nimmt.
+ Dann wird der String, welcher die eigentliche Abfrage enthält, mittels
+ des Verbindungsbefehls 
+\begin_inset Quotes gld
+\end_inset
+
+
+\series bold
+.
+\series default
+
+\begin_inset Quotes grd
+\end_inset
+
+ zusammengefügt.
+ Übergebene Parameter in der Anfrage können per 
+\begin_inset Quotes gld
+\end_inset
+
+
+\series bold
+$_GET['Parametername']
+\series default
+
+\begin_inset Quotes grd
+\end_inset
+
+ eingebaut werden (z.B.
+ die Nummer der Station).
+ Schließlich wird die Abfrage mittels der Methode 
+\series bold
+
+\begin_inset Quotes gld
+\end_inset
+
+mysqli_query
+\begin_inset Quotes grd
+\end_inset
+
+
+\series default
+ durchgeführt.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Ist eine Rückgabe nötig, wird diese nun erzeugt.
+ Dafür geht das jeweilige Script zunächst die Antwort der Datenbank zeilenweise
+ durch, liest die benötigten Werte aus ihren Spalten aus und schreibt sie
+ auf die Antwortseite mittels des Befehls 
+\begin_inset Quotes gld
+\end_inset
+
+
+\series bold
+echo
+\series default
+
+\begin_inset Quotes grd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Technische Umsetzung der Synchronisation
+\end_layout
+
+\begin_layout Standard
+\noindent
+Das Hauptprogramm ist in JavaFX
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "JavaFX"
+description "Java-Spezifikation, welche performanceoptimiert und besonders zurm schnellen und einfachen Anlegen von grafischen Benutzeroberflächen ausgelegt ist."
+
+\end_inset
+
+ geschrieben.
+ Es kann unter Verwendung des Datenbanktreibers jdbc (externe JAR-Library)
+ und dem java.sql-Package direkt auf die Datenbank zugreifen.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Es leert anfangs die Datenbank und legt die Tabellen an, die benötigt werden.
+ Dann trägt es Namen und Startnummern in Tabelle 
+\begin_inset Quotes gld
+\end_inset
+
+namen
+\begin_inset Quotes grd
+\end_inset
+
+ ein sowie nötige Attribute wie die Zahl der Messstationen sowie die Zuordnung
+ der Messtore zu den Stationen in die Tabelle 
+\begin_inset Quotes gld
+\end_inset
+
+allgemein
+\begin_inset Quotes grd
+\end_inset
+
+.
+ Diese Daten sind nötigt für die App, um die Startnummernauswahl für Start/Stopp
+ oder die Anmeldung an die einzelnen Messstation zu realisieren.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die Android-Clients führen die App in ihren verschiedenen Activitys
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "Activity"
+description "Entsprechung des Programmfensters unter Android. Eine App kann aus einer oder mehreren Activities bestehen, die sich gegenseitig starten."
+
+\end_inset
+
+ zum Starten, Stoppen oder auch Strafzeiten eintragen aus.
+ Android erlaubt keinen direkten MySQL-Zugriff, aber die Verbindung zum
+ Server über GET
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "GET-Anfragen"
+description "Anfragen an Scripte eines PHP-Servers. Parameter werden dabei in der Webadresse übergeben. Nach dem Namen des aufzurufenden Scriptes, etwa \\url{http://192.168.1.234/Zeit_eintragen.php}, stehen die Parameter in der Form \\url{?station=0&starter=1&strafe=50}."
+
+\end_inset
+
+-Anfragen per WLAN über das Internetprotokoll
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "IP"
+description "Protokoll, das Anfragen und Antworten im World Wide Web zu bestimmten Servern oder Clients lenkt, die über eine IP-Adresse eindeutig identifiziert sind."
+
+\end_inset
+
+ und HTTPS
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "Hypertext Transfer Protocol"
+description "Netzwerkprotokoll, das für die Übertragung von Anfragen an Server und Antworten an Clients in Form von Hypertext (HTML) entwickelt wurde. "
+
+\end_inset
+
+ ist möglich.
+ Die App braucht dafür die IP-Adresse des Servers, welche vom Nutzer eingegeben
+ werden muss.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Der PHP-Server kann Anfragen entgegennehmen und Abfragen in die Datenbank
+ ausführen.
+ Die App sendet also anfangs Anfragen an den Server, z.B., um die Zahl der
+ Messstationen zu erfragen.
+ Der Server nimmt die Anfrage entgegen und führt hier das Script 
+\begin_inset Quotes gld
+\end_inset
+
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+Abfrage_Stationen
+\end_layout
+
+\end_inset
+
+
+\begin_inset Quotes grd
+\end_inset
+
+ aus.
+ Dieses sendet eine Anfrage an die Datenbank, welche als Resultat die Zahl
+ der Messtationen liefert.
+ Das PHP-Script gibt die Zahl auf die vom Server zurückgegebene HTML-Seite
+ aus.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die App liest diese Seite per InputStream ein, trennt sie (bei mehreren,
+ vom Server per 
+\begin_inset Quotes gld
+\end_inset
+
+|
+\begin_inset Quotes grd
+\end_inset
+
+ getrennten) Datensätzen per Methode 
+\series bold
+String.split
+\series default
+ auf und verarbeitet sie, z.B., indem die vorhandenen Messstationen zur Auswahl
+ in einen Spinner geladen werden.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Bei bestimmten Aktionen der App wie dem Start entfällt die Verarbeitung
+ der Rückgabe (nicht benötigt).
+ Der PHP-Server übernimmt außerdem die Zeiterhebungen bei Start und Stopp.
+ Er liest die Systemzeit des Laptops aus, sodass die Zeitdifferenzen korrekt
+ gebildet werden.
+ Würden die Smartphones die Zeiterhebung übernehmen, wäre dies zwar exakter
+ (Verzögerungen bei Übertragung der Anfrage an den Server beeinflussen die
+ Zeiten nicht).
+ Jedoch ergäben sich beträchtliche Fehler bei der Zeitdifferenzenbildung,
+ wenn die Uhren der Smartphones und des Laptops nicht synchron sind.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Das Hauptprogramm erledigt nun die Zusammenführung, Anzeige und Auswertung
+ der Daten der Datenbank und seiner lokalen Daten.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Dafür liest es anfangs Starter, Startnummern und Kategorien ein und bereitet
+ die Datenbank auf die nächste Kategorien vor.
+ Das Programm startet im vorgegebenen Intervall, standardmäßig jede Zehntelsekun
+de, die Zeitberechnungsprozedur.
+ Diese ordnet ggf.
+ Startzeiten von der App den Startern zu, markiert sie als gestartet und
+ rechnet die Zeiten entsprechend um (PHP hat ein eigenes Timestampformat).
+ Zielzeiten in der Datenbank werden gleich behandelt.
+ Strafen aus der Datenbank werden im nächsten Schritt ausgelesen, aufsummiert
+ und ausgegeben.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Das Programm erkennt automatisch das Laufende (wenn der letzte Starter im
+ Ziel ist) und sichert ggf.
+ die aktuellen Daten.
+ Diese können aber weiterhin überschrieben werden.
+ Danach bietet es die Möglichkeit an, den nächsten Lauf bzw.
+ die nächste Kategorie zu starten.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Ist die letzte Kategorie abgeschlossen, speichert das Programm eine Excel-Datei
+ mit der Auswertung.
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Beschreibung des Ablaufs einer Verwendung des Softwaresystems
+\end_layout
+
+\begin_layout Standard
+\noindent
+Zuallererst wird das Hauptprogramm 
+\begin_inset Quotes gld
+\end_inset
+
+Kanu_s.a.M.
+\begin_inset Quotes grd
+\end_inset
+
+ auf dem zentralen Laptop gestartet.
+ Es öffnet zunächst das ConfigWindow, welches Starter und weitere Konfigurations
+daten einliest.
+ Die Starterdaten können aus einer Excel-Tabelle ausgelesen oder hier eingegeben
+ werden.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Beim Klick auf Weiter oder dem Schließen des Fensters wird erfragt, welche
+ Kategorie starten soll.
+ Danach öffnet sich das Hauptfenster, welches die einzelnen Läufe verwaltet.
+ Start/Stopp von Startern ist in diesem Fenster per Buttonklick möglich,
+ ist aber unpräzise.
+ Das Feature ist auch in der App enthalten.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Das Fenster zeigt jederzeit an, wer auf der Strecke ist oder sie bereits
+ beendet hat, dessen aktuelle Zeit mit und ohne Strafen (über die Datenbank
+ mit der App synchronisiert) und bei Startern, die im Ziel sind, die Gesamtzeit.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Wird dieses Hauptfenster angezeigt, ist der Start der 
+\begin_inset Quotes gld
+\end_inset
+
+Kanu s.a.M.
+ App
+\begin_inset Quotes grd
+\end_inset
+
+ möglich.
+ In diese muss zunächst die IP-Adresse des zentralen Laptops im lokalen
+ Netzwerk eingegeben werden.
+ Sie wird auf der GUI des Hauptprogramms angezeigt.
+ Nach der Eingabe wird die Verbindung mit dem Button 
+\begin_inset Quotes gld
+\end_inset
+
+Verbinden
+\begin_inset Quotes grd
+\end_inset
+
+ bestätigt.
+ Nun kann man das gewünschte Feature auswählen.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Wählt man 
+\begin_inset Quotes gld
+\end_inset
+
+STARTEN
+\begin_inset Quotes grd
+\end_inset
+
+, öffnet sich ein zweites Activity.
+ In diesem werden alle Startnummern des aktuellen Laufs in einem Spinner
+ angezeigt.
+ Man wählt nun die Startnummer, welche die Startlinie passiert, im Spinner
+ aus und tippt auf 
+\begin_inset Quotes gld
+\end_inset
+
+STARTEN!
+\begin_inset Quotes grd
+\end_inset
+
+.
+ Stoppen funktioniert analog.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Zum Eintragen von Strafzeiten tippt man auf den Spinner im ersten Activity
+ und wählt seine Messstation aus.
+ Beim Klick auf 
+\begin_inset Quotes gld
+\end_inset
+
+Wählen
+\begin_inset Quotes grd
+\end_inset
+
+ öffnet sich ein neues Activity, welches dieses Feature realisiert.
+ Dort wählt man zunächst die Startnummer im Spinner aus, die eine Strafzeit
+ bekommen soll.
+ In einer Tabelle wählt man die Strafzeiten für das in der linken Spalte
+ angegebene Tor rechts im Spinner aus.
+ Dieser enthält nur die Werte 
+\begin_inset Quotes gld
+\end_inset
+
+0
+\begin_inset Quotes grd
+\end_inset
+
+ (fehlerfreie Durchfahrt, der Standardwert), 
+\begin_inset Quotes gld
+\end_inset
+
+2
+\begin_inset Quotes grd
+\end_inset
+
+ (Torpfosten berührt) und 
+\begin_inset Quotes gld
+\end_inset
+
+50
+\begin_inset Quotes grd
+\end_inset
+
+ (Auslassen oder falsche Richtung).
+ Die Strafe wird beim Klick auf 
+\begin_inset Quotes gld
+\end_inset
+
+Zeit nehmen!
+\begin_inset Quotes grd
+\end_inset
+
+ eingelesen.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Wählt man eine andere Startnummer im Spinner, werden die gewählten Strafzeiten
+ alle auf 0 zurückgesetzt.
+ Wenn der letzte Starter das Ziel erreicht, werden die Zeiten im Hauptprogramm
+ gespeichert.
+ Es besteht die Möglichkeit, den nächsten Lauf zu starten.
+ Start- und Zielzeiten sowie Strafen sind bis zum Start des nächsten Laufs
+ veränderbar.
+ Ist der nächste Lauf der Wiederholungslauf, wird gefragt, welche Starter
+ welchen Lauf wiederholen.
+ Sonst wird der reguläre zweite Lauf gestartet.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Tritt keiner an oder ist der Wiederholungslauf beendet, wird das ConfigWindow
+ wieder aufgerufen.
+ Es zeigt den Zustand vor Kategoriestart.
+ Eine Eintragung über die App ist bis zum nächsten Kategoriestart nicht
+ möglich.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Beim Klick auf weiter muss die nächste Kategorie aus den übrigen Kategorien
+ ausgewählt werden.
+ Die Verwendung der App ist dann wieder möglich.
+ Es ist kein Neustart erforderlich, nur die aktuelle Anzeige muss durch
+ das Kippen des Bildschirms aktualisieren oder das aktuelle Activity neu
+ aufgerufen werden.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Sind alle Kategorien gefahren, wird eine Excel-Datei mit der Auswertung
+ am per 
+\series bold
+javafx.scene.FileChooser
+\series default
+ gewählten Ort gespeichert.
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Aufgetretene Probleme und ihre Lösungen
+\end_layout
+
+\begin_layout Standard
+\noindent
+Bei der Verwendung des Softwaresystems treten gelegentlich nicht näher bestimmba
+re Netzwerkfehler auf, welche die HTTP-Übertragung zwischen den Smartphones
+ und dem zentralen Laptop unterbrechen.
+ Dies sind zufällige Fehler, welche in Rechnernetzen unvermeidbar sind und
+ kaum verhindert werden können.
+ Dies wurde dadurch verbessert, dass die Scripte bei erfolgreicher Eintragung
+ eine Bestätigung auf die HTML-Seite ausgeben.
+ Der AsyncTask wiederholt das Absenden der Anfragen, bis diese eintrifft
+ oder zehn erfolglose Versuche gestartet wurden.
+ Besonders bei Start und Stopp ergeben sich aber hier ggf.
+ Verzögerungen bis zu mehreren Sekunden, bis die Verbindung wiederhergestellt
+ wird.
+ Dadurch entstehen Fehler in der Zeitmessung.
+ Bei gutem WLAN-Empfang treten solche Fehler jedoch nur äußerst selten auf.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Ein weiteres potentielles Problem ist das der WLAN-Reichweite.
+ Die Streckenlänge in Jena beträgt unter 200 m.
+ Offizielle Rennstrecken sind aber bis 400 m lang.
+ Die WLAN-n-Spezifikation gibt nur maximal 150 m Reichweite vor.
+ Diese kann zwar im Freien ohne Weiteres erreicht werden.
+ Jedoch beträgt die Reichweite der WLAN-Hotspots von Laptops meist deutlich
+ weniger.
+ Außerdem steht der zentrale Laptop wahrscheinlich im Zelt bei der Ziellinie,
+ sodass die (beidseitig verfügbare) Reichweite nicht vollständig ausgenutzt
+ werden kann.
+ Abhilfe schaffen kann hier die Verwendung eines älteren WLAN-Routers oder
+ WLAN-Repeaters, welcher eine höhere Stabilität und Reichweite bietet.
+ Dieser kann (wenn die Stromversorgung es zulässt) näher der Mitte aller
+ Geräte positioniert werden.
+ Damit verbessert sich die Netzwerkabdeckung erheblich.
+ Der Server kann auch per WLAN mit dem Router verbunden werden.
+ Durch die Verwendung des Internetprotokolls müssen Laptop und Smartphones
+ nur im selben Netzwerk sein, dieses muss nicht vom Laptop aufgebaut werden.
+ Reicht auch dies nicht, kann ein WLAN-Verstärker an eine Antenne des Routers
+ angeschlossen werden.
+ Ein geeignetes Gerät ist etwa mit dem PowerMicrowave WIFIPA24508W verfügbar
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "WLAN_Verstaerker"
+
+\end_inset
+
+.
+ Reicht auch das nicht, können in den Messstationen einzelne akkubetriebene
+ WLAN-Repeater eingesetzt werden, welche das Signal des Routers oder Laptops
+ verstärken.
+ Die Funktionalität eines WLAN-Repeaters kann auch durch Smartphones vom
+ Typ Samsung Galaxy S7 oder S7 Edge erreicht werden, siehe hierzu 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "s7_repeater"
+
+\end_inset
+
+.
+ Alternativ lässt sich ein tragbarer WLAN-Repeater wie der INSTAR IN-Route
+ P52 verwenden 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Repeater_Akku"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Ein anderes auftretendes Problem ist, dass das Hauptprogramm teilweise nicht
+ flüssig abläuft.
+ Dies geschieht aber nur bei schwachen Laptops mit rechenintensiven Hintergrunda
+ufgaben.
+ Grund dafür ist, dass der komplexe Zeitberechnungsalgorithmus mit mehreren
+ Datenbankzugriffen jede Zehntelsekunde ausgeführt werden muss.
+ Eine mögliche Lösung ist das manuelle Herunterstellen der Synchronisierungstakt
+rate.
+ Für jeden solchen Zugriff muss der Datenbanktreiber jdbc verfügbar sein.
+ Dieser liegt in einer Library, welche im Unterordner 
+\begin_inset Quotes gld
+\end_inset
+
+lib
+\begin_inset Quotes grd
+\end_inset
+
+ im Programmordner liegen muss.
+ Fehlt sie, kann das Programm nicht ablaufen.
+ Die Library kann nicht mit in die JAR-Datei des Programms gepackt werden,
+ da Java sie von dort nur als InputStream bitweise auslesen und somit nicht
+ verwenden kann.
+ Somit muss die Library im externen Ordner bleiben.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Ein weiteres Problem ist, dass XAMPP nur unter Windows automatisch vom Hauptprog
+ramm gestartet werden kann.
+ Eine Lösung für Linux und MacOS ist jedoch in Arbeit.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Im Zusammenhang damit steht das Problem, dass bei manchen XAMPP-Installationen
+ der Autostart vom Apache Webserver aufgrund fehlender Berechtigungen oder
+ Protokolle nicht funktioniert.
+ Auf den meisten Geräten funktioniert er aber problemlos.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Bei der Entwicklung der App trat das Problem auf, dass nach einem Update
+ der Google Repositories plötzlich die Spinner mit weißer Schrift auf weißem
+ Hintergrund dargestellt wurden.
+ Dieses wurde dadurch gelöst, dass ein ungeeignetes Android-Standarddesign
+ durch ein eigenes Design überschrieben wurde, das schwarze Schrift erzwingt.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Ebenfalls ohne erkennbaren Grund stürzte die App nach einer Neukompilierung
+ beim Versuch, Strafzeiten einzutragen, ab.
+ Aus einem bis heute unklaren Grund war der Zugriff auf die Spinner und
+ TextViews der Tabelle, in welcher die Strafzeiten an den einzelnen Toren
+ ausgewählt werden, über deren Instanz nicht mehr möglich.
+ Dies wurde gelöst, indem die Adressen der TextViews und Spinners in zwei
+ Arrays gespeichert wurden, über die der Zugriff und das Auslesen der korrekten
+ Werte wieder möglich war.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Änderte man in einer früheren Programmversion die Konfiguration der Datenbank,
+ hatte die App keinen Zugriff mehr.
+ Dies liegt daran, dass die PHP-Konfigurationsdatei mit den aktuellen Wertem
+ überschrieben werden musste.
+ Außerdem fehlten auf den Testrechnern oft wichtige Scripte.
+ Diese waren nicht kopiert worden.
+ Eine zusätzliche Funktion des Programms kopiert nun die Scripte automatisch
+ in das korrekte XAMPP-Unterverzeichnis.
+\end_layout
+
+\begin_layout Standard
+\noindent
+In frühen Versionen traten oft Probleme bei der Zeiterhebung und besonders
+ der Bildung von Zeitdifferenzen auf.
+ Dies wurde durch die Klasse java.util.Calendar gelöst, welche alle solchen
+ Berechnungen automatisch vornimmt.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Generell gilt, dass die hauptsächlich verwendete Sprache Java in ihren Spezifika
+tionen JavaFX und der Android-Variante sehr stabil ist.
+ Durch die Fehlerbehandlung mit try-catch und generell das Fehlersystem
+ mit Exceptions stürzt das Programm selbst bei schweren Fehlern nicht ab,
+ sondern bricht nur die aktuelle Aktion ab.
+ Auch PHP und MySQL sind sehr unempfindlich gegenüber Fehlern.
+ Komplettabstürze der Software waren selten und die letzte Programmversion
+ mit allen Verbesserungen lief so stabil, dass sie mehrere komplette Programmdur
+chläufe ohne Fehler durchführen konnte.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\noindent
+Zusammenfassung und Schluss
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Umsetzung der Konzeption
+\end_layout
+
+\begin_layout Standard
+Das entwickelte Softwaresystem 
+\begin_inset Quotes gld
+\end_inset
+
+Kanu s.a.M.
+\begin_inset Quotes grd
+\end_inset
+
+ kann vollumfänglich zur Erfassung von Lauf- und Strafzeiten beim Kanuslalom
+ verwendet werden.
+ Das Feature Auswertung kann noch optimiert werden, aber ist in jedem Fall
+ der mit Papierlisten in puncto Komfort weit überlegen.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Der Aufbau des Systems ist wie gefordert kostenlos und einfach möglich.
+ An Hardware werden lediglich ein (ggf.
+ auch älterer) Laptop sowie eine Reihe Android-Smartphones ab Android 2.3.3
+ (Gingerbread) benötigt.
+ Erreicht der Hotspot des Laptops die nötige WLAN-Reichweite nicht, kann
+ diese durch einen WLAN-Verstärker oder einen akkubetriebenen WLAN-Repeater
+ aufgebessert werden.
+ Auch der Einbau (eventuell vorhandener) älteren Router ist möglich.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+An Software werden wie gefordert nur gratis verfügbare Programme vorausgesetzt.
+ Für die Ausführung des Hauptprogramm ist eine aktuelle Java Runtime Environment
+ erforderlich, welche mit Windows bis einschließlich XP kompatibel ist.
+ Die finale Version wird ebenfalls als Java-Interpreter-unabhängiges .exe-Binary
+ zur Verfügung gestellt werden.
+ Dies ist unter JavaFX mit einer Modifikation des Build-Manifests möglich.
+ Zudem wird XAMPP benötigt, welches ebenfalls ab Windows XP funktionsfähig
+ ist.
+ Es ist in wenigen Minuten installiert und nimmt die umständliche Konfiguration
+ seiner Teilpakete selbstständig vor.
+ Der Benutzer muss nur noch (einmalig) XAMPP so einstellen, dass bei seinem
+ Start automatisch der Apache Webserver und MySQL gestartet werden.
+ Außerdem muss anfangs im Datenbankenverwaltungsprogramm mindestens eine
+ Datenbank angelegt werden, was in einer Minute getan ist.
+ Java selbst kann dies nicht.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Das Programm verwaltet die Starter selbstständig und kann sie auf Wunsch
+ direkt aus einer Excel-Datei einlesen.
+ Die Starter werden den Kategorien automatisch zugeordnet, sodass alle Starter
+ der gleichen Kategorie parallel starten.
+ Die Kategorien sind dabei völlig frei benennbar.
+ Ist ihr Name als Excel-Mappe nicht zulässig (kürzer als 1 oder länger als
+ 31 Zeichen), wird automatisch ein anderer Name generiert.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Das Programm muss nur noch so bedient werden, dass die nächste Kategorie
+ bzw.
+ der nächste Lauf gestartet wird, dazwischen läuft es von selbst (deswegen
+ semi-automatisch).
+ Das Starten und Stoppen von Startern ist per App genauso wie das Eintragen
+ von Strafzeiten möglich.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Das Programmende wird automatisch erkannt und es wird eine übersichtliche
+ Auswertung in einer Excel-Datei vorgenommen.
+ Diese kann nun in verschiedenen (auch kostenlosen) Programmen wie LibreOffice
+ geöffnet und leicht ausgewertet werden.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die korrekten Werte des aktuellen Laufs werden jederzeit im dafür vorgesehenen
+ Fenster angezeigt, über einen Anschluss an einen Beamer könnten diese sogar
+ den Zuschauern live gezeigt werden.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Das System erfordert keinen Internetzugriff, was es etwas sicherer gegenüber
+ Manipulationen macht.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Alles in allem wurde die Konzeption vollständig umgesetzt.
+ Das Problem kann durch das Programm gelöst werden.
+ Damit ist bewiesen, dass ein (minimal ungenaueres als ein professionelles)
+ Zeitenmesssystem für den Kanusport auch nahezu kostenfrei einrichtbar ist.
+ Dieses System ist modular aufgebaut, sodass es relativ leicht um weitere
+ Funktionen erweitert werden kann.
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Ausblick
+\end_layout
+
+\begin_layout Standard
+\noindent
+Eine gute Verbesserungsmöglichkeit wäre die, einen passiven Ablaufmodus
+ zu schreiben.
+ Das Programm würde in diesem lediglich den aktuellen Stand anzeigen, ihn
+ aber nicht selbst manipulieren können.
+ Dieser Ablauf könnte auch auf einem zweiten Laptop ausgeführt werden, der
+ (in WLAN-Reichweite) bei den Zuschauern steht und die aktuellen Zeiten
+ per Beamer projiziert.
+ Neben dieser Auswertung am Wettbewerbsort können die Werte über die Datenbank
+ auch ins Internet gestreamt werden.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Auch denkbar wäre eine bessere, detailliertere Auswertung.
+ Dafür könnten die Laufwerte (z.B.
+ in einer Excel-Tabelle) an ein Fremdprogramm übergeben werden, welches
+ im Verein SV Schott zu diesem Zweck entwickelt wird.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die Manipulierbarkeit des Systems kann ebenfalls noch verringert werden.
+ Zusätzliche Authkeys für die Scripte, Passwörter zur Anmeldung an die einzelnen
+ Stationen in der App (welche in der finalen Version auf Google Play verfügbar
+ sein wird) und eine Verschlüsselung der Anfragen durch md5 zum Schutz vor
+ Man-in-the-Middle-Attacks sind ebenfalls leicht realisierbar.
+\end_layout
+
+\begin_layout Standard
+\noindent
+In der App könnte jeweils auch in den Spinnern der Strafzeitenwahl die aktuelle
+ Strafzeitenkombination angezeigt werden.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Die Stabilität der App-Verbindung ließe sich durch die Wiederholung der
+ Anfragen bis zu einer Bestätigung verbessern.
+ Sollte doch einmal ein Fehler auftreten, wären verbesserte Fehlermeldungen
+ und eine verbesserte interne Fehlerdiagnose und -verhinderung hilfreich.
+ Für den Fall eines Komplettabsturzes gibt es noch den Wiederherstellungsmodus.
+ Er speichert Protokolldateien auf Wunsch am angegebenen Ort und kann sie
+ später wiederherstellen.
+ Jedoch muss bei ihm aktuell eine komplette Kategorie wiederholt werden.
+ Man könnte ihn so verbessern, dass nur ein angefangener Lauf wiederholt
+ werden muss.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Um Fehler und Abstürze zu vermeiden wäre auch das Abfangen möglicher Eingabefehl
+er hilfreich.
+ Beispiele sind doppelte Startnummern oder solche, die keine Zahl sind.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Das Start-Stopp-Signal des Programms könnte zusätzlich zu Buttons und App
+ auch per Lichtschranke gegeben werden, was die Präzision enorm erhöhen
+ würde.
+ Dafür wäre nur die Implementation eines Listeners nötig, der den Start-Stopp-Bu
+tton des Hauptprogramms auslöst.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Statt eines klassischen Listeners könnte auch ein preisgünstiger Einplatinen-PC
+ (z.B.
+ Arduino mit WLAN-Modul) eine HTTP-Request an den Laptop senden.
+ Dabei muss aber beachtet werden, dass Arduino und Laptop exakt synchrone
+ Uhren haben.
+ Durch eine Lichtschranke, einen Arduino und eine simple Webcam oder Digitalkame
+ra ließe sich auch einfach ein Fotofinish schießen, was aber hier nicht
+ zwingend nötig ist.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
+set_width "auto"
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintAll"
+bibfiles "Quellen"
+options "bibtotoc,plaindin"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Alle Quellen, die für die Softwareentwicklung relevant waren, sind im
+\series bold
+ @author
+\series default
+-Tag der Javadocs oder an verwendeter Stelle in Programmkommentaren gekennzeichn
+et.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+\noindent
+Anhang
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Screenshots
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+Hauptprogramm
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Screenshots/Config.PNG
+	height 10cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Konfigurationsfenster des Hauptprogramms mit Beispieleingaben
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Screenshots/Wahl_Kategorie.PNG
+	height 2cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Wahl der Kategorie, welche starten soll
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Screenshots/Zuordnung_Tore-MS.PNG
+	height 5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Zuordnung der Messtore zu Messstation 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Screenshots/Main_plain.PNG
+	width 10cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Hauptfenster vor Start des ersten Starters
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Screenshots/Main_lauf.PNG
+	width 10cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Hauptfenster während eines Laufs
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Screenshots/Main_lauf_fertig.PNG
+	width 10cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Hauptfenster bei Laufende
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Screenshots/Auswahl_wiederholung.PNG
+	width 10cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Auswahl der Starter, die zum Wiederholungslauf antreten
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+App
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fbox{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Screenshots/App/App_erster_Screen.png
+	height 10cm
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+App vor dem Verbindungsaufbau
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fbox{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Screenshots/App/App_Wahl_Funktion.png
+	height 10cm
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+App bei der Funktionswahl
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fbox{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Screenshots/App/Screenshot_2017-01-09-17-45-18.png
+	height 10cm
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+App im Startmodus bei Auswahl der Startnummer (Stoppmodus ähnlich)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fbox{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Screenshots/App/App_Strafzeiten-Eintrag.png
+	height 10cm
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+App beim Eintragen einer Strafzeit
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\noindent
+Protokolle
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Screenshots/Beispielprotokoll.PNG
+	width 17cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Protokoll eines Programmlaufs mit Beispielausgaben
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\noindent
+Sourcecode
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[caption={Hauptkonstruktor der Klasse 
+\backslash
+glqq MySQLConnection
+\backslash
+grqq , welche eine Verbindung zur Datenbank herstellt},     captionpos=b,languag
+e=JAVA,breaklines=true,basicstyle=
+\backslash
+scriptsize]
+\end_layout
+
+\begin_layout Plain Layout
+
+/**
+\end_layout
+
+\begin_layout Plain Layout
+
+* Hauptkonstruktor der Klasse
+\end_layout
+
+\begin_layout Plain Layout
+
+*
+\end_layout
+
+\begin_layout Plain Layout
+
+* @param host Datenbankhost (Standard: "localhost")
+\end_layout
+
+\begin_layout Plain Layout
+
+* @param port Datenbankport (Standard: "3306")
+\end_layout
+
+\begin_layout Plain Layout
+
+* @param db Datenbankname (Standard: "android_connect")
+\end_layout
+
+\begin_layout Plain Layout
+
+* @param user Datenbankbenutzername (Standard: "root")
+\end_layout
+
+\begin_layout Plain Layout
+
+* @param password Datenbankpasswort (Standard: leer)
+\end_layout
+
+\begin_layout Plain Layout
+
+*/
+\end_layout
+
+\begin_layout Plain Layout
+
+MySQLConnection(String host, String port, String db, String user, String
+ password, FXMLDocumentController doc) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	try {
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Verbindungsdaten speichern
+\end_layout
+
+\begin_layout Plain Layout
+
+		this.dbHost = host;
+\end_layout
+
+\begin_layout Plain Layout
+
+		this.dbPort = port;
+\end_layout
+
+\begin_layout Plain Layout
+
+		this.database = db;
+\end_layout
+
+\begin_layout Plain Layout
+
+		this.dbUser = user;
+\end_layout
+
+\begin_layout Plain Layout
+
+		this.dbPassword = password;
+\end_layout
+
+\begin_layout Plain Layout
+
+		// Datenbanktreiber für ODBC Schnittstellen aus der Library laden.
+\end_layout
+
+\begin_layout Plain Layout
+
+		//Resultat: im java.sql.DriverManager wird (statisch) der geladene Treiber
+ als Datenbanktreiber hinterlegt, dafür verantwortlich: Befehl im static-Teil
+ der Treiberdefinition, der bei Zugriff auf die Klasse ausgeführt wird
+\end_layout
+
+\begin_layout Plain Layout
+
+		//Treiber wird nur gefunden, wenn lib-Unterordner da ist!
+\end_layout
+
+\begin_layout Plain Layout
+
+		Class.forName("com.mysql.jdbc.Driver");
+\end_layout
+
+\begin_layout Plain Layout
+
+		//Verbindung zur ODBC-Datenbank android_connect herstellen und für Verwendung
+ speichern.
+\end_layout
+
+\begin_layout Plain Layout
+
+		// Es wird die JDBC-ODBC-Brücke verwendet.
+\end_layout
+
+\begin_layout Plain Layout
+
+		conn = DriverManager.getConnection("jdbc:mysql://" + dbHost + ": + dbPort
+ + "/" + database + "?" + "user=" + dbUser + "&" + "password=" + dbPassword);
+\end_layout
+
+\begin_layout Plain Layout
+
+		this.doc = doc;
+\end_layout
+
+\begin_layout Plain Layout
+
+	} catch (ClassNotFoundException e) {
+\end_layout
+
+\begin_layout Plain Layout
+
+		//aufgerufen, wenn Treiber nicht gefunden wird
+\end_layout
+
+\begin_layout Plain Layout
+
+	} catch (SQLException e) {             
+\end_layout
+
+\begin_layout Plain Layout
+
+		//aufgerufen, wenn keine Verbindung zur DB möglich
+\end_layout
+
+\begin_layout Plain Layout
+
+	}     
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{lstlisting}[caption={Methode 
+\backslash
+glqq selectTore
+\backslash
+grqq des Scriptes 
+\backslash
+glqq 
+\backslash
+url{Abfrage_Tore.php}
+\backslash
+grqq , welche alle Tore ermittelt, die der übergebenen Messstation zugeordnet
+ sind.},     captionpos=b,language=PHP,breaklines=true,basicstyle=
+\backslash
+scriptsize]
+\end_layout
+
+\begin_layout Plain Layout
+
+//Konfiguration einlesen
+\end_layout
+
+\begin_layout Plain Layout
+
+require_once("Konfiguration.php"); 
+\end_layout
+
+\begin_layout Plain Layout
+
+//Datenbankverbindung aufbauen 
+\end_layout
+
+\begin_layout Plain Layout
+
+$connection = mysqli_connect($host,$user,$passwort,$datenbank);
+\end_layout
+
+\begin_layout Plain Layout
+
+//Tore abfragen
+\end_layout
+
+\begin_layout Plain Layout
+
+selectTore($connection);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+//liest alle der übergebenen Station zugeordneten Tore aus der Datenbank
+ ein und gibt diese aus 
+\end_layout
+
+\begin_layout Plain Layout
+
+function selectTore ($connection) {
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Abfrage zum Auslesen aller Tore   
+\end_layout
+
+\begin_layout Plain Layout
+
+	$sqlStmt = "SELECT Wert FROM `allgemein` WHERE `Attribut` = 'Messstation_".$_GET
+["station"]."_Tore'";   
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Abfrage ausführen, Resultat in Variable result schreiben   
+\end_layout
+
+\begin_layout Plain Layout
+
+	$result =  mysqli_query($connection,$sqlStmt);   
+\end_layout
+
+\begin_layout Plain Layout
+
+	//falls Abfrage erfolgreich...
+   
+\end_layout
+
+\begin_layout Plain Layout
+
+	if ($result = $connection->query($sqlStmt)) {   	
+\end_layout
+
+\begin_layout Plain Layout
+
+		//für jede Zeile der Datenbankausgabe (nur 1 Zeile möglich, da Attribut
+ Primärschlüssel ist)...
+ 
+\end_layout
+
+\begin_layout Plain Layout
+
+		while ($row = $result->fetch_assoc()) { 		  
+\end_layout
+
+\begin_layout Plain Layout
+
+			//die Tore ermitteln...
+         
+\end_layout
+
+\begin_layout Plain Layout
+
+			$id = $row["Wert"];         
+\end_layout
+
+\begin_layout Plain Layout
+
+			//und ausgeben.
+         
+\end_layout
+
+\begin_layout Plain Layout
+
+			echo $id;         
+\end_layout
+
+\begin_layout Plain Layout
+
+		}       
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Ergebnisse leeren $result->free(); 
+\end_layout
+
+\begin_layout Plain Layout
+
+	//Verbindung schließen   
+\end_layout
+
+\begin_layout Plain Layout
+
+	closeConnection($connection); 
+\end_layout
+
+\begin_layout Plain Layout
+
+	} 
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+\noindent
+Eidesstattliche Erklärung
+\end_layout
+
+\begin_layout Standard
+\noindent
+Ich erkläre, dass ich die vorliegende Arbeit mit dem Titel 
+\begin_inset Quotes gld
+\end_inset
+
+Wettkampferfassung und -auswertung beim Kanusport mittels eines kostenlos
+ und einfach einrichtbaren Softwaresystems
+\begin_inset Quotes grd
+\end_inset
+
+ selbstständig, ohne unzulässige fremde Hilfe angefertigt und nur unter
+ Verwendung der angegebenen Literatur und Hilfsmittel verfasst habe.
+ Sämtliche Stellen, die wörtlich oder inhaltlich anderen Werken entnommen
+ sind, wurden unter Angabe der Quellen als Entlehnung kenntlich gemacht.
+ Dies trifft besonders auch auf Quellen aus dem Internet zu.
+ Gleichzeitig gebe ich das Einverständnis, meine Arbeit mittels einer Plagiatsso
+ftware überprüfen zu lassen.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\color white
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\color white
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{lp{2em}l}
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+hspace{5cm} && 
+\backslash
+hspace{4cm} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+cline{3-3}
+\end_layout
+
+\begin_layout Plain Layout
+
+ Jena, 15.01.2017     && Eric Ackermann  
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,385 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\RequirePackage[ngerman=ngerman-x-latest]{hyphsubst}
+\usepackage{caption}
+\usepackage{lmodern}
+\usepackage[bottom]{footmisc}
+\usepackage{setspace} 
+\onehalfspacing
+\hyphenation{Dreh-mo-men-ten-gleich-ge-wicht} 
+\newtheorem{defi}{Definition}[section]
+\usepackage{url}
+\usepackage{ucs}
+\PrerenderUnicode{öäüÖÄÜ}
+\makeatletter
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\usepackage{pdfpages}
+\usepackage{acronym}
+\usepackage{graphicx}
+\usepackage[colorlinks=false,
+pdfpagelabels,
+pdfstartview = FitH,
+bookmarksopen = true,
+bookmarksnumbered = true,
+linkcolor = black,
+plainpages = false,
+hypertexnames = false,
+citecolor = black] {hyperref}
+\setlength{\parindent}{0pt}
+\renewcommand{\nomname}{Glossar}
+\end_preamble
+\options intoc
+\use_default_options true
+\begin_modules
+eqs-within-sections
+tabs-within-sections
+figs-within-sections
+\end_modules
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 5
+\tocdepth 5
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{Roman}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+includepdf{Deckblatt.pdf}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Abkürzungsverzeichnis
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{acronym}[int]  
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+acro{int}{Integer}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{acronym}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList table
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{arabic} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Einleitung
+\end_layout
+
+\begin_layout Standard
+Hallo.
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "Hallo"
+description "Begrüßung im informellen Sprachgebrauch."
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
+set_width "auto"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintAll"
+bibfiles "Quellen"
+options "bibtotoc,ALPHADIN"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Alle Abbildungen wurden, sofern nicht anders angegeben, selbst fotografiert
+ oder auf Grundlage realer Vorlagen im Vektorgrafikprogramm Inkscape gezeichnet.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Eidesstattliche Erklärung
+\end_layout
+
+\begin_layout Standard
+\noindent
+Ich erkläre, dass ich die vorliegende Arbeit mit dem Titel 
+\begin_inset Quotes gld
+\end_inset
+
+Wettkampferfassung und -auswertung beim Kanusport mittels eines kostenlos
+ und einfach einrichtbaren Softwaresystems
+\begin_inset Quotes grd
+\end_inset
+
+ selbstständig, ohne unzulässige fremde Hilfe angefertigt und nur unter
+ Verwendung der angegebenen Literatur und Hilfsmittel verfasst habe.
+ Sämtliche Stellen, die wörtlich oder inhaltlich anderen Werken entnommen
+ sind, wurden unter Angabe der Quellen als Entlehnung kenntlich gemacht.
+ Dies trifft besonders auch auf Quellen aus dem Internet zu.
+ Gleichzeitig gebe ich das Einverständnis, meine Arbeit mittels einer Plagiatsso
+ftware überprüfen zu lassen.
+\end_layout
+
+\begin_layout Standard
+
+\color white
+.
+\end_layout
+
+\begin_layout Standard
+
+\color white
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tabular}{lp{2em}l}
+\end_layout
+
+\begin_layout Plain Layout
+
+ 
+\backslash
+hspace{5cm} && 
+\backslash
+hspace{4cm} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+cline{3-3}
+\end_layout
+
+\begin_layout Plain Layout
+
+ Jena, 5.10.2016     && Eric Ackermann  
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tabular} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

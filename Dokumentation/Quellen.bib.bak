@@ -1,0 +1,108 @@
+% Encoding: ISO-8859-1
+
+@Online{Info_Preise,
+  author = {{ProTime Sportservice GmbH}},
+  title  = {Preisliste},
+  year   = {26.12.2016 16:53},
+  url    = {http://www.zeitmessung.de/preisliste.html},
+}
+
+@Online{InfoSysteme,
+  author = {{IMAS}},
+  title  = {Versionen im Vergleich},
+  year   = {26.12.2016 17:54},
+  url    = {http://www.imas-sport.com/index.php/de/zeitmessung},
+}
+
+@Online{Komplettsystem,
+  author = {{IMAS}},
+  title  = {Komplettsystem},
+  year   = {26.12.2016 16:00},
+  url    = {http://www.imas-sport.com/index.php/de/zeitmessung/komplettsystem},
+}
+
+@Online{Basissystem,
+  author = {{IMAS}},
+  title  = {Basissystem},
+  year   = {26.12.2016 15:53},
+  url    = {http://www.imas-sport.com/index.php/de/zeitmessung/basissystem},
+}
+
+@Online{Bild_Laptop,
+  author = {Stéphanie Walter},
+  title  = {Mobile and desktop device template},
+  year   = {26.12.2016 17:44},
+  url    = {https://upload.wikimedia.org/wikipedia/commons/d/d4/Devicetemplates_laptop-01.png},
+}
+
+@Online{Bild_Smartphone,
+  author = {{Pixabay}},
+  title  = {Android Smartphone Clipart},
+  year   = {26.12.2016 17:48},
+  url    = {https://cdn.pixabay.com/photo/2016/03/31/19/26/android-1295022_960_720.png},
+}
+
+@Online{Bild_WLAN,
+  author = {{Canopus49}},
+  title  = {Wi-Fi icon in pale blue},
+  year   = {26.12.2016 17:53},
+  url    = {https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/WIFI_icon.svg/2000px-WIFI_icon.svg.png},
+}
+
+@Online{Bild_boeser_Roboter,
+  author = {{Google Inc.}},
+  title  = {Android Robot},
+  year   = {26.12.2016 18:23},
+  url    = {https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Angry_robot.svg/2000px-Angry_robot.svg.png},
+}
+
+@Online{WikMariaDB,
+  author = {{Wikipedia}},
+  title  = {MariaDB},
+  year   = {26.12.2016 18:33},
+  url    = {https://de.wikipedia.org/wiki/MariaDB},
+}
+
+@Online{WikXAMPP,
+  author = {{Wikipedia}},
+  title  = {XAMPP},
+  year   = {26.12.2016 18:37},
+  url    = {https://de.wikipedia.org/wiki/XAMPP},
+}
+
+@Online{Info_Crash,
+  author = {Alex Lockwood},
+  title  = {Why Ice Cream Sandwich Crashes your App},
+  year   = {28.12.2016 15:56},
+  url    = {http://www.androiddesignpatterns.com/2012/06/app-force-close-honeycomb-ics.html},
+}
+
+@Online{Info_POI,
+  author = {{Wikipedia}},
+  title  = {Apache POI},
+  year   = {31.12.2016 17:41},
+  url    = {https://de.wikipedia.org/wiki/Apache_POI},
+}
+
+@Online{WLAN_Verstaerker,
+  author = {{WLAN-SHOP24.de}},
+  title  = {PowerMicrowave WIFIPA24508W},
+  year   = {04.01.2017 18:30},
+  url    = {https://www.wlan-shop24.de/PowerMicrowave-WIFIPA24508W-24-GHz-WLAN-Verstaerker-max-8000mW-5dBi-Antenne},
+}
+
+@Online{s7_repeater,
+  author = {Jonas Schaap},
+  title  = {Samsung Galaxy S7 als WLAN-Verstärker nutzen - so geht's},
+  year   = {04.01.2017 18:36},
+  url    = {http://www.usp-forum.de/artikel-ratgeber/13068-samsung-galaxy-s7-wlan-verst-rker-nutzen-so-geht-s.html},
+}
+
+@Online{Repeater_Akku,
+  author = {{INSTAR GmbH}},
+  title  = {IN-Route P52},
+  year   = {04.01.2017 19:13},
+  url    = {https://www.amazon.de/INSTAR-Route-P52-Powerbank-Ladestation/dp/B00V9MA8SW},
+}
+
+@Comment{jabref-meta: databaseType:biblatex;}

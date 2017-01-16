@@ -1,0 +1,1029 @@
+%% LyX 2.2.0 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[11pt,ngerman,intoc]{article}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=2.5cm,bmargin=2cm,lmargin=2.5cm,rmargin=2.5cm}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+\usepackage{color}
+\usepackage{array}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{nomencl}
+% the following is useful when we have the old nomencl.sty package
+\providecommand{\printnomenclature}{\printglossary}
+\providecommand{\makenomenclature}{\makeglossary}
+\makenomenclature
+\onehalfspacing
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\numberwithin{equation}{section}
+\numberwithin{table}{section}
+\numberwithin{figure}{section}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\RequirePackage[ngerman=ngerman-x-latest]{hyphsubst}
+\usepackage{caption}
+\usepackage{lmodern}
+\usepackage[bottom]{footmisc}
+\usepackage{setspace} 
+\onehalfspacing
+\hyphenation{Dreh-mo-men-ten-gleich-ge-wicht} 
+\newtheorem{defi}{Definition}[section]
+\usepackage{url}
+\usepackage{ucs}
+\PrerenderUnicode{öäüÖÄÜ}
+\makeatletter
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\usepackage{pdfpages}
+\usepackage{acronym}
+\usepackage{graphicx}
+\usepackage[colorlinks=false,
+pdfpagelabels,
+pdfstartview = FitH,
+bookmarksopen = true,
+bookmarksnumbered = true,
+linkcolor = black,
+plainpages = false,
+hypertexnames = false,
+citecolor = black] {hyperref}
+\setlength{\parindent}{0pt}
+\renewcommand{\nomname}{Glossar}
+\usepackage{comment}
+
+\makeatother
+
+\usepackage{babel}
+\usepackage{listings}
+\lstset{language=Java,
+numbers=left,
+numberstyle={\tiny},
+numbersep=5pt,
+literate={{Ö}{{\"O}}1 {Ä}{{\"A}}1 {Ü}{{\"U}}1 {ß}{{\ss}}1 {ü}{{\"u}}1 {ä}{{\"a}}1 {ö}{{\"o}}1 {~}{{\textasciitilde}}1},
+basicstyle={\small},
+showstringspaces=false}
+\begin{document}
+\pagenumbering{Roman}
+\includepdf{Deckblatt.pdf}
+
+\section*{Kurzfassung}
+
+Professionelle Zeitmesssysteme für den Kanusport sind teuer und meist
+kompliziert einzurichten. Kleinere Vereine, die sich ein solches System
+nicht leisten können, sind auf Papierlisten für Strafzeiten und die
+Zeitmessung per Hand angewiesen. Dies bedeutet einen hohen Zeit- und
+Organisationsaufwand bei Training und Wettbewerben.
+
+\noindent Ziel dieses Projekts ist die Entwicklung eines Softwaresystems,
+welches auf vorhandener bzw. kostengünstig anzuschaffender Hardware
+funktioniert, einfach zu bedienen ist und die Zeitmessung für Kanu-Sportvereine
+optimiert. Im Mittelpunkt steht die Entwicklung einer Android-App,
+die das Eintragen von Strafzeiten sowie Start- und Zielzeit für die
+einzelnen Startnummern und Tore mit einem Klick leistet. Die in der
+App erhobenen Daten werden über ein lokales WLAN-Netzwerk unter Zuhilfenahme
+eines lokalen PHP- und MySQL- kompatiblen Servers mit einem zentralen
+Laptop synchronisiert. Auf diesem läuft eine eigens entwickelte Desktopanwendung,
+die alle Daten zusammenführt, jederzeit anzeigt und nach dem Wettkampf
+mit einem Klick übersichtlich auswertet.
+
+\pagebreak{}
+
+\section*{Abkürzungsverzeichnis}
+
+\begin{acronym}[HTTP]  
+\acro{PHP}{Hypertext PreProcessor}
+\acro{SQL}{Structured Query Language}
+\acro{IP}{Internet-Protokoll}
+\acro{HTTP}{Hypertext Transfer Protocol}
+\acro{IDE}{Integrated Development Environment}
+\acro{POI}{Poor Obfuscation Implementation}
+\end{acronym}
+
+\pagebreak{}
+
+\tableofcontents{}
+
+\pagebreak{}
+
+\listoffigures
+
+\pagebreak{}
+
+\listoftables
+\pagebreak{}
+
+\pagenumbering{arabic} 
+
+\section{Einleitung}
+
+\subsection{Zeitmessung im Kanusport/Problemstellung}
+\begin{itemize}
+\item Notwendigkeit der Messung und Zusammenführung von Zeiten beim Kanuslalom:
+Laufzeiten von Start zu Ziel sowie Strafzeiten beim falschen Passieren
+von Toren erheben, zuordnen zu Starter, Kategorie und Lauf, vergleichen...
+\item bei jedem Wettkampf und im Training auch bei kleinen Vereinen nötig,
+so auch beim Jenaer Kanu- und Ruderverein und beim Kanu-Slalom-Teil
+des SV Schott
+\item dort: Erhebung der Strafen an 18-25 Messtoren einer ca. 200 m langen
+Strecke durch Helfer an bis 8 Messstationen bei 27 Rennen (festgelegt
+durch z.B. Bootstyp und Alter der Sportler) mit ggf. dutzenden Startern
+\textendash > hoher Organisationsaufwand in Vorbereitung und Wettkampfauswertung
+\item bisher: Aufschreiben von Strafen per Hand, Auswertung über Excel-Makros
+\item $\longrightarrow$Zeitaufwand, Organisationsaufwand, Fehleranfälligkeit
+\item Existenz von kommerziellen Systemen zur automatischen Zeiterfassung
+\item vollwertige Anlage z.B. mit ,,Time System Professional`` von IMAS\cite{Komplettsystem,InfoSysteme}
+$\longrightarrow$ Zeiterfassung per Kamera (Ziel, siehe Abbildung
+\ref{fig:Zeitmesssystem-Basic}) und optional automatischer Startanlage
+bzw. Startkoffer (500¤), Erfassung von Zwischenzeiten (nicht nötig),
+Verwaltung der Starter per Software, Livestream der Werte ins Internet,
+Vernetzung der Geräte per LAN oder WLAN
+\end{itemize}
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[height=5cm]{laptop_600}
+\par\end{centering}
+\caption{Zeitmesssystem ,,Basic`` von IMAS, vgl. \cite{Basissystem}\label{fig:Zeitmesssystem-Basic}}
+
+\end{figure}
+
+\begin{itemize}
+\item aber: Fehlen der Synchronisation mit Strafzeiten, keine Erfassung
+dieser
+\item bis zu 6 Laptops benötigt mit jew. 1 Bediener
+\item IMAS: Preis auf Anfrage, da optionale kostenpflichtige Zusatzgeräte
+wie eine Liveanzeige am Wettbewerbsort
+\item Vergleichbares System von Lynx kostet aber bis zu 41.595,- ¤ zzgl.
+MwSt, in der günstigsten Variante noch 11.995,- ¤ zzgl. MwSt\cite{Info_Preise};
+ebenfalls keine Zusynchronisation von Strafzeiten
+\item Zusammenfassung: kein kostengünstiges Angebot für kleine Vereine gefunden
+\item kommerzielle Systeme bieten auf der einen Seite meist mehr Funktionen
+als grundlegend nötig, daher teuer
+\item auf der anderen Seite: lassen wichtige Features (Strafzeiten) vermissen
+\item Grund: Systeme für Kanu-Sprint gebaut, bei dem Starter alle gleichzeitig
+starten und eine Strecke möglichst schnell entlangfahren müssen, die
+gerade ist
+\item in Jena: Kanuslalom \textendash > Starter starten nacheinander, müssen
+Strecke mit Toren präzise folgen \textendash > etwas andere Anforderung
+\item Frage der Arbeit: Ist das Problem mit kostenloser, selbst entwickelter
+Software und günstiger Hardware zu lösen?
+\end{itemize}
+
+\subsection{Konzeption}
+\begin{itemize}
+\item Problem der Starterverwaltung, Wettkampfzeiterhebung, Strafzeitensynchronisation
+und Wettkampfauswertung möglichst günstig und einfach zu lösen
+\item dafür: Verwendung von Android-Smartphones (fast jeder besitzt eines),
+einem Windows-Rechner (auch sehr wahrscheinlich vorhanden), gratis-Software
+\item Vernetzung der Geräte mit einem drahtlosen Netzwerk
+\end{itemize}
+\pagebreak{}
+
+\section{Vorgehensweise}
+
+\subsection{Grundprinzip der Vernetzung der verschiedenen Geräte}
+\begin{itemize}
+\item zentraler Laptop: wichtigstes Gerät im etwickelten Softwaresystem
+\item Windows-Gerät; nötige Software auch auf älteren Geräten bis zu Win
+XP lauffähig, Kompatibilität zu Linux- oder Apple-Geräten im Rahmen
+der grundlegenden Funktionalität gegeben (ggf. Verlust von Zusatzfunktionen)
+\item Laptop baut WLAN für Vernetzung der Geräte auf (wenn er genug Reichweite
+hat, sonst Repeater), aber: kein Internetzugriff benötigt
+\end{itemize}
+\begin{figure}[H]
+\begin{centering}
+\includegraphics{Schema_Vernetzung}
+\par\end{centering}
+\caption{Schema der Vernetzung der verschiedenen Geräte, vgl. \cite[(Illustrationen)]{Bild_boeser_Roboter,Bild_Laptop,Bild_Smartphone,Bild_WLAN}\label{fig:Schema-der-Vernetzung}}
+
+\end{figure}
+
+\begin{itemize}
+\item zentral im Projekt steht MySQL\nomenclature{MySQL}{Sprache, die zur Erzeugung und Anlegung von Datenbanken genutzt wird.}-DB,
+die alle Daten speichert (siehe Abbildung \ref{fig:Schema-der-Vernetzung})
+\item Datenbank wird durch MariaDB\nomenclature{MariaDB}{\glqq freies, relationales Open-Source-Datenbank­verwaltungs­system, das durch eine Abspaltung (Fork) aus MySQL entstanden ist\grqq \cite{WikMariaDB}}
+verwaltet (freier Ableger von MySQL mit gleicher technischen Grundlage)
+\item parallel zu DB läuft ein PHP-Server, hier der Apache Webserver
+\item Helfer mit Smartphones in ihren Messstationen, auf Smartphones wird
+Android-App ausgeführt, die Start-Stopp oder Eintragen von Strafzeiten
+ermöglicht
+\item App kommuniziert über den PHP-Server mit der Datenbank
+\item auf dem Hauptrechner läuft in JavaFX geschriebenes Hauptprogramm
+\item verbindet sich direkt mit DB, kann über sie mit App synchronisieren
+\item verwaltet Starter und Rennen, ermittelt während eines Laufs immer
+die aktuellen Laufzeiten der laufenden Starter, wertet am Ende den
+Wettkampf aus
+\end{itemize}
+
+\subsection{Aufbau und Funktionsweise der verwendeten MySQL-Datenbank}
+\begin{itemize}
+\item MariaDB kann nur auf Webserver ausgeführt werden $\longrightarrow$
+zentraler Laptop, der hier auch als Server fungiert, wird zum Anlegen
+eines Webservers genutzt
+\item dafür: Installation der Software XAMPP\nomenclature{XAMPP}{\glqq XAMPP ermöglicht das einfache Installieren und Konfigurieren des Webservers Apache mit der Datenbank MariaDB bzw. SQLite und den Skriptsprachen Perl und PHP (mit PEAR). \grqq \cite{WikXAMPP}}
+$\longrightarrow$ legt Webserver an, der Verwalten einer Datenbank
+und Ausführung von PHP ermöglicht
+\item Webserver bleibt rein lokal, kann innerhalb des lokalen Netzes adressiert
+werden, aber nicht vom Internet aus (Datensicherheit), solange kein
+Gerät eine Internet-Verbindung besitzt
+\item direkte Internet-Zugriffsmöglichkeit nicht zu empfehlen, da XAMPP
+für einfachen und schnellen lokalen Betrieb konzipiert ist und nicht
+für den Betrieb als echter Server $\longrightarrow$ evtl. Sicherheitslücken
+\item DB (siehe Abbildung \ref{fig:=0000DCbersicht-DB}) enthält genannte
+Tabellen: ,,namen``, ,,allgemein``, für jede Messstation 1, sowie
+eine für die Auswertung (nicht im Bild)
+\end{itemize}
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=16cm]{Screenshots/DB_overview.PNG}
+\par\end{centering}
+\caption{Übersicht über die Datenbank ,,android\_connect`` und ihre Tabellen
+in einer Beispielbelegung, Darstellung durch verwendetes Datenbankverwaltungsprogramm
+PHPMyAdmin (Teil von XAMPP)\label{fig:=0000DCbersicht-DB}}
+
+\end{figure}
+
+\begin{itemize}
+\item Tabelle ,,allgemein``: speichert Informationen, die für die Initialisierung
+und korrekte Eintragung der Handy-App relevant sind
+\item namentlich (siehe Abbildung \ref{fig:Beispielbelegung-allgemein}):
+ob der erste Starter bereits gestartet ist $\longrightarrow$ ab dann
+Eintragung von Strafen möglich in App, Nummer des aktuellen Laufs
+(wird zur Orientierung in der App eingeblendet), die Tore, welche
+zu den einzelnen Messstationen gehören, die Startzeit des Wettkampfes
+als Java-Timestamp und die Anzahl der Messstationen, damit Benutzer
+der App sich an jede davon anmelden können
+\end{itemize}
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=10cm]{Screenshots/DB_Tabelle_allgemein.PNG}
+\par\end{centering}
+\caption{Beispielbelegung der Datenbanktabelle ,,allgemein``\label{fig:Beispielbelegung-allgemein}}
+
+\end{figure}
+
+\begin{itemize}
+\item Tabelle ,,namen`` (siehe Abbildung \ref{fig:Beispielbelegung-namen}):
+speichert Namen und Startnummer der Starter für Anzeige oder Auswahl
+der Starter in der App, eine ggf. von der App per Script eingetragene
+Start- oder Zielzeit als PHP-Timestamp sowie eine Zusammenfassung
+der einzelnen Läufe für eine spätere Auswertung als String, zudem:
+Information, welchen Lauf der Wiederholungslauf ersetzt, enthalten
+\end{itemize}
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=17cm]{Screenshots/DB_Tabelle_Namen.PNG}
+\par\end{centering}
+\caption{Beispielbelegung der Datenbanktabelle ,,namen``\label{fig:Beispielbelegung-namen}}
+
+\end{figure}
+
+\begin{itemize}
+\item Tabellen für jew. Messtore (Nummer in Computerzählweise ab 0, siehe
+Abbildung): speichert an diesem Tor je die Startnummer und ihre Strafzeit
+\end{itemize}
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=10cm]{Screenshots/DB_Tabelle_Messtor_0.PNG}
+\par\end{centering}
+\caption{Beispielbelegung der Tabelle eines Messtores}
+\end{figure}
+
+\begin{itemize}
+\item Tabelle ,,auswertung`` wie Tabelle ,,namen``, nur dass sie alle
+Startnummern enthält und bei allen die Kategorie mit angegeben ist;
+keine Spalten für Start- und Zielzeit
+\item Startnummer in allen genannten Tabellen der Primärschlüssel
+\end{itemize}
+
+\subsection{Das Hauptprogramm}
+\begin{itemize}
+\item Programm entwickelt mit NetBeans IDE 8.2, läuft in JVM \textendash >
+prinzipiell zu allen Betriebssystemen kompatibel, Ausführung unter
+Windows empfohlen
+\item läuft auf Hauptrechner, 1 Person zur Bedienung ausreichend, muss nur
+je nächsten Lauf/nächste Kategorie starten
+\item über WLAN indirekt mit App verbunden
+\end{itemize}
+
+\subsubsection{Features}
+\begin{itemize}
+\item Tabelle \ref{tab:Features-des-Hauptprogramms} zeigt alle Features
+des Hauptprogramms zusammengefasst; bei Interesse an Umsetzung steht
+Quellcode zur Verfügung, entsprechende Klassen und Methoden sind zugeordnet
+\end{itemize}
+\begin{table}[H]
+\begin{centering}
+\begin{tabular}{|>{\centering}m{7cm}|>{\centering}m{10cm}|}
+\hline 
+\textbf{Feature} & \textbf{Realisierung mittels Java-Klasse(n) und Methode(n)}\tabularnewline
+\hline 
+\hline 
+Einlesen von Starterdaten aus Excel-Dateien & Prozedur ConfigWindowController.readExcel(), Klasse ExcelReader, Library
+Apache POI\tabularnewline
+\hline 
+\hline 
+Anzeige, Veränderbarkeit eingelesener Daten & Klasse ConfigWindowController, Klasse javafx.scene.control.TableView
+(und assoziierte Klassen), Klasse Person, Klasse EditabletableCell\tabularnewline
+\hline 
+\hline 
+automatisches Leeren der Datenbank & Prozedur MySQLConnection.reset\tabularnewline
+\hline 
+\hline 
+automatisches Starten und Stoppen von XAMPP & Prozeduren ConfigWindowController.xampp\_start, xampp\_stopp\tabularnewline
+\hline 
+\hline 
+automatisches Kopieren von nötigen PHP-Skripten, Überschreiben der
+PHP-Konfiguration & Prozedur ConfigWindowController.overridePHPConfig\tabularnewline
+\hline 
+\hline 
+Erstellen von Sicherungsprotokollen & Prozedur MySQLConnection.werteFesthalten\tabularnewline
+\hline 
+\hline 
+Prüfen des Netzwerkzugriffs, Ermittlung der eigenen IP-Adresse & Klasse NetworkUtil\tabularnewline
+\hline 
+\hline 
+Zugriff auf MySQL-Datenbank (allgemein) & Klasse MySQLConnection, Klasse com.mysql.jdbc.Driver (Teil der verwendeten
+Library), Klasse java.sql.Statement (für eigentliche Abfragen)\tabularnewline
+\hline 
+\hline 
+Verwaltung der Starter, Zuordnung zu Kategorien, Start dieser & Klasse ConfigWindowController\tabularnewline
+\hline 
+\hline 
+Verwaltung der Daten der einzelnen Läufe, Start und Stopp dieser & Klasse FXMLDocumentController\tabularnewline
+\hline 
+\hline 
+Anzeige der aktuellen Laufaten der jeweiligen Starter & Klasse MySQLConnection, Klasse javafx.scene.control.ListView\tabularnewline
+\hline 
+\hline 
+Anzeige der Daten im angegebenen Intervall & Klasse java.util.concurrent.ScheduledExecutorService, Klasse java.util.concurrent.ScheduledFuture,
+Klasse java.lang.Runnable\tabularnewline
+\hline 
+\hline 
+Auswertung der Rennen & Prozedur ConfigWindowController.printResults, Funktion MySQLConnection.getAuswertung\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+\caption{Features des Hauptprogramms ,,Android\_Connector``\label{tab:Features-des-Hauptprogramms}}
+\end{table}
+
+
+\subsubsection{Anlegen und Verwalten der Datenbank}
+\begin{itemize}
+\item genereller Verbindungsaufbau zur Datenbank: im Konstruktor der Klasse
+MySQLConnection
+\item Konstruktor speichert übergebene Konfigurationswerte global und legt
+Instanz der Klasse java.sql.Connection namens conn an, das eine Verbindung
+zur DB herstellen kann \textendash > Verbindung zur DB ab jetzt möglich,
+SQL-Abfragen können ausgeführt werden
+\item 2 Arten von Abfragen: Schreibafragen, die z.B. über Befehl CREATE
+eine neue Tabelle anlegen oder über UPDATE Werte in einer Tabelle
+ändern, und Leseabfragen, die ein Ergebnis liefern sollen
+\item Instanz conn von java.sql.Connection stellt Methode createStatement
+bereit, das Instanz des Interfaces java.sql.Statement zurückgibt
+\item Klasse Statement stellt Methode execute bereit, welche einen übergebenen
+String als Datenbankabfrage in der adressierten Datenbank ausführt
+(Schreibzugriff)
+\item zudem: Methode executeQuery, welche übergebene SQL-Abfrage in DB ausführt
+und Instanz von java.sql.ResultSet zurückgibt
+\item dieses: repräsentiert von Datenbank erzeugte Antworttabelle, kann
+Zeilenweise gelesen werden, Zugriff auf einzelne Spalten und Speicherung
+im String dann auch möglich
+\end{itemize}
+\begin{comment}
+
+\subsubsection{Verwaltung weiterer Daten}
+\begin{itemize}
+\item Gesamtheit aller Starterdaten bleibt während des Programmablaufs in
+javafx.collections.ObservableList namens PersonData gespeichert, die
+der Tabelle im ConfigWindow zugeordnet ist, Klasse Person repräsentiert
+dabei die Starter
+\item Konfigurationsdaten werden in Instanz von ConfigWindowController gespeichert,
+die beim Wechsel der Anzeige behalten und bei erneutem Aufruf nach
+Kategorieende wieder gelesen werden, um ConfigWindow wiederherstellen
+zu können
+\item zudem: Übergabe der noch nicht gestarteten Kategorien über die Instanz,
+damit Programm ,,weiß``, welche Kategorien noch zu starten sind,
+wenn das ConfigWindow wieserhergestellt wird
+\item Start- und Stoppzeiten, welche über die Buttons erhoben wurden, sind
+nur lokal in einem Array von Instanzen von java.util.Calendar gespeichert;
+ausgelesene Startzeiten aus der DB von der App werden ebenfalls dazu
+konvertiert \textendash > Programm ,,weiß``, wer noch nicht gestartet
+und wer schon fertig ist; schneller, als bei jedem Starter immer die
+Startzeiten aus der DB auslesen und umrechnen zu müssen
+\item lokales zweidimensionales int-Array im FXMLDocumentController, das
+für jedes Tor (1. Index) und jeden Starter (2. Index) die Strafen
+an den Toren speichert \textendash > Beschleunigung der Auswertung 
+\item Fenster enthalten meist auch Instanzen der anderen Laufklassen sowie
+des Programmfensters (alle Fenster teilen 1 Stage), um Werte übergeben,
+ggs. Methoden aufrufen oder Aktionen auslösen zu können
+\end{itemize}
+\end{comment}
+
+\subsubsection{Datenverarbeitung und Auswertung}
+\begin{itemize}
+\item Ende des Programmlaufs wird dadurch erkannt, dass keine weiteren startbaren
+Kategorien verbleiben
+\item dann: zunächst Aufruf der Prozedur printResults im ConfigWindowController,
+diese ruft Methode getAuswertung von MySQLConnection auf
+\item liest Laufzusammenfassungen aus Tabelle ,,auswertung`` der Datenbank
+aus, ersetzt Läufe ggf. durch den Wiederholungslauf (wie angegeben),
+gibt Array mit allen Werten aller Starter zurück
+\item printResults nimmt nun Laufzusammenfassungen auseinander, extrahiert
+reine Laufzeit, Gesamtstrafen, Gesamtlaufzeit und die Strafen an den
+einzelnen Toren
+\item Library Apache POI\nomenclature{Apache POI}{\glqq POI ist Open-Source-Software, die Java-APIs zum Lesen und Schreiben von Dateien im Dateiformat von Microsoft Office wie z. B. Word und Excel bereitstellt. \grqq \cite{Info_POI}}
+wird verwendet, um daraus eine Excel-Datei (siehe Abbildung \ref{fig:Auswertung-Datei})
+zu erzeugen; dabei wird für jede Kategorie eine Mappe angelegt, die
+Angaben für jeweilige Starter (aus der HashMap gelesen) enthält
+\item Auswertung nun möglich durch Makro oder z.B. durch Sortierung
+\end{itemize}
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=15cm]{Screenshots/Auswertung.PNG}
+\par\end{centering}
+\caption{Ausschnitt aus einer Auswertungsdatei mit Beispieldaten, dargestellt
+von LibreOffice\label{fig:Auswertung-Datei}}
+
+\end{figure}
+
+
+\subsection{Die Android-App}
+\begin{itemize}
+\item Android-App, entwickelt mit Android Studio, der offiziellen IDE von
+Google
+\item verwendete Programmiersprache: Java, Interpretation auf Smartphone
+durch Dalvik VM
+\item lauffähig ab Android 2.3.3 auf allen Smartphones und Tablets mit WLAN
+\item läuft im Wettbewerb auf mehreren Geräten parallel
+\end{itemize}
+
+\subsubsection{Funktionen}
+\begin{itemize}
+\item Tabelle \ref{tab:Features-der-App} zeigt alle Features der App zusammengefasst;
+bei Interesse an Umsetzung steht Quellcode zur Verfügung, entsprechende
+Klassen und Methoden sind zugeordnet
+\end{itemize}
+\begin{table}[H]
+\begin{centering}
+\begin{tabular}{|>{\centering}m{7cm}|>{\centering}m{10cm}|}
+\hline 
+\textbf{Feature} & \textbf{Realisierung mittels}\tabularnewline
+\hline 
+\hline 
+Verbindungsaufbau zur Datenbank über den PHP-Server & Activity ConnectionActivity, Klasse HTTP\_Connection, Interface AsyncResponse,
+PHP-Skript \url{Abfrage_Stationen.php}\tabularnewline
+\hline 
+\hline 
+Anzeige des aktuellen Laufs & Klasse HTTP\_Connection, Interface AsyncResponse, PHP-Skript \url{Abfrage_Lauf.php}\tabularnewline
+\hline 
+\hline 
+Handstarten eines ausgewählten Starters & Activity StartActivity, Klasse HTTP\_Connection, Interface AsyncResponse,
+PHP-Skript \url{Abfrage_Startnummern.php}, PHP-Skript \url{Startzeit_eintragen.php}\tabularnewline
+\hline 
+\hline 
+Handstoppen eines ausgewählten Starters & Activity StoppActivity, Klasse HTTP\_Connection, Interface AsyncResponse,
+PHP-Skript \url{Abfrage_Startnummern.php}, PHP-Skript \url{Zielzeit_eintragen.php}\tabularnewline
+\hline 
+\hline 
+Anzeigen der vergangenen Zeit seit Wettbewerbsstart & Klasse HTTP\_Connection, Interface AsyncResponse, PHP-Skript \url{Abfrage_Startzeit.php},
+Klasse Thread, Instanz ,,uhr``\tabularnewline
+\hline 
+\hline 
+Auswahl der aktuellen Startnummer und ihren Strafen an den lokalen
+Toren & Activity MainActivity, Klasse android.widget.Spinner, Klasse android.widget.TableLayout\tabularnewline
+\hline 
+\hline 
+Eintragen der gewählten Strafzeiten an den gewählten Toren für die
+gewählte Startnummer & Methode MainActivity.onClick, Klasse HTTP\_Connection, Interface AsyncResponse,
+PHP-Skript \url{Zeit_eintragen.php}\tabularnewline
+\hline 
+\end{tabular}
+\par\end{centering}
+\caption{Features der App ,,Android Connector App HTTP``\label{tab:Features-der-App}}
+\end{table}
+
+
+\subsubsection{Umsetzung des Verbindungsaufbaus}
+\begin{itemize}
+\item Android: keine Möglichkeit, direkt auf MySQL-DB auf fremdem Gerät
+zuzugreifen
+\item aber: Fähigkeit, GET-Anfragen zu senden und zu empfangen
+\item Problem dabei: Anfragen dürfen ab Android 3.0 nicht (mit einfachem
+Code) auf Main- oder UI-Thread\nomenclature{UI-Thread/Mainthread}{Thread, in dem die eigentlichen Activities der App ausgeführt werden. Jede App erhält bei Start einen solchen Thread zugewiesen. Seine Hauptaufgabe ist die Verknüpfung von Oberflächenelementen mit dem Programmcode, der ihren verschiedenen Events zugewiesen ist. Außerdem ist er für die Modifikation der Oberflächenelemente wie neue Texte in einem TextView verantwortlich.}
+ausgeführt werden, siehe hierzu \cite{Info_Crash}
+\item Hintergrund: längere Operationen wie Netzwerkzugriffe (mit Verzögerungen
+der Antwort) würden Thread blockieren und UI einfrieren
+\item $\longrightarrow$ Alternative: Klasse AsyncTask beerben (getan in
+Klasse HTTPConnection) $\longrightarrow$ Anlegen eines zweiten Threads,
+in dem die Abfrage durchgeführt werden kann; Thread läuft parallel
+zum Mainthread
+\item AsyncTask stellt Methode doInBackground bereit, welche auf diesem
+zweiten Thread läuft
+\item dort: Abfrage möglich, Klasse URLConnection unter Verwendung von URL{*}openConnection()
+kann nun die übergebene HTTP-Abfrage senden; diese: Anfrage an PHP-Skript
+auf dem Hauptrechner, zusammengesetzt \url{http://IP-Adresse des Rechners/AndroidConnectorAppHTTPScripts/Skriptname.php?Parameter="Wert"};
+Apache-Server nimmt entgegen, führt aus, gibt ein HTML-Document zurück,
+das ggf. die Ausgaben des Scriptes enthält
+\item Document kann als InputStream von Instanz von URLConnection eingelesen
+werden, wird als String zeilenweise gelesen
+\item danach: Aufruf der Methode onPostExecute im Asynctask, die im Mainthread
+läuft; Problem: Antwort muss nun zurück in Activity, das Abfrage ausgeführt
+hat
+\item dafür: Interface AsyncResponse $\longrightarrow$ enthält Methode
+processFinish $\longrightarrow$ HTTP\_Connection enthält Instanz
+des Interfaces, ruft Methode auf
+\item Interface von Activity implementiert, Überschreibung der leeren Standardmethode
+$\longrightarrow$ Antwort kann nun in Methode weiter verarbeitet
+und in Oberflächenelemente geschrieben werden
+\end{itemize}
+
+\subsection{Der PHP-Server}
+\begin{itemize}
+\item PHP-Server\nomenclature{PHP}{Abkürzung von Hypertext PreProcessor. Scriptsprache, die hauptsächlich auf Servern ausgeführt wird. Nimmt eine POST- oder GET-Request entgegen, verarbeitet sie z.B. mit einem Zugriff auf eine MySQL-Datenbank und gibt eine HTML-Seite an den anfragenden Client zurück.}
+läuft im Apache Webserver, der Teil von XAMPP ist, auf dem zentralen
+Laptop
+\item kann durch Anfragen (von den App-Instanzen) nur im lokalen Netzwerk
+angesprochen werden
+\item ,,htdocs``-Ordner\nomenclature{htdocs-Ordner}{\glqq HyperText Documents \grqq , Ordner in XAMPP. Dort liegen alle Skripte und HTML-Seiten, die über den Webserver aufgerufen werden können.}
+enthält erstellte Scripte, welche Anfragen der App verarbeiten, sowie
+DB-Konfiguration; wird alles von Hauptprogramm vor Start kopiert
+\end{itemize}
+
+\subsubsection{Aufgabe}
+\begin{itemize}
+\item Entgegennehmen von Anfragen der App, Eintragungen in DB
+\item Anfragen dabei in Form von GET
+\item Ausführung von SQL-Befehlen in Datenbank, die entweder einen Schreibzugriff
+oder eine Leseanfrage durchführen
+\item bei Leseanfrage: Antwort an App in Form einer HTML-Seite mit den angeforderten
+Informationen
+\end{itemize}
+
+\subsubsection{Umsetzung des Zugriffes auf die Datenbank}
+\begin{itemize}
+\item Code-Verweis
+\item Einlesen der Datei Konfiguration.php, welche die Konfiguration in
+Bezug auf Host, User, Passwort und Datenbankname enthält; wird vom
+Programm automatisch mit den aktuellen Werten überschrieben
+\item Aufbau eines Zugriffs
+\item String zusammensetzen, der den SQL-Befehl enthält mittels Zusammenfüger
+,,.``; übergebene Parameter in der Anfrage können per \$\_GET{[}'Parametername'{]}
+eingebaut werden (z.B. hier die Nummer der Station)
+\item Ausführung der Abfrage über mysqli\_query
+\item Rückgabe aus der DB ,,zeilenweise`` durchgehen, Werte aus den nötigen
+Spalten auslesen und per echo auf die Seite drucken
+\end{itemize}
+
+\subsection{Technische Umsetzung der Synchronisation}
+\begin{itemize}
+\item Hauptprogramm mit JavaFX geschrieben, kann unter Verwendung des Datenbanktreibers
+jdbc (externe JAR-Library) und dem java.sql-Package direkt auf Datenbank
+zugreifen
+\item $\longrightarrow$ leert anfangs die DB, legt Tabellen an, die benötigt
+werden, trägt Namen und Startnummern in Tabelle ,,namen`` ein sowie
+nötige Attribute wie die Zahl der Messstationen sowie die Zurodnung
+der Messtore zu den Stationen in die Tabelle ,,allgemein`` $\longrightarrow$
+nötigt für App, um Startnummernauswahl für Start/Stopp oder Anmeldung
+an Messstation zu realisieren
+\item Android-Clients mit App in ihren verschiedenen Activitys\nomenclature{Activity}{Entsprechung des Programmfensters unter Android. Eine App kann aus einer oder mehreren Activities bestehen, die sich gegenseitig starten.}
+zum Starten, Stoppen oder auch Strafzeiten eintragen; Android erlaubt
+keinen direkten MySQL-Zugriff
+\item $\longrightarrow$ aber: Verbindung zum Server über GET\nomenclature{GET-Anfragen}{Anfragen an Scripte eines PHP-Servers. Parameter werden dabei in der Webadresse übergeben. Nach dem Namen des aufzurufenden Scriptes, etwa \url{http://192.168.1.234/Zeit_eintragen.php}, stehen die Parameter in der Form \url{?station=0&starter=1&strafe=50}.}-Anfragen
+per WLAN über IP\nomenclature{IP}{Protokoll, das Anfragen und Antworten im World Wide Web zu bestimmten Servern oder Clients lenkt, die über eine IP-Adresse eindeutig identifiziert sind.}
+und HTTPS\nomenclature{Hypertext Transfer Protocol}{Netzwerkprotokoll, das für die Übertragung von Anfragen an Server und Antworten an Clients in Form von Hypertext (HTML) entwickelt wurde. }
+möglich (App braucht dafür IP des Servers)
+\item PHP-Server (hier Apache Webserver, Teil von XAMPP) kann Anfragen entgegennehmen
+und Abfragen in die DB ausführen
+\item $\longrightarrow$ App sendet anfangs Anfrage an Server, z.B., um
+die Zahl der Messstationen zu erfragen
+\item Server nimmt Anfrage entgegen, führt hier Script ,,\url{Abfrage_Stationen}``
+aus
+\item dieses sendet Anfrage an DB, die als Resultat die Zahl der Messtationen
+liefert
+\item PHP-Script gibt Zahl per Befehl ,,echo`` auf die vom Server zurückgegebene
+HTML-Seite aus
+\item App liest Seite per InputStream ein, trennt sie (bei mehreren, vom
+Server per ,,|`` getrennten) Anfragen per String.split auf und verarbeitet
+sie, z.B., indem die vorhandenen Messstationen zur Auswahl in einen
+Spinner gepackt werden
+\item bei bestimmten Aktionen wie dem Start entfällt die Verarbeitung der
+Rückgabe (sinnlos), PHP-Server übernimmt Zeiterhebungen bei Start
+und Stopp (kompensiert Abweichung der Uhren der Smartphones)
+\item Hauptprogramm $\longrightarrow$ Zusammenführung, Anzeige, Auswertung
+der Daten der DB und der eigenen, lokalen Daten (z.B. der anderen
+Starter)
+\item Programm liest anfangs Starter, Startnummern, Kategorien ein; bereitet
+DB für die einzelnen Kategorien vor
+\item Programm startet im vorgegebenen Intervall, standardmäßig jede Zehntelsekunde,
+die Zeitberechnungsprozedur
+\item diese ordnet ggf. Startzeiten von der App den Startern zu, markiert
+sie als gestartet, rechnet die Zeiten entsprechend um (PHP hat eigenes
+Timestampformat)
+\item dann: Auslesen der Stoppzeiten aus der DB, die genau wie Startzeiten
+behandelt werden
+\item Auslesen, Aufsummieren, Ausgaben der Strafen aus der DB zu Startern
+\item Programm erkennt automatisch Laufende, sichert ggf. Daten, bietet
+Möglichkeit an, nächsten Lauf/Kategorie zu starten
+\item bei Ende letzter Kategorie: Programm erzeugt Excel-Datei mit Auswertung
+\end{itemize}
+
+\subsection{Beschreibung des Ablaufs einer Verwendung des Softwaresystems}
+\begin{itemize}
+\item zuerst: Öffnen des Hauptprogramms 
+\item erst Start des ConfigWindows, das Starter und weitere Konfigurationsdaten
+einliest, kann Starter aus Excel-Tabelle auslesen oder hier eingeben
+\item Klick auf Weiter oder Schließen des Fensters: Frage der Kategorie,
+die laufen soll; Öffnen des zweiten Fensters, das die Läufe verwaltet
+\item Start/Stopp von Startern hier möglich, aber unpräzise; Feature in
+der App enthalten
+\item Fenster zeigt jederzeit an, wer auf der Strecke ist, dessen aktuelle
+Zeit mit und ohne Strafen (über Db mit App gesynct) und bei Startern,
+die im Ziel sind, die Gesamtzeit
+\item nun: Start der App möglich
+\item zuerst: Eingabe der IP-Adresse des Hauptrechners im lokalen Netzwerk
+(auf GUI des Hauptprogramms angezeigt)
+\item Klick auf ,,VERBINDEN``
+\item zum Starten: Klick auf ,,STARTEN``
+\item Auswahl der Startnummer im Spinner
+\item Tipp auf ,,STARTEN!{}``
+\item zum Stoppen: Klick auf ,,STOPPEN``, selbes Verfahren
+\item zum Strafzeiteneintragen: Tipp auf die Zahl (Spinner), Wahl der gewünschten
+Messstation
+\item Klick auf ,,WÄHLEN``
+\item Auswahl der Startnummer, die eine Strafzeit bekommt, per Tipp auf
+Spinner
+\item Wahl der Strafzeiten aus Spinner für angegebenes Tor
+\item Klick auf ,,Zeit nehmen``
+\item Zurücksetzen der Anzeige bei anderer Startnummer
+\item wenn der letzte Starter das Ziel erreicht, werden die Zeiten im Hauptprogramm
+gespeichert; Möglichkeit, nächsten Lauf zu starten; Start- und Zielzeiten
+sowie Strafen bis zum Start des nächsten Laufs veränderbar
+\item ist der nächste Lauf der Wiederholungslauf, wird gefragt, wer antritt
+\item sonst: Start des regulären zweiten Laufs
+\item tritt keiner an oder ist der Wiederholungslauf beendet, wird das ConfigWindow
+wieder aufgerufen, zeigt Zustand vor Kategoriestart
+\item Klick auf weiter: Auswahl der nächsten Kategorie aus den übrigen Kategorien
+\item Verwendung der App wieder möglich, kein Neustart erforderlich, nur
+aktuelle Anzeige durch Kippen des Bildschirms aktualisieren
+\item alle Kategorien gefahren: Weiterleitung zur Auswertung \textendash >
+Programm speichert Excel-Datei mit Daten an gewähltem Ort
+\end{itemize}
+
+\subsection{Aufgetretene Probleme und ihre Lösungen}
+\begin{itemize}
+\item gelegentliches Auftreten nicht näher bestimmter Netzwerkfehler, die
+HTTP-Verbindung zwischen Hauptrechner und App unterbrechen
+\item $\longrightarrow$ zufällige Fehler, die in Rechnernetzwerken unvermeidbar
+sind und kaum verhindert werden können
+\item Besserung durch Wiederholung der Anfrage bis zum Erreichen einer Bestätigung
+möglich, dabei aber besonders bei Start und Stopp Verzögerung bis
+zur Wiederherstellung der Verbindung, ggf. mehrere Sekunden $\longrightarrow$
+Fehler bei Zeitmessung
+\item auch: potentielles Problem der WLAN-Reichweite (Streckenlänge in Jena
+keine 200 m, auf offiziellen Strecken bis 400 m) bei WLAN-n-Spez.
+von nur 150 m Reichweite
+\item Verlängerung der Reichweite mit Repeatern möglich, leider keine tragbaren
+akkubetriebenen Geräte verfügbar, aber gerootete Android-Smartphones
+können das
+\item gelegentliche Performanceprobleme bei schwachen Rechnern mit rechenintensiven
+Nebenthreads
+\item Ursache: mehrere DB-Zugriffe und komplizierte Zeitenberechnung jede
+Zehntelsekunde
+\item Lösung: manuell Synchronisierungstaktrate herunterstellen
+\item Hauptprogramm kann ohne Unterordner lib mit zusätzlicher Library nicht
+laufen
+\item Ursache: DB-Treiber benötigt, Hinzufügen in eigene JAR unter verwendeter
+IDE NetBeans nicht möglich; Treiber muss immer da sein
+\item Start von XAMPP per Konsole nur unter Windows möglich, ungelöst
+\item aufgetretenes Android-internes Problem: nach Neukompilierung der App
+ohne jegliche Änderung Darstellung der Spinner mit weißer Schrift
+auf weißem Hintergrund
+\item gelöst durch Überschreiben eines (meiner Meinung nach) unsinnigen
+Standard-XML-Designs durch eigenes
+\item ebenfalls nach Neukompilierung: Absturz der App beim Versuch, Strafzeiten
+einzutragen
+\item Ursache: Zugriff auf Spinner und TextViews mit Tornummern in der Tabelle
+aus unklarem Grund nicht mehr möglich
+\item $\longrightarrow$ Speicherung der Adressen der Spinner in Array,
+Wiederherstellung des Zugriffs, Speicherung dern zugehörigen Tore
+in 2. Array, damit Strafzeiten auch für das richtige Tor eingetragen
+werden (anfangs ein Problem)
+\item bei Änderung der Konfigurationswerte im Programm kein Zugriff per
+App mehr möglich
+\item Lösung: Überschreibung der PHP-Konfigurationsdatei
+\item Problem: fehlende PHP-Skripte (vergessen zu kopieren)
+\item Lösung: Skripte manuell zu Programm kopieren, Programm selbst kopiert
+diese in XAMPP-Unterverzeichnis
+\item gelegentliches Problem: beim Konsolenstart von XAMPP bleibt Apache
+auf manchen PC's hängen
+\item ungelöst, aber Empfehlung an User, bei Verbindungsproblemen einfach
+Apache neuzustarten
+\item Probleme bei Umrechnung von PHP- in Javatimestamps gelöst durch eigene
+Umrechnungsmethode
+\item Probleme mit Zeitumrechnung und Differenzbildung gelöst durch Verwendung
+von java.util.Calendar
+\item allgemein: verwendete Sprachen Java in seinen Spezifikationen JavaFX
+und Dalvik unter Android, PHP, MySQL sehr stabil; werfen bei Programmfehlern
+Exceptions bzw. geben Fehler aus $\longrightarrow$ Fehler nicht fatal,
+echte Abstürze sind selten
+\item letzte Programmversion mit Patches lief stabil
+\end{itemize}
+\pagebreak{}
+
+\section{Zusammenfassung und Schluss}
+
+\subsection{Umsetzung der Konzeption}
+\begin{itemize}
+\item Softwaresystem kann zur Erfassung von Lauf- und Strafzeiten beim Kanusport
+verwendet werden, Auswertung ist noch optimierbar, aber definitiv
+leichter und besser mit der erzeugten Excel-Datei als mit Papierlisten
+\item Aufbau des Systems ist wie gefordert kostenlos und einfach möglich
+\item Hardwareanforderungen: 
+\begin{itemize}
+\item 1 Laptop als Hauptserver
+\item ggf. Repeater oder als solcher konfigurierter Router (WLAN-n-Spezifikation:
+150 m Reichweite, bei abzudeckendem Radius von ca. 100 m reicht 1
+Gerät vermutlich aus, um eine ausreichende Abdeckung zu erzielen)
+\item für jeden Helfer ein Android-Smartphone mit mind. Android 2.3.3 (Gingerbread)
+\end{itemize}
+\item Softwareanforderungen
+\begin{itemize}
+\item Java JRE (auf meisten Geräten sowieso installiert)
+\item XAMPP (Installation in wenigen Minuten)
+\item Anlegen einer Datenbank (wenige Klicks)
+\end{itemize}
+\item Einlesen der Starterkonfiguration aus Excel-Tabelle möglich, Starterkategorien
+frei benennbar (regionale Unterschiede), Programm ordnet Starter automatisch
+den Läufen zu
+\item Starten und Stoppen sowie Eintragen von Strafzeiten per App
+\item automatische Erkennung des Laufendes, Erzeugung von Protokolldateien
+(ggf.), Datenspeicherung für Auswertung in einer übersichtlichen Excel-Datei
+\item erzeugte Excel-Datei kann nun in verschiedenen (auch kostenlosen)
+Programmen wie LibreOffice geöffnet und leicht ausgewertet werden
+\item korrekte Anzeige der Werte des aktuellen Laufs im Hauptprogramm, kann
+durch Anschluss an einen Beamer ggf. sogar Zuschauern live gezeigt
+werden
+\item System erfordert keinen Internetzugriff \textendash > schwer manipulierbar
+\item \textendash > alles in allem: Konzeption voll umgesetzt, Problem erfüllt,
+Programm kann ggf. durch andere Entwickler leicht um weitere Funktionen
+erweitert werden
+\end{itemize}
+
+\subsection{Ausblick}
+\begin{itemize}
+\item mögliche Verbesserung: bessere, detailliertere Auswertung; Übergabe
+an Fremdprogramm (eigens dafür programmiert) in Arbeit
+\item Livestream der Laufwerte ins Internet durch Auslesen der DB ohne Weiteres
+möglich, kostengünstig einrichtbar (nur 1 Webserver nötig, der Daten
+weitergibt; XAMPP für diese Aufgabe nicht zu empfehlen)
+\item höhere Datensicherheit durch Authkeys für die Skripte und Passwörter
+für die Stationen zum Schutz vor Manipulation gut möglich, Verschlüsselung
+der Parameter durch md5
+\item Verbesserung: Anzeige der aktuell eingetragenen Strafzeiten in den
+Spinnern der Handy-App; könnte aber Entscheidung des Helfers beeinflussen
+\item vollständige Integration der benötigten Ressourcen in die JAR (von
+Ant und NetBeans nicht zugelassen, aber z.B. in Android möglich)
+\item Erhöhung der Stabilität, Kompensation von Netzwerkfehlern durch Wiederholung
+der Anfragen bis zur Bestätigung
+\item Überarbeitung der Fehlerdiagnose und Fehlermeldungen für noch leichtere
+Identifikation von Fehlern im Ablauf
+\item Verbesserung des Wiederherstellungsmodus, sodass nicht eine ganze
+Kategorie wiederholt werden muss
+\item Abfangen möglicher Eingabefehler bei den Starterdaten, z.B. unzulässige
+oder doppelte Startnummern
+\item Auslösen des Start-/Stopp-Signals durch eine Lichtschranke (hochpräzise)
+\textendash > nur Implementation eines Listeners nötig, der ,,Start``-Button
+auf der GUI des Hauptprogramms startet
+\item Arduino mit WLAN-Modul kann HTTP-Requests senden \textendash > ähnliche
+Implementierung wie Start durch App möglich, aber startende/stoppende
+Startnummer müsste duch Helfer eingestellt werden
+\item über Lichtschranke, Digitalkamera und Arduino auch einfaches Fotofinish
+möglich, aber hier eher nicht sinnvoll
+\end{itemize}
+\pagebreak{}
+
+\settowidth{\nomlabelwidth}{Hypertext Transfer Protocol}
+\printnomenclature{}
+
+\pagebreak{}
+
+\bibliographystyle{Plaindin}
+\addcontentsline{toc}{section}{\refname}\nocite{*}
+\bibliography{Quellen}
+
+\noindent Alle Quellen, die für die Softwareentwicklung relevant waren,
+sind im\textbf{ @author}-Tag der Javadocs oder an verwendeter Stelle
+in Programmkommentaren gekennzeichnet.
+
+\pagebreak{}
+
+\section{Anhang}
+
+Bilder, Struktogramme, evtl. Code
+
+\subsection{Funktionsweise der Hauptmethode, welche alle Daten zusammenführt}
+\begin{itemize}
+\item Struktogramm oder Pseudocode mit kurzer Erläuterung
+\item \textit{Anhang}
+\end{itemize}
+
+\subsection{Protokollierung und Wiederherstellungsmodus}
+\begin{itemize}
+\item kurzes Statement, wie Dateien gespeichert und wieder gelesen werden
+\item \textit{Anhang}
+\end{itemize}
+
+\subsection{Screenshots}
+
+\subsubsection{Hauptprogramm}
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[height=10cm]{Screenshots/Config.PNG}
+\par\end{centering}
+\caption{Konfigurationsfenster des Hauptprogramms mit Beispieleingaben}
+
+\end{figure}
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[height=2cm]{Screenshots/Wahl_kat.PNG}
+\par\end{centering}
+\caption{Wahl der Kategorie, welche starten soll}
+\end{figure}
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[height=5cm]{Screenshots/Zuordnung_Tore-MS.PNG}
+\par\end{centering}
+\caption{Zuordnung der Messtore zu Messstation 1}
+\end{figure}
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=10cm]{Screenshots/Main_plain.PNG}
+\par\end{centering}
+\caption{Hauptfenster vor Start des ersten Starters}
+\end{figure}
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=10cm]{Screenshots/Main_lauf.PNG}
+\par\end{centering}
+\caption{Hauptfenster während eines Laufs}
+\end{figure}
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=10cm]{Screenshots/Main_lauf_fertig.PNG}
+\par\end{centering}
+\caption{Hauptfenster bei Laufende}
+\end{figure}
+
+
+\subsubsection{App}
+
+\begin{figure}[H]
+\begin{centering}
+\fbox{\includegraphics[height=10cm]{Screenshots/App/App_erster_Screen}}
+\par\end{centering}
+\caption{App vor dem Verbindungsaufbau}
+\end{figure}
+
+\begin{figure}[H]
+\begin{centering}
+\fbox{\includegraphics[height=10cm]{Screenshots/App/App_Wahl_Funktion}}
+\par\end{centering}
+\caption{App bei der Funktionswahl}
+\end{figure}
+
+\begin{figure}[H]
+\begin{centering}
+\fbox{\includegraphics[height=10cm]{Screenshots/App/App_Start_Wahl-SN}}
+\par\end{centering}
+\caption{App im Startmodus bei Auswahl der Startnummer (Stoppmodus ähnlich)}
+\end{figure}
+
+\begin{figure}[H]
+\begin{centering}
+\fbox{\includegraphics[height=10cm]{Screenshots/App/App_Strafzeiten-Eintrag}}
+\par\end{centering}
+\caption{App beim Eintragen einer Strafzeit}
+\end{figure}
+
+
+\subsubsection{Protokolle}
+
+\begin{figure}[H]
+\begin{centering}
+\includegraphics[width=17cm]{Screenshots/Beispielprotokoll.PNG}
+\par\end{centering}
+\caption{Protokoll eines Programmlaufs mit Beispielausgaben}
+\end{figure}
+
+
+\subsection{Sourcecode}
+
+\begin{lstlisting}[caption={Hauptkonstruktor der Klasse \glqq MySQLConnection\grqq , welche eine Verbindung zur Datenbank herstellt},     captionpos=b,language=JAVA,breaklines=true,basicstyle=\scriptsize]
+/**
+* Hauptkonstruktor der Klasse
+*
+* @param host Datenbankhost (Standard: "localhost")
+* @param port Datenbankport (Standard: "3306")
+* @param db Datenbankname (Standard: "android_connect")
+* @param user Datenbankbenutzername (Standard: "root")
+* @param password Datenbankpasswort (Standard: leer)
+*/
+MySQLConnection(String host, String port, String db, String user, String password, FXMLDocumentController doc) {
+	try {
+	//Verbindungsdaten speichern
+		this.dbHost = host;
+		this.dbPort = port;
+		this.database = db;
+		this.dbUser = user;
+		this.dbPassword = password;
+		// Datenbanktreiber für ODBC Schnittstellen aus der Library laden.
+		//Resultat: im java.sql.DriverManager wird (statisch) der geladene Treiber als Datenbanktreiber hinterlegt, dafür verantwortlich: Befehl im static-Teil der Treiberdefinition, der bei Zugriff auf die Klasse ausgeführt wird
+		//Treiber wird nur gefunden, wenn lib-Unterordner da ist!
+		Class.forName("com.mysql.jdbc.Driver");
+		//Verbindung zur ODBC-Datenbank android_connect herstellen und für Verwendung speichern.
+		// Es wird die JDBC-ODBC-Brücke verwendet.
+		conn = DriverManager.getConnection("jdbc:mysql://" + dbHost + ": + dbPort + "/" + database + "?" + "user=" + dbUser + "&" + "password=" + dbPassword);
+		this.doc = doc;
+	} catch (ClassNotFoundException e) {
+		//aufgerufen, wenn Treiber nicht gefunden wird
+	} catch (SQLException e) {             
+		//aufgerufen, wenn keine Verbindung zur DB möglich
+	}     
+}
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Methode \glqq selectTore\grqq des Skriptes \glqq \url{Abfrage_Tore.php}\grqq , welche alle Tore ermittelt, die der übergebenen Messstation zugeordnet sind.},     captionpos=b,language=PHP,breaklines=true,basicstyle=\scriptsize]
+//Konfiguration einlesen
+require_once("Konfiguration.php"); 
+//Datenbankverbindung aufbauen 
+$connection = mysqli_connect($host,$user,$passwort,$datenbank);
+//Tore abfragen
+selectTore($connection);
+
+//liest alle der übergebenen Station zugeordneten Tore aus der Datenbank ein und gibt diese aus 
+function selectTore ($connection) {
+	//Abfrage zum Auslesen aller Tore   
+	$sqlStmt = "SELECT Wert FROM `allgemein` WHERE `Attribut` = 'Messstation_".$_GET["station"]."_Tore'";   
+	//Abfrage ausführen, Resultat in Variable result schreiben   
+	$result =  mysqli_query($connection,$sqlStmt);   
+	//falls Abfrage erfolgreich...   
+	if ($result = $connection->query($sqlStmt)) {   	
+		//für jede Zeile der Datenbankausgabe (nur 1 Zeile möglich, da Attribut Primärschlüssel ist)... 
+		while ($row = $result->fetch_assoc()) { 		  
+			//die Tore ermitteln...         
+			$id = $row["Wert"];         
+			//und ausgeben.         
+			echo $id;         
+		}       
+	//Ergebnisse leeren $result->free(); 
+	//Verbindung schließen   
+	closeConnection($connection); 
+	} 
+}
+\end{lstlisting}
+
+\pagebreak{}
+
+\section*{Eidesstattliche Erklärung}
+
+\noindent Ich erkläre, dass ich die vorliegende Arbeit mit dem Titel
+,,Wettkampferfassung und -auswertung beim Kanusport mittels eines
+kostenlos und einfach einrichtbaren Softwaresystems`` selbstständig,
+ohne unzulässige fremde Hilfe angefertigt und nur unter Verwendung
+der angegebenen Literatur und Hilfsmittel verfasst habe. Sämtliche
+Stellen, die wörtlich oder inhaltlich anderen Werken entnommen sind,
+wurden unter Angabe der Quellen als Entlehnung kenntlich gemacht.
+Dies trifft besonders auch auf Quellen aus dem Internet zu. Gleichzeitig
+gebe ich das Einverständnis, meine Arbeit mittels einer Plagiatssoftware
+überprüfen zu lassen.
+
+\textcolor{white}{.}
+
+\textcolor{white}{.}
+
+\noindent \begin{tabular}{lp{2em}l}
+ \hspace{5cm} && \hspace{4cm} \\
+\cline{3-3}
+ Jena, 5.10.2016     && Eric Ackermann  
+\end{tabular} 
+\end{document}

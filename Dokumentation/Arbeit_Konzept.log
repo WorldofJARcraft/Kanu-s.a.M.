@@ -1,0 +1,1227 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.7.25)  31 DEC 2016 18:32
+entering extended mode
+**./Arbeit_Konzept.tex
+(Arbeit_Konzept.tex
+LaTeX2e <2016/03/31> patch level 1
+Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size11.clo"
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\helvet.sty"
+Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\latin9.def"
+File: latin9.def 2015/03/17 v1.2c Input encoding file
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count87
+\Gm@cntv=\count88
+\c@Gm@tempcnt=\count89
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks17
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2016/06/02 v1.1d Standard LaTeX Color (DPC)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2016/06/17 v0.06h Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count90
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen111
+\extrarowheight=\dimen112
+\NC@list=\toks18
+\extratabsurround=\skip43
+\backup@length=\skip44
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count91
+\float@exts=\toks19
+\float@box=\box26
+\@float@everytoks=\toks20
+\@floatcapt=\box27
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def"
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2016/03/10 v2.15b AMS math features
+\@mathmargin=\skip45
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks21
+\ex@=\dimen113
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen114
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count92
+LaTeX Info: Redefining \frac on input line 199.
+\uproot@=\count93
+\leftroot@=\count94
+LaTeX Info: Redefining \overline on input line 297.
+\classnum@=\count95
+\DOTSCASE@=\count96
+LaTeX Info: Redefining \ldots on input line 394.
+LaTeX Info: Redefining \dots on input line 397.
+LaTeX Info: Redefining \cdots on input line 518.
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen115
+LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+\macc@depth=\count97
+\c@MaxMatrixCols=\count98
+\dotsspace@=\muskip11
+\c@parentequation=\count99
+\dspbrk@lvl=\count100
+\tag@help=\toks22
+\row@=\count101
+\column@=\count102
+\maxfields@=\count103
+\andhelp@=\toks23
+\eqnshift@=\dimen116
+\alignsep@=\dimen117
+\tagshift@=\dimen118
+\tagwidth@=\dimen119
+\totwidth@=\dimen120
+\lineht@=\dimen121
+\@envbody=\toks24
+\multlinegap=\skip46
+\multlinetaggap=\skip47
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2739.
+LaTeX Info: Redefining \] on input line 2740.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2016/06/02 v1.0s Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+)
+\Gin@req@height=\dimen122
+\Gin@req@width=\dimen123
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\nomencl\nomencl.sty"
+Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
+\nomlabelwidth=\dimen124
+\nom@tempdim=\dimen125
+\nomitemsep=\skip48
+)
+\@nomenclaturefile=\write3
+\openout3 = `Arbeit_Konzept.nlo'.
+
+
+Writing nomenclature file Arbeit_Konzept.nlo
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hyphsubst.sty"
+Package: hyphsubst 2016/05/16 v0.3 Substitute hyphenation patterns (HO)
+Package hyphsubst Info: Redefined: \l@ngerman
+(hyphsubst)             old value: 45
+(hyphsubst)             new value: 46 on input line 223.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen126
+\captionmargin@=\dimen127
+\captionwidth=\dimen128
+\caption@tempdima=\dimen129
+\caption@indent=\dimen130
+\caption@parindent=\dimen131
+\caption@hangindent=\dimen132
+)
+\c@ContinuedFloat=\count104
+Package caption Info: float package is loaded.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\lmodern.sty"
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\footmisc\footmisc.sty"
+Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+\FN@temptoken=\toks26
+\footnotemargin=\dimen133
+\c@pp@next@reset=\count105
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+)
+\c@defi=\count106
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\ucs.sty"
+Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\uni-global.def"
+File: uni-global.def 2013/05/13 UCS: Unicode global data
+)
+\uc@secondtry=\count107
+\uc@combtoks=\toks27
+\uc@combtoksb=\toks28
+\uc@temptokena=\toks29
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pdfpages.sty"
+Package: pdfpages 2016/04/19 v0.5f Insert pages of external PDF documents (AM)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count108
+\calc@Bcount=\count109
+\calc@Adimen=\dimen134
+\calc@Bdimen=\dimen135
+\calc@Askip=\skip49
+\calc@Bskip=\skip50
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count110
+\calc@Cskip=\skip51
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty"
+Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty"
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+))
+\AM@pagewidth=\dimen136
+\AM@pageheight=\dimen137
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pppdftex.def"
+File: pppdftex.def 2016/04/19 v0.5f Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box30
+\AM@global@opts=\toks30
+\AM@toc@title=\toks31
+\c@AM@survey=\count111
+\AM@templatesizebox=\box31
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\acronym\acronym.sty"
+Package: acronym 2015/03/21 v1.41 Support for acronyms (Tobias Oetiker)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\bigfoot\suffix.sty"
+Package: suffix 2006/07/15 1.5a Variant command support
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\xstring\xstring.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\xstring\xstring.tex"
+\@xs@message=\write4
+\integerpart=\count112
+\decimalpart=\count113
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+\AC@clearlist=\toks32
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2016/05/21 v6.83p Hypertext links for LaTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package hobsub Info: Skipping package `atbegshi' (already loaded).
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen138
+\Hy@linkcounter=\count114
+\Hy@pagecounter=\count115
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2016/05/21 v6.83p Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count116
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `colorlinks' set `false' on input line 4362.
+Package hyperref Info: Option `pdfpagelabels' set `true' on input line 4362.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 4362.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 4362
+.
+Package hyperref Info: Option `plainpages' set `false' on input line 4362.
+Package hyperref Info: Option `hypertexnames' set `false' on input line 4362.
+Package hyperref Info: Hyper figures OFF on input line 4486.
+Package hyperref Info: Link nesting OFF on input line 4491.
+Package hyperref Info: Hyper index ON on input line 4494.
+Package hyperref Info: Plain pages OFF on input line 4501.
+Package hyperref Info: Backreferencing OFF on input line 4506.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4735.
+\c@Hy@tempcnt=\count117
+LaTeX Info: Redefining \url on input line 5088.
+\XeTeXLinkMargin=\dimen139
+\Fld@menulength=\count118
+\Field@Width=\dimen140
+\Fld@charsize=\dimen141
+Package hyperref Info: Hyper figures OFF on input line 6342.
+Package hyperref Info: Link nesting OFF on input line 6347.
+Package hyperref Info: Hyper index ON on input line 6350.
+Package hyperref Info: backreferencing OFF on input line 6357.
+Package hyperref Info: Link coloring OFF on input line 6362.
+Package hyperref Info: Link coloring with OCG OFF on input line 6367.
+Package hyperref Info: PDF/A mode OFF on input line 6372.
+LaTeX Info: Redefining \ref on input line 6412.
+LaTeX Info: Redefining \pageref on input line 6416.
+\Hy@abspage=\count119
+\c@Item=\count120
+\c@Hfootnote=\count121
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2016/05/21 v6.83p Hyperref driver for pdfTeX
+\Fld@listcount=\count122
+\c@bookmark@seq@number=\count123
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip52
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\comment\comment.sty"
+\CommentStream=\write5
+
+Excluding comment 'comment')
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2016/04/23 3.9r The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\babel-german\ngerman.ldf"
+Language: ngerman 2013/12/13 v2.7 German support for babel (new orthography)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\babel-german\ngermanb.ldf"
+Language: ngermanb 2013/12/13 v2.7 German support for babel (new orthography)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2016/04/23 3.9r Babel common definitions
+\babel@savecnt=\count124
+\U@D=\dimen142
+)
+\l@naustrian = a dialect from \language\l@ngerman 
+\l@nswissgerman = a dialect from \language\l@ngerman 
+Package babel Info: Making " an active character on input line 88.
+)))
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
+\lst@mode=\count125
+\lst@gtempboxa=\box32
+\lst@token=\toks33
+\lst@length=\count126
+\lst@currlwidth=\dimen143
+\lst@column=\count127
+\lst@pos=\count128
+\lst@lostspace=\dimen144
+\lst@width=\dimen145
+\lst@newlines=\count129
+\lst@lineno=\count130
+\lst@maxwidth=\dimen146
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count131
+\lst@skipnumbers=\count132
+\lst@framebox=\box33
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(Arbeit_Konzept.aux)
+\openout1 = `Arbeit_Konzept.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 79.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 79.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 79.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmss.fd"
+File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 472.03123pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 666.9326pt, 56.9055pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=472.03123pt
+* \textheight=666.9326pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count133
+\scratchdimen=\dimen147
+\scratchbox=\box34
+\nofMPsegments=\count134
+\nofMParguments=\count135
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count136
+\MPscratchDim=\dimen148
+\MPnumerator=\count137
+\makeMPintoPDFobject=\count138
+\everyMPtoPDFconversion=\toks35
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ucs\ucsencs.def"
+File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
+)
+\AtBeginShipoutBox=\box35
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\lscape.sty"
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
+Package hyperref Info: Link coloring OFF on input line 79.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count139
+)
+LaTeX Info: Redefining \ref on input line 79.
+LaTeX Info: Redefining \pageref on input line 79.
+LaTeX Info: Redefining \nameref on input line 79.
+
+(Arbeit_Konzept.out) (Arbeit_Konzept.out)
+\@outlinefile=\write6
+\openout6 = `Arbeit_Konzept.out'.
+
+\c@lstlisting=\count140
+
+<Deckblatt.pdf, id=98, 597.50829pt x 845.0471pt>
+File: Deckblatt.pdf Graphic file (type pdf)
+ <use Deckblatt.pdf>
+Package pdftex.def Info: Deckblatt.pdf used on input line 81.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: Deckblatt.pdf Graphic file (type pdf)
+
+<use Deckblatt.pdf>
+Package pdftex.def Info: Deckblatt.pdf used on input line 81.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+ <Deckblatt.pdf, id=101, page=1, 597.50829pt x 845.0471pt>
+File: Deckblatt.pdf Graphic file (type pdf)
+
+<use Deckblatt.pdf, page 1>
+Package pdftex.def Info: Deckblatt.pdf, page1 used on input line 81.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: Deckblatt.pdf Graphic file (type pdf)
+ <use Deckblatt.pdf, page 1>
+Package pdftex.def Info: Deckblatt.pdf, page1 used on input line 81.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
+File: Deckblatt.pdf Graphic file (type pdf)
+
+<use Deckblatt.pdf, page 1>
+Package pdftex.def Info: Deckblatt.pdf, page1 used on input line 81.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
+File: Deckblatt.pdf Graphic file (type pdf)
+ <use Deckblatt.pdf, page 1>
+Package pdftex.def Info: Deckblatt.pdf, page1 used on input line 81.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
+File: Deckblatt.pdf Graphic file (type pdf)
+
+<use Deckblatt.pdf, page 1>
+Package pdftex.def Info: Deckblatt.pdf, page1 used on input line 81.
+(pdftex.def)             Requested size: 562.12285pt x 795.00201pt.
+ [1
+
+ <./Deckblatt.pdf{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}>] [2] [3]
+ (Arbeit_Konzept.toc
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 3.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 3.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 3.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 3.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 3.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 3.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 3.
+
+! Undefined control sequence.
+<recently read> \nicefrac 
+                          
+l.3 ...$\nicefrac {3}{4}$Seiten)}{1}{subsection.7}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \nicefrac 
+                          
+l.23 ...icefrac {3}{2}$ Seiten)}{8}{subsection.27}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<recently read> \nicefrac 
+                          
+l.24 ...nicefrac {1}{2}$ Seite)}{8}{subsection.28}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+)
+\tf@toc=\write7
+\openout7 = `Arbeit_Konzept.toc'.
+
+ [4] (Arbeit_Konzept.lof)
+\tf@lof=\write8
+\openout8 = `Arbeit_Konzept.lof'.
+
+ [5] (Arbeit_Konzept.lot)
+\tf@lot=\write9
+\openout9 = `Arbeit_Konzept.lot'.
+
+ [6]
+LaTeX Font Info:    Try loading font information for TS1+lmss on input line 135
+.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\ts1lmss.fd"
+File: ts1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+
+LaTeX Warning: Citation `Komplettsystem' on page 1 undefined on input line 148.
+
+
+
+LaTeX Warning: Citation `InfoSysteme' on page 1 undefined on input line 148.
+
+
+LaTeX Warning: Reference `fig:Zeitmesssystem-Basic' on page 1 undefined on inpu
+t line 150.
+
+<laptop_600.png, id=186, 144.54pt x 114.6684pt>
+File: laptop_600.png Graphic file (type png)
+ <use laptop_600.png>
+Package pdftex.def Info: laptop_600.png used on input line 157.
+(pdftex.def)             Requested size: 179.3424pt x 142.26378pt.
+
+
+LaTeX Warning: Citation `Basissystem' on page 1 undefined on input line 159.
+
+
+LaTeX Warning: Citation `Basissystem' on page 1 undefined on input line 159.
+
+
+LaTeX Warning: Citation `Info_Preise' on page 1 undefined on input line 170.
+
+[1 <./laptop_600.png>] [2]
+<Schema_Vernetzung.pdf, id=201, 484.74438pt x 294.60405pt>
+File: Schema_Vernetzung.pdf Graphic file (type pdf)
+
+<use Schema_Vernetzung.pdf>
+Package pdftex.def Info: Schema_Vernetzung.pdf used on input line 208.
+(pdftex.def)             Requested size: 484.7432pt x 294.60333pt.
+
+Overfull \hbox (12.71196pt too wide) in paragraph at lines 208--209
+ [][] 
+ []
+
+
+LaTeX Warning: Citation `Bild_boeser_Roboter' on page 3 undefined on input line
+ 210.
+
+
+LaTeX Warning: Citation `Bild_Laptop' on page 3 undefined on input line 210.
+
+
+LaTeX Warning: Citation `Bild_Smartphone' on page 3 undefined on input line 210
+.
+
+
+LaTeX Warning: Citation `Bild_WLAN' on page 3 undefined on input line 210.
+
+
+LaTeX Warning: Citation `Bild_boeser_Roboter' on page 3 undefined on input line
+ 210.
+
+
+LaTeX Warning: Citation `Bild_Laptop' on page 3 undefined on input line 210.
+
+
+LaTeX Warning: Citation `Bild_Smartphone' on page 3 undefined on input line 210
+.
+
+
+LaTeX Warning: Citation `Bild_WLAN' on page 3 undefined on input line 210.
+
+
+LaTeX Warning: Reference `fig:Schema-der-Vernetzung' on page 3 undefined on inp
+ut line 216.
+
+[3 <./Schema_Vernetzung.pdf>]
+
+LaTeX Warning: Reference `fig:=0000DCbersicht-DB' on page 4 undefined on input 
+line 245.
+
+<Screenshots/DB_overview.PNG, id=301, 870.25125pt x 271.76532pt>
+File: Screenshots/DB_overview.PNG Graphic file (type png)
+
+<use Screenshots/DB_overview.PNG>
+Package pdftex.def Info: Screenshots/DB_overview.PNG used on input line 251.
+(pdftex.def)             Requested size: 455.24408pt x 142.16887pt.
+
+
+LaTeX Warning: Reference `fig:Beispielbelegung-allgemein' on page 4 undefined o
+n input line 262.
+
+<Screenshots/DB_Tabelle_allgemein.PNG, id=303, 373.395pt x 191.9672pt>
+File: Screenshots/DB_Tabelle_allgemein.PNG Graphic file (type png)
+
+<use Screenshots/DB_Tabelle_allgemein.PNG>
+Package pdftex.def Info: Screenshots/DB_Tabelle_allgemein.PNG used on input lin
+e 272.
+(pdftex.def)             Requested size: 284.52756pt x 146.28615pt.
+ [4 <./Screenshots/DB_overview.PNG>]
+
+LaTeX Warning: Reference `fig:Beispielbelegung-namen' on page 5 undefined on in
+put line 279.
+
+<Screenshots/DB_Tabelle_Namen.PNG, id=311, 1053.9375pt x 79.04532pt>
+File: Screenshots/DB_Tabelle_Namen.PNG Graphic file (type png)
+
+<use Screenshots/DB_Tabelle_Namen.PNG>
+Package pdftex.def Info: Screenshots/DB_Tabelle_Namen.PNG used on input line 28
+8.
+(pdftex.def)             Requested size: 483.69684pt x 36.27805pt.
+
+Overfull \hbox (11.6656pt too wide) in paragraph at lines 288--289
+ [][] 
+ []
+
+<Screenshots/DB_Tabelle_Messtor_0.PNG, id=312, 343.2825pt x 76.03406pt>
+File: Screenshots/DB_Tabelle_Messtor_0.PNG Graphic file (type png)
+
+<use Screenshots/DB_Tabelle_Messtor_0.PNG>
+Package pdftex.def Info: Screenshots/DB_Tabelle_Messtor_0.PNG used on input lin
+e 300.
+(pdftex.def)             Requested size: 284.52756pt x 63.02007pt.
+ [5 <./Screenshots/DB_Tabelle_allgemein.PNG> <./Screenshots/DB_Tabelle_Namen.PN
+G> <./Screenshots/DB_Tabelle_Messtor_0.PNG>]
+
+LaTeX Warning: Reference `tab:Features-des-Hauptprogramms' on page 6 undefined 
+on input line 324.
+
+
+Overfull \hbox (36.86559pt too wide) in paragraph at lines 330--379
+ [][] 
+ []
+
+[6] Excluding 'comment' comment.
+
+LaTeX Warning: Reference `fig:Auswertung-Datei' on page 7 undefined on input li
+ne 449.
+
+<Screenshots/Auswertung.PNG, id=330, 1376.89406pt x 108.405pt>
+File: Screenshots/Auswertung.PNG Graphic file (type png)
+
+<use Screenshots/Auswertung.PNG>
+Package pdftex.def Info: Screenshots/Auswertung.PNG used on input line 456.
+(pdftex.def)             Requested size: 426.79134pt x 33.60188pt.
+ [7 <./Screenshots/Auswertung.PNG>]
+
+LaTeX Warning: Reference `tab:Features-der-App' on page 8 undefined on input li
+ne 476.
+
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 488.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Overfull \hbox (36.86559pt too wide) in paragraph at lines 482--515
+ [][] 
+ []
+
+
+LaTeX Warning: Citation `Info_Crash' on page 8 undefined on input line 527.
+
+[8]
+Overfull \hbox (46.3108pt too wide) in paragraph at lines 536--541
+\T1/lmss/m/n/10.95 zu-sam-men-ge-setzt []$\T1/lmtt/m/n/10.95 http : / / IP-[]Ad
+ressedesRechners / AndroidConnectorAppHTTPScripts / Skriptname .
+ []
+
+
+Overfull \hbox (23.90999pt too wide) in paragraph at lines 561--564
+[]\T1/lmss/m/n/10.95 ,,htdocs``-Ordner[] ent-hält er-stell-te Scrip-te, wel-che
+ An-fra-gen der App ver-ar-bei-ten, so-wie DB-Konfiguration;
+ []
+
+[9] [10] [11] [12]
+Overfull \hbox (3.88315pt too wide) in paragraph at lines 737--739
+[]\T1/lmss/m/n/10.95 Probleme mit Zeit-um-rech-nung und Dif-fe-renz-bil-dung ge
+-löst durch Ver-wen-dung von ja-va.util.Calendar 
+ []
+
+[13] [14] [15]
+No file Arbeit_Konzept.nls.
+No file Arbeit_Konzept.bbl.
+[16]
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 841.
+ <Screenshots/Config.PNG, id=400, 453.19313pt x 557.08125pt>
+File: Screenshots/Config.PNG Graphic file (type png)
+
+<use Screenshots/Config.PNG>
+Package pdftex.def Info: Screenshots/Config.PNG used on input line 856.
+(pdftex.def)             Requested size: 231.47119pt x 284.52756pt.
+
+<Screenshots/Wahl_kat.PNG, id=401, 432.86719pt x 139.27031pt>
+File: Screenshots/Wahl_kat.PNG Graphic file (type png)
+
+<use Screenshots/Wahl_kat.PNG>
+Package pdftex.def Info: Screenshots/Wahl_kat.PNG used on input line 864.
+(pdftex.def)             Requested size: 176.86243pt x 56.9055pt.
+ [17 <./Screenshots/Config.PNG>]
+<Screenshots/Zuordnung_Tore-MS.PNG, id=414, 347.79938pt x 237.88875pt>
+File: Screenshots/Zuordnung_Tore-MS.PNG Graphic file (type png)
+
+<use Screenshots/Zuordnung_Tore-MS.PNG>
+Package pdftex.def Info: Screenshots/Zuordnung_Tore-MS.PNG used on input line 8
+71.
+(pdftex.def)             Requested size: 208.00194pt x 142.26378pt.
+
+<Screenshots/Main_plain.PNG, id=415, 603.75563pt x 438.13687pt>
+File: Screenshots/Main_plain.PNG Graphic file (type png)
+
+<use Screenshots/Main_plain.PNG>
+Package pdftex.def Info: Screenshots/Main_plain.PNG used on input line 878.
+(pdftex.def)             Requested size: 284.52756pt x 206.47255pt.
+
+<Screenshots/Main_lauf.PNG, id=416, 603.75563pt x 438.13687pt>
+File: Screenshots/Main_lauf.PNG Graphic file (type png)
+
+<use Screenshots/Main_lauf.PNG>
+Package pdftex.def Info: Screenshots/Main_lauf.PNG used on input line 885.
+(pdftex.def)             Requested size: 284.52756pt x 206.47255pt.
+ [18 <./Screenshots/Wahl_kat.PNG> <./Screenshots/Zuordnung_Tore-MS.PNG> <./Scre
+enshots/Main_plain.PNG>]
+<Screenshots/Main_lauf_fertig.PNG, id=427, 603.75563pt x 438.13687pt>
+File: Screenshots/Main_lauf_fertig.PNG Graphic file (type png)
+
+<use Screenshots/Main_lauf_fertig.PNG>
+Package pdftex.def Info: Screenshots/Main_lauf_fertig.PNG used on input line 89
+2.
+(pdftex.def)             Requested size: 284.52756pt x 206.47255pt.
+
+<Screenshots/App/App_erster_Screen.png, id=428, 722.7pt x 1284.8pt>
+File: Screenshots/App/App_erster_Screen.png Graphic file (type png)
+
+<use Screenshots/App/App_erster_Screen.png>
+Package pdftex.def Info: Screenshots/App/App_erster_Screen.png used on input li
+ne 902.
+(pdftex.def)             Requested size: 160.0421pt x 284.52756pt.
+ [19 <./Screenshots/Main_lauf.PNG> <./Screenshots/Main_lauf_fertig.PNG>]
+<Screenshots/App/App_Wahl_Funktion.png, id=438, 722.7pt x 1284.8pt>
+File: Screenshots/App/App_Wahl_Funktion.png Graphic file (type png)
+
+<use Screenshots/App/App_Wahl_Funktion.png>
+Package pdftex.def Info: Screenshots/App/App_Wahl_Funktion.png used on input li
+ne 909.
+(pdftex.def)             Requested size: 160.0421pt x 284.52756pt.
+ [20 <./Screenshots/App/App_erster_Screen.png>]
+<Screenshots/App/App_Start_Wahl-SN.png, id=445, 722.7pt x 1284.8pt>
+File: Screenshots/App/App_Start_Wahl-SN.png Graphic file (type png)
+
+<use Screenshots/App/App_Start_Wahl-SN.png>
+Package pdftex.def Info: Screenshots/App/App_Start_Wahl-SN.png used on input li
+ne 916.
+(pdftex.def)             Requested size: 160.0421pt x 284.52756pt.
+
+<Screenshots/App/App_Strafzeiten-Eintrag.png, id=446, 722.7pt x 1284.8pt>
+File: Screenshots/App/App_Strafzeiten-Eintrag.png Graphic file (type png)
+
+<use Screenshots/App/App_Strafzeiten-Eintrag.png>
+Package pdftex.def Info: Screenshots/App/App_Strafzeiten-Eintrag.png used on in
+put line 923.
+(pdftex.def)             Requested size: 160.0421pt x 284.52756pt.
+ [21 <./Screenshots/App/App_Wahl_Funktion.png> <./Screenshots/App/App_Start_Wah
+l-SN.png>]
+<Screenshots/Beispielprotokoll.PNG, id=453, 1073.51062pt x 113.67468pt>
+File: Screenshots/Beispielprotokoll.PNG Graphic file (type png)
+
+<use Screenshots/Beispielprotokoll.PNG>
+Package pdftex.def Info: Screenshots/Beispielprotokoll.PNG used on input line 9
+33.
+(pdftex.def)             Requested size: 483.69684pt x 51.21904pt.
+
+Overfull \hbox (11.6656pt too wide) in paragraph at lines 933--934
+ [][] 
+ []
+
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 941.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 942.
+LaTeX Font Info:    Font shape `TS1/lmss/m/it' in size <8> not available
+(Font)              Font shape `TS1/lmss/m/sl' tried instead on input line 942.
+
+[22 <./Screenshots/App/App_Strafzeiten-Eintrag.png> <./Screenshots/Beispielprot
+okoll.PNG>]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 960.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang2.sty"
+File: lstlang2.sty 2015/06/04 1.6 listings language file
+) [23] [24]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1029.
+
+[25]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1029.
+ (Arbeit_Konzept.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1029.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1029.
+
+
+
+Package rerunfilecheck Warning: File `Arbeit_Konzept.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Arbeit_Konzept.out':
+(rerunfilecheck)             Before: 8153EE8DCA203FFD3370C84BD9BEE3A4;2588
+(rerunfilecheck)             After:  FD852D54B295CCC4CE9F1AFC1B29EBC1;2437.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1029.
+ ) 
+Here is how much of TeX's memory you used:
+ 14148 strings out of 493335
+ 216145 string characters out of 3139263
+ 685241 words of memory out of 3000000
+ 17241 multiletter control sequences out of 15000+200000
+ 50982 words of font info for 43 fonts, out of 3000000 for 9000
+ 1142 hyphenation exceptions out of 8191
+ 38i,18n,44p,473b,2961s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{subsection.27} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.26} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.25} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.24} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.23} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.22} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.20} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.19} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.18} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.17} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.16} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.15} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.14} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsubsection.13} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.12} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.10} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.9} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.8} has been referenced but does not exis
+t, replaced by a fixed one
+
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files
+/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Program Files/MiKTeX 2.9/fonts/en
+c/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/lm/lmss10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/l
+mss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmsso10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/lm/lmsso8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/
+uplri8a.pfb>
+Output written on Arbeit_Konzept.pdf (31 pages, 2516504 bytes).
+PDF statistics:
+ 619 PDF objects out of 1000 (max. 8388607)
+ 172 named destinations out of 1000 (max. 500000)
+ 303 words of extra memory for PDF output out of 10000 (max. 10000000)
+

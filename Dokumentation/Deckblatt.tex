@@ -1,0 +1,53 @@
+\documentclass[11pt, oneside, halfparskip, smallheadings, automark]{scrreprt}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{palatino}
+\usepackage{listings} \lstset{numbers=left, numberstyle=\tiny, numbersep=5pt} \lstset{language=Java}
+\usepackage{color}
+\usepackage{float}
+\usepackage{pdfpages}
+% Weiter Pakete können hinzugefügt werden
+\usepackage{
+  booktabs,
+  graphicx,
+  xcolor,
+  pdfpages
+  }
+\lstset{literate=%
+    {Ö}{{\"O}}1
+    {Ä}{{\"A}}1
+    {Ü}{{\"U}}1
+    {ß}{{\ss}}1
+    {ü}{{\"u}}1
+    {ä}{{\"a}}1
+    {ö}{{\"o}}1
+    {~}{{\textasciitilde}}1
+} 
+
+\usepackage{url}
+\usepackage{hyperref}
+
+
+%   ********************************************************************************
+%
+%        Anpassen, oder entwerfen einer eigenen Titelseite
+
+\title{Kanu s.a.M. - Wettkampferfassung und -auswertung beim Kanusport mittels eines kostenlos und einfach einrichtbaren Softwaresystems\\ \includegraphics[width=.15 \textwidth]{Logo/Logo.pdf}}
+\subject{4. Regionalwettbewerb \glqq Jugend forscht\grqq ~in Jena, Fachgebiet Mathematik/Informatik}
+\author{Eric Ackermann\\Carl-Zeiss-Gymnasium Jena}
+\publishers{\emph{betreut durch:} \\ Herrn Bernd Schade}
+\date{15. Januar 2017}
+%
+%   ********************************************************************************
+
+
+\begin{document}
+\sloppy
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+\end{document}
+

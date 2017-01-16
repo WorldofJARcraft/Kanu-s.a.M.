@@ -1,0 +1,19 @@
+\select@language {ngerman}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Zeitmesssystem ,,Basic`` von IMAS, vgl. \cite {Basissystem}\relax }}{1}{figure.caption.8}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Schema der Vernetzung der verschiedenen Ger\"ate, vgl. \cite [(Illustrationen)]{Bild_boeser_Roboter,Bild_Laptop,Bild_Smartphone,Bild_WLAN}\relax }}{3}{figure.caption.12}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces \"Ubersicht \"uber die Datenbank ,,android\_connect`` und ihre Tabellen in einer Beispielbelegung, Darstellung durch verwendetes Datenbankverwaltungsprogramm PHPMyAdmin (Teil von XAMPP)\relax }}{4}{figure.caption.14}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Beispielbelegung der Datenbanktabelle ,,allgemein``\relax }}{5}{figure.caption.15}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Beispielbelegung der Datenbanktabelle ,,namen``\relax }}{5}{figure.caption.16}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Beispielbelegung der Tabelle eines Messtores\relax }}{5}{figure.caption.17}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Ausschnitt aus einer Auswertungsdatei mit Beispieldaten, dargestellt von LibreOffice\relax }}{7}{figure.caption.23}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Konfigurationsfenster des Hauptprogramms mit Beispieleingaben\relax }}{17}{figure.caption.42}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Wahl der Kategorie, welche starten soll\relax }}{18}{figure.caption.43}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Zuordnung der Messtore zu Messstation 1\relax }}{18}{figure.caption.44}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Hauptfenster vor Start des ersten Starters\relax }}{18}{figure.caption.45}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Hauptfenster w\"ahrend eines Laufs\relax }}{19}{figure.caption.46}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Hauptfenster bei Laufende\relax }}{19}{figure.caption.47}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces App vor dem Verbindungsaufbau\relax }}{20}{figure.caption.49}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces App bei der Funktionswahl\relax }}{21}{figure.caption.50}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces App im Startmodus bei Auswahl der Startnummer (Stoppmodus \"ahnlich)\relax }}{21}{figure.caption.51}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces App beim Eintragen einer Strafzeit\relax }}{22}{figure.caption.52}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Protokoll eines Programmlaufs mit Beispielausgaben\relax }}{22}{figure.caption.54}
