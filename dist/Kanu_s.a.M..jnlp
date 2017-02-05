@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Kanu_s.a.M..jar" size="1109376" download="eager" />
+    <jar href="Kanu_s.a.M..jar" size="1109498" download="eager" />
     <jar href="lib\mysql-connector-java-5.1.38-bin.jar" size="983914" download="eager" />
     <jar href="lib\poi-3.15.jar" size="2579580" download="eager" />
   </resources>

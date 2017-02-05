@@ -681,7 +681,8 @@ public class ConfigWindowController implements Initializable {
             Logger.getLogger(ConfigWindowController.class.getName()).log(Level.SEVERE, null, ex);
         } //sauber beenden
         catch(NullPointerException e){
-            
+            MySQLConnection.staticExceptionDialog(e, "Kopierfehler", "Benötigte PHP-Skripte konnten nicht kopiert werden!", "Die für die App-Verbindung nötigen PHP-Skripte konnten nicht automatisch "
+                    + "kopiert werden. Bitte kopieren Sie sie mit Ausnahme von \"Konfiguration.php\" manuell in den Ordner \"XAMPP\\htdocs\"!");
         }
         finally {
             try {
