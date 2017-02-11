@@ -973,15 +973,16 @@ public class MySQLConnection {
         if ((result.get(Calendar.HOUR_OF_DAY) - 1) > 0) {
             ret += (result.get(Calendar.HOUR_OF_DAY) - 1) + ":";
         }
-        if (result.get(Calendar.MINUTE) > 0) {
+        //Minuten-, Sekunden- und Millisekundenunterschiede werden zwecks der Einheitlichkeit der Anzeige immer ausgegeben
+        //if (result.get(Calendar.MINUTE) > 0) {
             ret += result.get(Calendar.MINUTE) + ":";
-        }
-        if (result.get(Calendar.SECOND) > 0) {
+        //}
+        //if (result.get(Calendar.SECOND) > 0) {
             ret += result.get(Calendar.SECOND) + ",";
-        }
-        if (result.get(Calendar.MILLISECOND) > 0) {
+        //}
+        //if (result.get(Calendar.MILLISECOND) > 0) {
             ret += result.get(Calendar.MILLISECOND) + "";
-        }
+        //}
         return ret;
     }
 
