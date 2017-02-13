@@ -19,8 +19,6 @@ function zeiteintragen ($connection) {
 	$sqlStmt = "UPDATE `namen` SET `Zielzeit` = '".getMicrotime()."' WHERE `namen`.`Startnummer` = '".$_GET['startnummer']."';";
 	//... und ausführen
 	$result =  mysqli_query($connection,$sqlStmt);
-	if($result==true)
-		echo "Erfolg";
 	//Verbindung schließen
 	closeConnection($connection); 
 }
