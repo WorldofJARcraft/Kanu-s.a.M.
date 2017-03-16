@@ -12,11 +12,11 @@ if (mysqli_connect_errno()) {
 }
 //Startzeit übergebener Startnummer eintragen
 zeiteintragen($connection);
-
+echo "Erfolg!";
 //trägt die aktuelle Systemzeit als Startzeit für die übergebene Startnummer ein.
 function zeiteintragen ($connection) {
 	//Tabelle schon initialisiert --> immer schon Wert da (NULL), also Update-Befehl zusammensetzten...
-	$sqlStmt = "UPDATE `namen` SET `Startzeit` = '".getMicrotime()."' WHERE `namen`.`Startnummer` = '".$_GET['startnummer']."';";
+	$sqlStmt = "UPDATE `namen` SET `Startzeit` = '".$_GET['timestamp']."' WHERE `namen`.`Startnummer` = '".$_GET['startnummer']."';";
 	//... und ausführen
 	$result =  mysqli_query($connection,$sqlStmt);
 	//Verbindung schließen

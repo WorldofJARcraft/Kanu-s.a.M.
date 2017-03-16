@@ -12,7 +12,7 @@ if (mysqli_connect_errno()) {
 }
 //Startzeit übergebener Startnummer eintragen
 zeiteintragen($connection);
-
+echo "Erfolg!";
 //trägt die aktuelle Systemzeit als Startzeit für die übergebene Startnummer ein.
 function zeiteintragen ($connection) {
 	//Tabelle schon initialisiert --> immer schon Wert da (NULL), also Update-Befehl zusammensetzten...
@@ -30,7 +30,6 @@ function getMicrotime()
     {
         return array_sum(explode(' ', microtime()));
     }
-
     return microtime(true);
 }  
 

@@ -32,7 +32,7 @@ public class Android_Connector extends Application {
     public void start(Stage stage) throws Exception {
         //Icon und Titel laden
         stage.getIcons().add(new Image(Android_Connector.class.getResourceAsStream( "lib/Logo.png" )));
-        stage.setTitle("Kanu s.a.M");
+        stage.setTitle("Kanu s.a.M Desktop");
         //Laden der Anzeige des ersten Fensters
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ConfigWindow.fxml"));
         Parent root = fxmlLoader.load();

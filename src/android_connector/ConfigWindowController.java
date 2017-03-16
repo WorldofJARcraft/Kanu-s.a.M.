@@ -722,8 +722,8 @@ public class ConfigWindowController implements Initializable {
                 }
                 //Fehler fangen
             } catch (IOException ex) {
-                (new MySQLConnection(new FXMLDocumentController())).showExceptionDialog(ex, "Fehler", "XAMPP konnte aufgrund eines Fehlers nicht gestoppt werden.",
-                        "Bitte geben Sie bei einer Beschwerde an den Entwickler folgende Fehlermeldung an:", false);
+                /*(new MySQLConnection(new FXMLDocumentController())).showExceptionDialog(ex, "Fehler", "XAMPP konnte aufgrund eines Fehlers nicht gestoppt werden.",
+                        "Bitte geben Sie bei einer Beschwerde an den Entwickler folgende Fehlermeldung an:", false);*/
 
             }
             //nicht Windows --> Fehler

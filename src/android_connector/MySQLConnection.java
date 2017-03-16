@@ -131,12 +131,12 @@ public class MySQLConnection {
         } catch (ClassNotFoundException e) {
             //aufgerufen, wenn Treiber nicht gefunden wird
             //Ausgabe einer Fehlermeldung mittels Alert, dabei wird auf die Fläche ein TextArea gelegt, in das der Stacktrace der Exception geladen wird.
-            showExceptionDialog(e, "Fehler", "Nötige Bibliothek konnte nicht geladen werden!", "Bitte stellen Sie sicher, dass der Ordner \"lib\" im selben Ordner wie die ausführbare .jar-Datei dieses Programms liegt"
+            /*showExceptionDialog(e, "Fehler", "Nötige Bibliothek konnte nicht geladen werden!", "Bitte stellen Sie sicher, dass der Ordner \"lib\" im selben Ordner wie die ausführbare .jar-Datei dieses Programms liegt"
                     + " und eine Datei namens \"mysql-connector-java-5.1.38-bin.jar\" enthält und verwenden Sie ggf. eine neue Kopie dieses Programms!", false);
-        } catch (SQLException e) {
+       */ } catch (SQLException e) {
             //aufgerufen, wenn keine Verbindung zur DB möglich
-            showExceptionDialog(e, "Fehler", "Verbindungsaufbau zur Datenbank nicht möglich!", "Bitte prüfen Sie, ob der Apache- und MySQL-Server gestartet sind und korrekt laufen sowie die "
-                    + "korrekten Konfigurationswerte für den Verbindungsaufbau angegeben sind und starten Sie das Programm neu!", false);
+            /*showExceptionDialog(e, "Fehler", "Verbindungsaufbau zur Datenbank nicht möglich!", "Bitte prüfen Sie, ob der Apache- und MySQL-Server gestartet sind und korrekt laufen sowie die "
+                    + "korrekten Konfigurationswerte für den Verbindungsaufbau angegeben sind und starten Sie das Programm neu!", false);*/
         }
     }
 
@@ -750,11 +750,9 @@ public class MySQLConnection {
                         //prüfen, ob Startzeit vorhanden für spez. Startnummer
                         if (stamp != null) {
                             //PHP-Zeit zerlegen...
-                            String millis = "";
-                            String[] teile = stamp.split("\\.");
                             //...: erster Teil ist Timestamp in Sekunden, letzter Teil ist Zahl der Milli-
                             //Sekunden, letzte Ziffer ist Komma
-                            long zeit = Long.parseLong(teile[0]) * 1000 + Long.parseLong(teile[1]) / 10;
+                            long zeit = Long.parseLong(stamp);
                             //Calendar initialisieren...
                             Calendar cal = Calendar.getInstance();
                             //... und Zeit zuweisen
@@ -815,12 +813,8 @@ public class MySQLConnection {
                         String stamp = result.getString("Zielzeit");
                         //Prüfen, ob vorhanden (standardmäßig: null)
                         if (stamp != null) {
-                            //PHP-Zeit zerlegen...
-                            String millis = "";
-                            String[] teile = stamp.split("\\.");
-                            //...: erster Teil ist Timestamp in Sekunden, letzter Teil ist Zahl der Milli-
-                            //Sekunden, letzte Ziffer ist Komma
-                            long zeit = Long.parseLong(teile[0]) * 1000 + Long.parseLong(teile[1]) / 10;
+                            //Startzeit ist Java-Timestamp --> als solchen verwenden
+                            long zeit = Long.parseLong(stamp);
                             //Zeit als Calendar-Objekt speichern
                             Calendar cal = Calendar.getInstance();
                             cal.setTimeInMillis(zeit);
