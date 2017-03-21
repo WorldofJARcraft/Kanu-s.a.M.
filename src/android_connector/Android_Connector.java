@@ -30,9 +30,11 @@ public class Android_Connector extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+        //hübscheres Stylesheet
+        setUserAgentStylesheet(STYLESHEET_MODENA);
         //Icon und Titel laden
         stage.getIcons().add(new Image(Android_Connector.class.getResourceAsStream( "lib/Logo.png" )));
-        stage.setTitle("Kanu s.a.M Desktop");
+        stage.setTitle("Kanu s.a.M Desktop Version 0.9");
         //Laden der Anzeige des ersten Fensters
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ConfigWindow.fxml"));
         Parent root = fxmlLoader.load();
@@ -83,7 +85,7 @@ public class Android_Connector extends Application {
                 if(conf.protokoll.isSelected())
                 conf.writeConfig(conf.pfad.getText(),kategorie);
                 (new MySQLConnection(conf.host.getText(), conf.port.getText(), conf.db.getText(), conf.user.getText(), conf.pw.getText(), doc)).auswertungAnlegen(conf.getAllWerte());
-                docu.init(conf.checkNetwork.isSelected(), conf.port.getText(), conf.host.getText(), conf.db.getText(), conf.user.getText(), conf.pw.getText(), conf.messstationen.getText(), conf.messtore.getText(), conf.getWerte(kategorie), conf.protokoll.isSelected(), conf.pfad.getText(),0,true, stage,conf,kategorie, conf.andr);
+                docu.init(conf.checkNetwork.isSelected(), conf.port.getText(), conf.host.getText(), conf.db.getText(), conf.user.getText(), conf.pw.getText(), conf.messstationen.getText(), conf.messtore.getText(), conf.getWerte(kategorie), conf.protokoll.isSelected(), conf.pfad.getText(),0,true, stage,conf,kategorie, conf.andr, conf.startmodus.getSelectionModel().getSelectedItem());
                 //Startnummerb übernehmen
                 //aktuelle Stage übergeben, um auch Dialoge anzeigen zu können
                 docu.stage = stage;

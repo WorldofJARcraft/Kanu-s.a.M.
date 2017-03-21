@@ -5,11 +5,6 @@
  */
 package android_connector;
 
-import static android_connector.Android_Connector.db;
-import static android_connector.Android_Connector.host;
-import static android_connector.Android_Connector.port;
-import static android_connector.Android_Connector.pw;
-import static android_connector.Android_Connector.user;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -45,6 +40,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ChoiceDialog;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -217,6 +213,11 @@ public class ConfigWindowController implements Initializable {
      */
     @FXML
     private Button restoreButton;
+    /**
+     * Auswahl, wie gestartet werden soll.
+     */
+    @FXML
+    public ChoiceBox<String> startmodus;
 
     /**
      * Stellt einen alten Zustand wieder her.
@@ -258,6 +259,8 @@ public class ConfigWindowController implements Initializable {
         //... und sie (hart) aktualisieren
         refresh_table(tabelle);
         alteWerteÜbernommen = true;
+        //Prüfen, welcher Startmodus denn gewählt war --> für Entscheidung, wann vorbei
+        this.startmodus.getSelectionModel().select(oldValues.startmodus.getSelectionModel().getSelectedItem());
     }
     /**
      * Speichert, ob die Initialisierung bereits durch die Wertübernehme von
@@ -321,7 +324,25 @@ public class ConfigWindowController implements Initializable {
                 ((Person) t.getTableView().getItems().get(t.getTablePosition().getRow())).setKategorie(t.getNewValue());
             }
         });
+        //Festlegung der Alternativen für die ChoiceBox
+        ObservableList<String> startmodi = FXCollections.observableArrayList();
+        startmodi.add(alle_hintereinander);
+        startmodi.add(nach_Kategorien);
+        //Werte in ChoiceBox eintragen
+        startmodus.setItems(startmodi);
+        //Standardmäßig ersten Wert anzeigen
+        startmodus.getSelectionModel().select(0);
     }
+    /**
+     * Angezeigter Text, wenn alle Starter hintereinander Starten, also Läufe
+     * Kategorien übergeordnet sind.
+     */
+    private final String alle_hintereinander = "Alle Starter laufen in 2 Läufen";
+    /**
+     * Anzuzeigender Text, wenn Kategorien Läufen übergeordnet sind, also alle
+     * Starter einer Kategorie 3 Läufe machen, dann die der nächsten usw.
+     */
+    private final String nach_Kategorien = "Starter laufen nach Kategorien getrennt.";
 
     /**
      * Aktion, die bei Klick auf den Button "neue Zeile" ausgeführt wird: Zeile
@@ -409,27 +430,30 @@ public class ConfigWindowController implements Initializable {
      * @param kategorie Kategorie, deren Starter ermittelt werden sollen
      */
     String[][] getWerte(String kategorie) {
-        //zur Sicherheit: Werte aus der Tabelle erneut auslesen
-        personData = tabelle.getItems();
-        int starter_kategorie = 0;
-        for (int i = 0; i < personData.size(); i++) {
-            if (personData.get(i).getKategorie().equals(kategorie)) {
-                starter_kategorie++;
+        if (kategorie != null) {
+            //zur Sicherheit: Werte aus der Tabelle erneut auslesen
+            personData = tabelle.getItems();
+            int starter_kategorie = 0;
+            for (int i = 0; i < personData.size(); i++) {
+                if (personData.get(i).getKategorie().equals(kategorie)) {
+                    starter_kategorie++;
+                }
             }
-        }
-        //neues Array anlegen, das die Werte später speichert
-        String[][] werte = new String[starter_kategorie][2];
-        //Tabelleninhalte durchgehen und in das Array einordnen wie oben beschrieben, solange sie zur gewünschten Kategorie gehören
-        int zaehler = 0;
-        for (int i = 0; i < personData.size(); i++) {
-            if (personData.get(i).getKategorie().equals(kategorie)) {
-                werte[zaehler][0] = personData.get(i).getStartnummer();
-                werte[zaehler][1] = personData.get(i).getName();
-                zaehler++;
+            //neues Array anlegen, das die Werte später speichert
+            String[][] werte = new String[starter_kategorie][2];
+            //Tabelleninhalte durchgehen und in das Array einordnen wie oben beschrieben, solange sie zur gewünschten Kategorie gehören
+            int zaehler = 0;
+            for (int i = 0; i < personData.size(); i++) {
+                if (personData.get(i).getKategorie().equals(kategorie)) {
+                    werte[zaehler][0] = personData.get(i).getStartnummer();
+                    werte[zaehler][1] = personData.get(i).getName();
+                    zaehler++;
+                }
             }
+            //Rückgabe aller Werte
+            return werte;
         }
-        //Rückgabe aller Werte
-        return werte;
+        return getAllWerte();
     }
 
     /**
@@ -641,10 +665,10 @@ public class ConfigWindowController implements Initializable {
         FileWriter fw = null;
         try {
             String res = ConfigWindowController.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath();
-            res = res.substring(1, res.length()-15);
-            System.out.println("Pfad: "+res);
+            res = res.substring(1, res.length() - 15);
+            System.out.println("Pfad: " + res);
             //Scripte liegen unter src in JAR --> Kopieren dieser mit Methode.
-            copyFilesInDirectory(new File(res+"lib/AndroidConnectorAppHTTPScripts"), new File(pfad + "/htdocs/AndroidConnectorAppHTTPScripts"));
+            copyFilesInDirectory(new File(res + "lib/AndroidConnectorAppHTTPScripts"), new File(pfad + "/htdocs/AndroidConnectorAppHTTPScripts"));
             /**
              * Enthält den Text der PHP-Konfigurationsdatei unter Verwendung der
              * in diesem Fenster eingegebenen Konfigurationswerte.
@@ -680,14 +704,14 @@ public class ConfigWindowController implements Initializable {
         } catch (URISyntaxException ex) {
             Logger.getLogger(ConfigWindowController.class.getName()).log(Level.SEVERE, null, ex);
         } //sauber beenden
-        catch(NullPointerException e){
+        catch (NullPointerException e) {
             MySQLConnection.staticExceptionDialog(e, "Kopierfehler", "Benötigte PHP-Skripte konnten nicht kopiert werden!", "Die für die App-Verbindung nötigen PHP-Skripte konnten nicht automatisch "
                     + "kopiert werden. Bitte kopieren Sie sie mit Ausnahme von \"Konfiguration.php\" manuell in den Ordner \"XAMPP\\htdocs\"!");
-        }
-        finally {
+        } finally {
             try {
-                if(fw!=null)
-                fw.close();
+                if (fw != null) {
+                    fw.close();
+                }
             } catch (IOException ex) {
                 verbinder = new MySQLConnection(new FXMLDocumentController());
                 verbinder.showExceptionDialog(ex, "Fehler", "Internes Schreibproblem!",
@@ -766,6 +790,9 @@ public class ConfigWindowController implements Initializable {
      */
     @FXML
     private void readExcel(ActionEvent event) {
+        //Rücksetzen der Tabelle
+        tabelle.setItems(FXCollections.observableArrayList());
+        personData = tabelle.getItems();
         //FileChooser einsetzen, um Starterplan einzulesen
         FileChooser fc = new FileChooser();
         //standardmäßig im Home-Verzeichnis starten
@@ -894,50 +921,67 @@ public class ConfigWindowController implements Initializable {
      * sonst die erste Kategorie, wenn noch eine da ist, sonst null
      */
     public String getSelectedKategorie() {
-        //Ermitteln der Kategorien beim ersten Fensteraufruf --> danach nicht mehr, um keinen Doppelstart zu ermöglichen
-        List<String> items = getKategorien();
-        //Prüfen, ob das nicht der erste Aufruf des Fensters ist und keine Kategorien mehr offen sind
-        if (kategorien.isEmpty() && alteWerteÜbernommen) {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Veranstaltung beendet");
-            alert.setHeaderText("Alle Läufe aller Kategorien sind durchgeführt worden.");
-            alert.setContentText("Alle Läufe wurden von den eingeteilten Startern absolviert, die Werte sind gespeichert. Sie werden zur Auswertung umgeleitet!");
-            alert.showAndWait();
-            printResults();
+        /**
+         * Was das Programm tun soll.
+         */
+        final String startmod = startmodus.getSelectionModel().getSelectedItem();
+        if (startmod.equals(nach_Kategorien)) {
+            //Ermitteln der Kategorien beim ersten Fensteraufruf --> danach nicht mehr, um keinen Doppelstart zu ermöglichen
+            List<String> items = getKategorien();
+            //Prüfen, ob das nicht der erste Aufruf des Fensters ist und keine Kategorien mehr offen sind
+            if (kategorien.isEmpty() && alteWerteÜbernommen) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Veranstaltung beendet");
+                alert.setHeaderText("Alle Läufe aller Kategorien sind durchgeführt worden.");
+                alert.setContentText("Alle Läufe wurden von den eingeteilten Startern absolviert, die Werte sind gespeichert. Sie werden zur Auswertung umgeleitet!");
+                alert.showAndWait();
+                printResults();
+                return null;
+            }
+            if (kategorien.isEmpty()) {
+                kategorien = items;
+            }
+            //temporäre Kopie anlegen
+            items = kategorien;
+            String ret = null;
+
+            //keine Kategorien mehr da --> Auswertung
+            //hier prüfen, da später 1 Wert gelöscht wird
+            //ChoiceDialog anzeigen, der die Auswahl ermöglicht wenn mahrere mögliche Kategorien noch nicht bearbeitet sind
+            if (items.size() >= 1) {
+                ChoiceDialog<String> dialog = new ChoiceDialog<>(items.get(0), items);
+                dialog.setTitle("Kategorie?");
+                dialog.setHeaderText("Bitte Kategorie auswählen!");
+                dialog.setContentText("Bitte wählen Sie aus der folgenden Liste die Kategorie aus, die starten soll!");
+
+                Optional<String> result = dialog.showAndWait();
+                // The Java 8 way to get the response value (with lambda expression).
+                final StringBuilder tmp = new StringBuilder();
+                result.ifPresent(letter -> {
+                    //Tabelle laden, die gewählt wurde.
+                    tmp.append(letter);
+                });
+                ret = tmp.toString();
+                //Entfernen der gewählten Kategorie --> kann nur einmal aufgerufen werden
+                kategorien.remove(ret);
+                //nur noch eine Kategorie übrig --> Auswahl dieser
+            } else if (!items.isEmpty()) {
+                ret = items.get(0);
+                kategorien.remove(ret);
+            }
+            return ret;
+        } else {
+            if (startmod.equals(alle_hintereinander) && alteWerteÜbernommen) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Veranstaltung beendet");
+                alert.setHeaderText("Alle Läufe aller Kategorien sind durchgeführt worden.");
+                alert.setContentText("Alle Läufe wurden von den eingeteilten Startern absolviert, die Werte sind gespeichert. Sie werden zur Auswertung umgeleitet!");
+                alert.showAndWait();
+                printResults();
+                return null;
+            }
             return null;
         }
-        if (kategorien.isEmpty()) {
-            kategorien = items;
-        }
-        //temporäre Kopie anlegen
-        items = kategorien;
-        String ret = null;
-
-        //keine Kategorien mehr da --> Auswertung
-        //hier prüfen, da später 1 Wert gelöscht wird
-        //ChoiceDialog anzeigen, der die Auswahl ermöglicht wenn mahrere mögliche Kategorien noch nicht bearbeitet sind
-        if (items.size() >= 1) {
-            ChoiceDialog<String> dialog = new ChoiceDialog<>(items.get(0), items);
-            dialog.setTitle("Kategorie?");
-            dialog.setHeaderText("Bitte Kategorie auswählen!");
-            dialog.setContentText("Bitte wählen Sie aus der folgenden Liste die Kategorie aus, die starten soll!");
-
-            Optional<String> result = dialog.showAndWait();
-            // The Java 8 way to get the response value (with lambda expression).
-            final StringBuilder tmp = new StringBuilder();
-            result.ifPresent(letter -> {
-                //Tabelle laden, die gewählt wurde.
-                tmp.append(letter);
-            });
-            ret = tmp.toString();
-            //Entfernen der gewählten Kategorie --> kann nur einmal aufgerufen werden
-            kategorien.remove(ret);
-            //nur noch eine Kategorie übrig --> Auswahl dieser
-        } else if (!items.isEmpty()) {
-            ret = items.get(0);
-            kategorien.remove(ret);
-        }
-        return ret;
     }
 
     /**
@@ -1119,8 +1163,9 @@ public class ConfigWindowController implements Initializable {
          */
         int tore = Integer.parseInt(messtore.getText());
         /**
-         * Gibt die gespeicherten Werte der DB an.
-         * Jedes Unterarray repräsentiert einen Datensatz. Der zweite Index ist bei 0 die Startnummer, 1 der Name, 2 die Kategorie, 3 Lauf 1, 4 Lauf 2.
+         * Gibt die gespeicherten Werte der DB an. Jedes Unterarray
+         * repräsentiert einen Datensatz. Der zweite Index ist bei 0 die
+         * Startnummer, 1 der Name, 2 die Kategorie, 3 Lauf 1, 4 Lauf 2.
          */
         String[][] werte = (new MySQLConnection(host.getText(), port.getText(), db.getText(), user.getText(), pw.getText(), null)).getAuswertung(starter, tore);
         //FileChooser einsetzen, um Speicherort zu ermitteln
@@ -1157,7 +1202,7 @@ public class ConfigWindowController implements Initializable {
                  */
                 HSSFSheet sheet;
                 //Prüfen, ob die Länge des Kategorienamens zwischen 1 und 31 liegt --> sonst ungültig
-                if (!kategorie.isEmpty()&&kategorie.length()<31) {
+                if (!kategorie.isEmpty() && kategorie.length() < 31) {
                     //wenn ja: Kategoriename ist Mappenname
                     sheet = workbook.createSheet(kategorie);
                     //sonst: Standardname
@@ -1186,15 +1231,17 @@ public class ConfigWindowController implements Initializable {
 
                 for (int i = 0; i < werte.length; i++) {
                     //data.put(""+(i+2), werte[i]);
-                    if (werte[i][2].equals(kategorie)) {
-                        List<String> angaben = new ArrayList<>();
-                        angaben.add(werte[i][0]);
-                        angaben.add(werte[i][1]);
-                        angaben.add(werte[i][2]);
-                        String lauf1 = werte[i][3];
-                        angaben.addAll(extractList(lauf1));
-                        angaben.addAll(extractList(werte[i][4]));
-                        data.put("" + (i + 1), angaben);
+                    if (werte[i][2] != null) {
+                        if (werte[i][2].equals(kategorie)) {
+                            List<String> angaben = new ArrayList<>();
+                            angaben.add(werte[i][0]);
+                            angaben.add(werte[i][1]);
+                            angaben.add(werte[i][2]);
+                            String lauf1 = werte[i][3];
+                            angaben.addAll(extractList(lauf1));
+                            angaben.addAll(extractList(werte[i][4]));
+                            data.put("" + (i + 1), angaben);
+                        }
                     }
                 }
                 Set<String> keyset = data.keySet();
@@ -1226,6 +1273,9 @@ public class ConfigWindowController implements Initializable {
                 workbook.write(out);
                 out.close();
                 System.out.println("Excel written successfully..");
+                out = new FileOutputStream(System.getProperty("user.home") + "/Kanu-s.a.M.-Notfall.xls");
+                workbook.write(out);
+                out.close();
 
             } catch (FileNotFoundException e) {
                 MySQLConnection.staticExceptionDialog(e, "Schreibfehler", "Auswertung konnte nicht geschrieben werden", "Die Excel-Datei mit der Auswertung konnte nicht geschrieben werden. Bitte versuchen Sie es erneut!");

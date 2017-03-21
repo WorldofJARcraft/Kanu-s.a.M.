@@ -319,6 +319,10 @@ pane.getColumnConstraints().add(column1);*/
     private ConfigWindowController conf;
     public String kategorie;
     /**
+     * Wie gestartet werden soll.
+     */
+    public String startmodus;
+    /**
      * Speichert die genauen Strafzeiten der Starter an den Toren. Erster Index:
      * Startnummer, zweiter Index: Tor
      */
@@ -348,9 +352,11 @@ pane.getColumnConstraints().add(column1);*/
      * soll
      * @param kategorie Kategorie, die gerade läuft
      * @param andr Hauptklasse der Anwendung, die Programm gestartet hat
+     * @param startmodus wie gestartet werden soll
      */
-    public void init(boolean prüfe_Internet, String port, String host, String db, String user, String pw, String messstationen, String tore, String[][] werte, boolean protokoll, String protokollpfad, int lauf, boolean ersterStart, Stage stage, ConfigWindowController conf, String kategorie, Android_Connector andr) {
+    public void init(boolean prüfe_Internet, String port, String host, String db, String user, String pw, String messstationen, String tore, String[][] werte, boolean protokoll, String protokollpfad, int lauf, boolean ersterStart, Stage stage, ConfigWindowController conf, String kategorie, Android_Connector andr, String startmodus) {
         setValues(andr);
+        this.startmodus = startmodus;
         this.stage = stage;
         this.kategorie = kategorie;
         this.prüfe_Internet = prüfe_Internet;
@@ -1082,7 +1088,7 @@ pane.getColumnConstraints().add(column1);*/
                         if (conf.protokoll.isSelected()) {
                             conf.writeConfig(conf.pfad.getText(), kategorie);
                         }
-                        docu.init(conf.checkNetwork.isSelected(), conf.port.getText(), conf.host.getText(), conf.db.getText(), conf.user.getText(), conf.pw.getText(), conf.messstationen.getText(), conf.messtore.getText(), conf.getWerte(kategorie), conf.protokoll.isSelected(), conf.pfad.getText(), 0, true, stage, conf, kategorie, andr);
+                        docu.init(conf.checkNetwork.isSelected(), conf.port.getText(), conf.host.getText(), conf.db.getText(), conf.user.getText(), conf.pw.getText(), conf.messstationen.getText(), conf.messtore.getText(), conf.getWerte(kategorie), conf.protokoll.isSelected(), conf.pfad.getText(), 0, true, stage, conf, kategorie, andr, startmodus);
                         //Startnummern übernehmen
                         //docu.setValues(andr);
                         //aktuelle Stage übergeben, um auch Dialoge anzeigen zu können
@@ -1178,7 +1184,7 @@ pane.getColumnConstraints().add(column1);*/
                         //... und die Initialisierung mit den Konfigurationswerten des ersten Fensters aufrufen
                         String kategorie = conf.getSelectedKategorie();
                         if (kategorie != null) {
-                            docu.init(conf.checkNetwork.isSelected(), conf.port.getText(), conf.host.getText(), conf.db.getText(), conf.user.getText(), conf.pw.getText(), conf.messstationen.getText(), conf.messtore.getText(), conf.getWerte(kategorie), conf.protokoll.isSelected(), conf.pfad.getText(), 0, true, stage, conf, kategorie, andr);
+                            docu.init(conf.checkNetwork.isSelected(), conf.port.getText(), conf.host.getText(), conf.db.getText(), conf.user.getText(), conf.pw.getText(), conf.messstationen.getText(), conf.messtore.getText(), conf.getWerte(kategorie), conf.protokoll.isSelected(), conf.pfad.getText(), 0, true, stage, conf, kategorie, andr, startmodus);
                             //Startnummern übernehmen
                             //aktuelle Stage übergeben, um auch Dialoge anzeigen zu können
                             docu.stage = stage;
@@ -1224,7 +1230,7 @@ pane.getColumnConstraints().add(column1);*/
                 Logger.getLogger(Android_Connector.class.getName()).log(Level.SEVERE, null, ex);
             }
             FXMLDocumentController docu = (FXMLDocumentController) fxmlLoader2.getController();
-            docu.init(prüfe_Internet, android.dbPort, android.dbHost, android.database, android.dbUser, android.dbPassword, messstationen, messtore, startnummern, protokoll, protokollpfad, lauf + 1, false, stage, conf, kategorie, andr);
+            docu.init(prüfe_Internet, android.dbPort, android.dbHost, android.database, android.dbUser, android.dbPassword, messstationen, messtore, startnummern, protokoll, protokollpfad, lauf + 1, false, stage, conf, kategorie, andr, startmodus);
             //docu.setValues(null);
             Scene scene2 = new Scene(root2);
             stage.setScene(scene2);
