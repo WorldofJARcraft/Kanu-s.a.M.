@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -32,6 +33,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonBar.ButtonData;
 import javafx.scene.control.ButtonType;
@@ -106,7 +108,7 @@ public class FXMLDocumentController implements Initializable, KeyListener {
         stoppuhr.setVisible(true);
         //... und Stoppuhrprozess starten
         exec = Executors.newSingleThreadScheduledExecutor();
-        clock = exec.scheduleAtFixedRate(TimerTask, 0, (int) 100, TimeUnit.MILLISECONDS);
+        clock = exec.scheduleAtFixedRate(TimerTask, 0, (int) 2000, TimeUnit.MILLISECONDS);
         //Wenn gestartet wurde, ist auch stoppen möglich
         stopp.setDisable(false);
         System.out.println("Startjahr: " + startzeit.get(Calendar.YEAR));
@@ -486,7 +488,6 @@ pane.getColumnConstraints().add(column1);*/
                         JOptionPane.ERROR_MESSAGE);
             }
         }
-
         //IP für Smartphone-Verbindung auf der GUI anzeigen
         IP.setText(nu.getOwnerIp());
         //ComboBox für Auswahl der Station leeren
@@ -526,7 +527,7 @@ pane.getColumnConstraints().add(column1);*/
         exec = Executors.newSingleThreadScheduledExecutor();
         //sekündlich Aktion von "TimerTask" ausführen (Darstellung mit DB sunchronisieren), Zuordnung zu result, um Ausführung stoppen zu können
         //Aktion läuft in eigenem Thread
-        result = exec.scheduleAtFixedRate(SyncTask, 0, (int) 100, TimeUnit.MILLISECONDS);
+        result = exec.scheduleAtFixedRate(SyncTask, 0, (int) 2000, TimeUnit.MILLISECONDS);
         //Pfad für Protokollierung übergeben, wenn Protokollierung aktiviert
         if (protokoll) {
             android.setPfad(protokollpfad);
@@ -535,7 +536,7 @@ pane.getColumnConstraints().add(column1);*/
             android.messWerteLeeren(Integer.parseInt(tore));
         }
         android.laufEintragen(lauf);
-        this.strafen = new int[startnummerMax+1][Integer.parseInt(tore)];
+        this.strafen = new int[startnummerMax + 1][Integer.parseInt(tore)];
     }
 
     @Override
@@ -667,6 +668,10 @@ pane.getColumnConstraints().add(column1);*/
             //verbindet diesen Synchronisationsthread mit dem JavaFX-Mainthread --> Zugriff auf GUI
             Platform.runLater(new Runnable() {
                 public void run() {
+                    //neue Instanz der Klasse NetworkUtil anlegen, um... 
+                    NetworkUtil nu = new NetworkUtil();
+                    //IP für Smartphone-Verbindung auf der GUI anzeigen
+                    IP.setText(nu.getOwnerIp());
                     //jede Sekunde für die gewählte Station...
                     int station = wahl_stationen.getSelectionModel().getSelectedIndex();
                     //... aus der Datenbank die Zeiteintragungen auslesen
@@ -1030,6 +1035,18 @@ pane.getColumnConstraints().add(column1);*/
         //ggf. geänderte Werte noch einmal speichern
         android.werteFesthalten(lauf, kategorie);
         String[][] startnummern;
+        if (startmodus.equals(ConfigWindowController.alle_hintereinander)) {
+            /*Alert alert = new Alert(AlertType.CONFIRMATION);
+            alert.setTitle("Protokollieren?");
+            alert.setHeaderText("Protokoll des aktuellen Laufs erstellen?");
+            alert.setContentText("Möchten Sie den aktuellen Lauf in einer Excel-Tabelle protokollieren?");
+
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == ButtonType.OK) {
+                
+            }*/
+            conf.printResults(false);
+        }
         if (lauf == 2) {
             weiter = false;
             if (result != null) {
@@ -1258,5 +1275,14 @@ pane.getColumnConstraints().add(column1);*/
             });
         }
 
+    }
+    /**
+     * Ändert die Synchronisierungsrate.
+     * @param event 
+     */
+    @FXML
+    private void changeRate(ActionEvent event) {
+        result.cancel(false);
+        result = exec.scheduleAtFixedRate(SyncTask, Integer.parseInt(aktualisierung.getText()), Integer.parseInt(aktualisierung.getText()), TimeUnit.MILLISECONDS);
     }
 }

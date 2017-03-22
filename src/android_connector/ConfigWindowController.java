@@ -337,12 +337,12 @@ public class ConfigWindowController implements Initializable {
      * Angezeigter Text, wenn alle Starter hintereinander Starten, also Läufe
      * Kategorien übergeordnet sind.
      */
-    private final String alle_hintereinander = "Alle Starter laufen in 2 Läufen";
+    public static final String alle_hintereinander = "Alle Starter laufen in 2 Läufen";
     /**
      * Anzuzeigender Text, wenn Kategorien Läufen übergeordnet sind, also alle
      * Starter einer Kategorie 3 Läufe machen, dann die der nächsten usw.
      */
-    private final String nach_Kategorien = "Starter laufen nach Kategorien getrennt.";
+    public static final String nach_Kategorien = "Starter laufen nach Kategorien getrennt.";
 
     /**
      * Aktion, die bei Klick auf den Button "neue Zeile" ausgeführt wird: Zeile
@@ -935,7 +935,7 @@ public class ConfigWindowController implements Initializable {
                 alert.setHeaderText("Alle Läufe aller Kategorien sind durchgeführt worden.");
                 alert.setContentText("Alle Läufe wurden von den eingeteilten Startern absolviert, die Werte sind gespeichert. Sie werden zur Auswertung umgeleitet!");
                 alert.showAndWait();
-                printResults();
+                printResults(true);
                 return null;
             }
             if (kategorien.isEmpty()) {
@@ -977,7 +977,7 @@ public class ConfigWindowController implements Initializable {
                 alert.setHeaderText("Alle Läufe aller Kategorien sind durchgeführt worden.");
                 alert.setContentText("Alle Läufe wurden von den eingeteilten Startern absolviert, die Werte sind gespeichert. Sie werden zur Auswertung umgeleitet!");
                 alert.showAndWait();
-                printResults();
+                printResults(true);
                 return null;
             }
             return null;
@@ -1155,9 +1155,11 @@ public class ConfigWindowController implements Initializable {
      *
      * @author Quelle:
      * http://viralpatel.net/blogs/java-read-write-excel-file-apache-poi/
+     * @param programmende True, wenn das Programm beendet werden soll, sonst
+     * false.
      *
      */
-    private void printResults() {
+    public void printResults(boolean programmende) {
         /**
          * Zahl der Messtore.
          */
@@ -1238,8 +1240,12 @@ public class ConfigWindowController implements Initializable {
                             angaben.add(werte[i][1]);
                             angaben.add(werte[i][2]);
                             String lauf1 = werte[i][3];
-                            angaben.addAll(extractList(lauf1));
-                            angaben.addAll(extractList(werte[i][4]));
+                            if (werte[i][3] != null && !werte[i][3].isEmpty()) {
+                                angaben.addAll(extractList(lauf1));
+                            }
+                            if (werte[i][4] != null && !werte[i][4].isEmpty()) {
+                                angaben.addAll(extractList(werte[i][4]));
+                            }
                             data.put("" + (i + 1), angaben);
                         }
                     }
@@ -1283,12 +1289,14 @@ public class ConfigWindowController implements Initializable {
                 e.printStackTrace();
             }
         }
-        Alert alert = new Alert(AlertType.INFORMATION);
-        alert.setTitle("Programmende");
-        alert.setHeaderText("Der Programmablauf ist beendet.");
-        alert.setContentText("Das Programm hat seine Aufgabe erfüllt und wird nun beendet. Vielen Dank für die Benutzung des Softwaresystems!");
-        alert.showAndWait();
-        Platform.exit();
+        if (programmende) {
+            Alert alert = new Alert(AlertType.INFORMATION);
+            alert.setTitle("Programmende");
+            alert.setHeaderText("Der Programmablauf ist beendet.");
+            alert.setContentText("Das Programm hat seine Aufgabe erfüllt und wird nun beendet. Vielen Dank für die Benutzung des Softwaresystems!");
+            alert.showAndWait();
+            Platform.exit();
+        }
     }
 
     /**
