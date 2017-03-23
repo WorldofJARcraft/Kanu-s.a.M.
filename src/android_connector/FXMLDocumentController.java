@@ -5,6 +5,7 @@
  */
 package android_connector;
 
+import java.awt.Dimension;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.IOException;
@@ -43,15 +44,19 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Dialog;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import javax.swing.BoxLayout;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTable;
 
 /*Quellen: 
@@ -192,8 +197,8 @@ public class FXMLDocumentController implements Initializable, KeyListener {
         /*ColumnConstraints column1 = new ColumnConstraints();
 column1.setPercentWidth(50);
 pane.getColumnConstraints().add(column1);*/
-
-        dialog.getDialogPane().setContent(pane);
+        ScrollPane scroll = new ScrollPane(pane);
+        dialog.getDialogPane().setContent(scroll);
         dialog.showAndWait();
         for (int i = 0; i < selections.length; i++) {
             if (selections[i].isSelected()) {
@@ -427,13 +432,19 @@ pane.getColumnConstraints().add(column1);*/
                 nachricht.add("Bitte wählen Sie die Tore aus, die Messtation " + (i + 1) + " von " + stationen + " zugeordnet sind.");
                 //speichert, ob noch Tore unzugeordnet sind
                 boolean tore_übrig = false;
+                JPanel panel = new JPanel();
+                panel.setLayout(
+                        new BoxLayout(panel, BoxLayout.Y_AXIS));
                 for (int j = 0; j < this.tore; j++) {
                     //nachricht alle unzugeordneten Tore hinzufügen
                     if (this.zuordnung_Tore[j] == -1) {
-                        nachricht.add(box[j]);
+                        panel.add(box[j]);
                         tore_übrig = true;
                     }
                 }
+                JScrollPane scroller = new JScrollPane(panel);
+                scroller.setPreferredSize(new Dimension(500, 500));
+                nachricht.add(scroller);
                 //Falls noch Tore übrig sind...
                 if (tore_übrig) {
                     //... diese vom User zuordnen lassen
@@ -1276,13 +1287,17 @@ pane.getColumnConstraints().add(column1);*/
         }
 
     }
+
     /**
      * Ändert die Synchronisierungsrate.
-     * @param event 
+     *
+     * @param event
      */
     @FXML
     private void changeRate(ActionEvent event) {
         result.cancel(false);
         result = exec.scheduleAtFixedRate(SyncTask, Integer.parseInt(aktualisierung.getText()), Integer.parseInt(aktualisierung.getText()), TimeUnit.MILLISECONDS);
+        clock.cancel(false);
+        clock = result = exec.scheduleAtFixedRate(TimerTask, Integer.parseInt(aktualisierung.getText()), Integer.parseInt(aktualisierung.getText()), TimeUnit.MILLISECONDS);
     }
 }
