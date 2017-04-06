@@ -34,7 +34,7 @@ public class Android_Connector extends Application {
         setUserAgentStylesheet(STYLESHEET_MODENA);
         //Icon und Titel laden
         stage.getIcons().add(new Image(Android_Connector.class.getResourceAsStream( "lib/Logo.png" )));
-        stage.setTitle("Kanu s.a.M Desktop Version 0.9");
+        stage.setTitle("Kanu s.a.M Desktop Version 0.91");
         //Laden der Anzeige des ersten Fensters
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ConfigWindow.fxml"));
         Parent root = fxmlLoader.load();
