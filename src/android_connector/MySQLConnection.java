@@ -129,11 +129,12 @@ public class MySQLConnection {
                     + "password=" + dbPassword);
             this.doc = doc;
         } catch (ClassNotFoundException e) {
+
             //aufgerufen, wenn Treiber nicht gefunden wird
             //Ausgabe einer Fehlermeldung mittels Alert, dabei wird auf die Fläche ein TextArea gelegt, in das der Stacktrace der Exception geladen wird.
             /*showExceptionDialog(e, "Fehler", "Nötige Bibliothek konnte nicht geladen werden!", "Bitte stellen Sie sicher, dass der Ordner \"lib\" im selben Ordner wie die ausführbare .jar-Datei dieses Programms liegt"
                     + " und eine Datei namens \"mysql-connector-java-5.1.38-bin.jar\" enthält und verwenden Sie ggf. eine neue Kopie dieses Programms!", false);
-       */ } catch (SQLException e) {
+             */ } catch (SQLException e) {
             //aufgerufen, wenn keine Verbindung zur DB möglich
             /*showExceptionDialog(e, "Fehler", "Verbindungsaufbau zur Datenbank nicht möglich!", "Bitte prüfen Sie, ob der Apache- und MySQL-Server gestartet sind und korrekt laufen sowie die "
                     + "korrekten Konfigurationswerte für den Verbindungsaufbau angegeben sind und starten Sie das Programm neu!", false);*/
@@ -544,7 +545,8 @@ public class MySQLConnection {
      * Löscht alle erstellten Tabellen für eine erneute Verwendung aus der
      * Datenbank. Wird bei Programmende ausgeführt.
      *
-     * @param auswertungLoeschen True, wenn die Tabelle "auswertung" gelöscht werden soll, sonst false.
+     * @param auswertungLoeschen True, wenn die Tabelle "auswertung" gelöscht
+     * werden soll, sonst false.
      */
     public void reset(boolean auswertungLoeschen) {
         //ggf. Verbindung herstellen
@@ -678,7 +680,11 @@ public class MySQLConnection {
                 for (int i = 0; i < doc.startnummerMax + 1; i++) {
                     //prüfen, ob aktuelle Startnummer existiert und bereits gestartet ist
                     if (doc.starter.contains(startnummern[i]) && doc.startzeiten[startnummern[i]] != null) {
-
+                        /**
+                         * Gibt true an, wenn die Startnummer bereits im Ziel
+                         * ist, sonst false.
+                         */
+                        boolean fertig = false;
                         //aktuelle Zeit ermitteln...
                         Calendar cal;
                         //prüfen, ob bereits Stoppzeit besteht, dann diese nehmen
@@ -686,6 +692,7 @@ public class MySQLConnection {
                             //Neues Calendar-Objekt erzeugen, diesem die Zielzeit zuweisen --> damit set-Methode später nicht die echte Zielzeit ändert
                             cal = Calendar.getInstance();
                             cal.setTimeInMillis((doc.zielzeiten[startnummern[i]]).getTimeInMillis());
+                            fertig = true;
                             //sonst: aktuelle Zeit nehmen
                         } else {
                             cal = Calendar.getInstance();
@@ -705,13 +712,18 @@ public class MySQLConnection {
                          * Strafen
                          */
                         String gesamtZeit = differenz(cal, doc.startzeiten[startnummern[i]]);
-
+                        //ermitteln, ob die Startnummer im Ziel ist
+                        String status = "Status: unterwegs";
+                        if (fertig) {
+                            status = "Status: im Ziel";
+                        }
                         //... und die Zeile für das ListView zusammensetzen
-                        String zeile = "Startnummer: " + (startnummern[i]) + " aktuelle Zeit: " + reine_Zeit + ", Strafen: " + strafen[i] + " Sekunden, Gesamtzeit: " + gesamtZeit;
+                        String zeile = "Startnummer: " + (startnummern[i]) + " aktuelle Zeit: " + reine_Zeit + ", Strafen: " + strafen[i] + " Sekunden, Gesamtzeit: " + gesamtZeit + "; " + status;
                         //Zeile der Liste hinzufügen
                         items.add(zeile);
                     }
                 }
+                items = werteSortieren(items);
                 //Elemente des ListView sind jetzt die ermittelten Zeilen
                 werte.setItems(items);
             }
@@ -969,13 +981,13 @@ public class MySQLConnection {
         }
         //Minuten-, Sekunden- und Millisekundenunterschiede werden zwecks der Einheitlichkeit der Anzeige immer ausgegeben
         //if (result.get(Calendar.MINUTE) > 0) {
-            ret += result.get(Calendar.MINUTE) + ":";
+        ret += result.get(Calendar.MINUTE) + ":";
         //}
         //if (result.get(Calendar.SECOND) > 0) {
-            ret += result.get(Calendar.SECOND) + ",";
+        ret += result.get(Calendar.SECOND) + ",";
         //}
         //if (result.get(Calendar.MILLISECOND) > 0) {
-            ret += result.get(Calendar.MILLISECOND) + "";
+        ret += result.get(Calendar.MILLISECOND) + "";
         //}
         return ret;
     }
@@ -1150,7 +1162,7 @@ public class MySQLConnection {
                 //prüfen, ob die Zeile die der gesuchten Startnummer ist.
                 if (Integer.parseInt(sn) == get) {
                     //Laufzeit ermitteln...
-                    zeile = zeile.substring(zeile.indexOf("aktuelle Zeit: ") + 15);
+                    zeile = zeile.substring(zeile.indexOf("aktuelle Zeit: ") + 15, zeile.indexOf("; Status:"));
                     //... und Rückgabe anhängen
                     ret += zeile.substring(0, zeile.indexOf(", Strafen:")) + "|";
                     //Strafen ermitteln...
@@ -1275,5 +1287,29 @@ public class MySQLConnection {
             //showExceptionDialog(e, "Fehler", "Zugriff auf Datenbank fehlgeschlagen", "Der Zugriff auf die Datenbank ist bei einer Abfrage fehlgeschlagen.");
         }
         return ret;
+    }
+    /**
+     * Sortiert die Startnummernwerte nach Größe.
+     * @param items eine Liste aus der Anzeige
+     * @return sortierte Liste
+     */
+    private ObservableList<String> werteSortieren(ObservableList<String> items) {
+        //Prüfen, ob Elemente da sind
+        if (items.size()>1) {
+            //Sortieren der Liste mit Bubblesort
+            for (int i = 0; i < items.size(); i++) {
+                for (int j = 0; j < items.size() - 1; j++) {
+                    String wert1 = items.get(j);
+                    String wert2 = items.get(j + 1);
+                    Integer sn1 = new Integer(wert1.substring(wert1.indexOf("Startnummer: ") + 13, wert1.indexOf("aktuelle Zeit:") - 1));
+                    Integer sn2 = new Integer(wert2.substring(wert2.indexOf("Startnummer: ") + 13, wert2.indexOf("aktuelle Zeit:") - 1));
+                    if (sn1 > sn2) {
+                        items.set(j, wert2);
+                        items.set(j+1, wert1);
+                    }
+                }
+            }
+        }
+        return items;
     }
 }

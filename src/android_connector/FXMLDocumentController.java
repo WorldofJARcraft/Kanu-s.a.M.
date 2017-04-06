@@ -19,6 +19,7 @@ import java.util.ResourceBundle;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -113,7 +114,7 @@ public class FXMLDocumentController implements Initializable, KeyListener {
         stoppuhr.setVisible(true);
         //... und Stoppuhrprozess starten
         exec = Executors.newSingleThreadScheduledExecutor();
-        clock = exec.scheduleAtFixedRate(TimerTask, 0, (int) 2000, TimeUnit.MILLISECONDS);
+        clock = executor.scheduleAtFixedRate(TimerTask, 0, (int) 2000, TimeUnit.MILLISECONDS);
         //Wenn gestartet wurde, ist auch stoppen möglich
         stopp.setDisable(false);
         System.out.println("Startjahr: " + startzeit.get(Calendar.YEAR));
@@ -658,9 +659,30 @@ pane.getColumnConstraints().add(column1);*/
             "Port: ", port, "Datenbank: ", db, "Benutzername: ", user, "Passwort: ", pw, prüfe_Internet};
         //Initialisierung eines JOptionPanes, das als Basis für das Konfigurationsfenster dient, mit allen anzuzeigenden Inhalten
          */
+        //Exec erzeugt Threads mit hoher Priorität (9), Executor mit niedriger (1)
+        exec = Executors.newSingleThreadScheduledExecutor(new ThreadFactory() {
+            private ThreadFactory defaultThreadFactory = Executors.defaultThreadFactory();
+
+            @Override
+            public Thread newThread(Runnable r) {
+                Thread t = defaultThreadFactory.newThread(r);
+                t.setPriority(8);
+                return t;
+            }
+        });
+        executor = Executors.newSingleThreadScheduledExecutor(new ThreadFactory() {
+            private ThreadFactory defaultThreadFactory = Executors.defaultThreadFactory();
+
+            @Override
+            public Thread newThread(Runnable r) {
+                Thread t = defaultThreadFactory.newThread(r);
+                t.setPriority(Thread.MIN_PRIORITY);
+                return t;
+            }
+        });
     }
     /**
-     * Zeitgeber für die Synchronisation
+     * Zeitgeber für die Synchronisation. Erzeugt Threads mit hoher Priorität.
      */
     ScheduledExecutorService exec;
     /**
@@ -693,7 +715,7 @@ pane.getColumnConstraints().add(column1);*/
         }
     };
     /**
-     * Zeitgeber für die Stoppuhr
+     * Zeitgeber für die Stoppuhr. Erzeugt Threads mit Minimalpriorität.
      */
     ScheduledExecutorService executor;
     /**
@@ -863,8 +885,7 @@ pane.getColumnConstraints().add(column1);*/
             //TextArea mit Stoppuhrfunktion anzeigen...
             stoppuhr.setVisible(true);
             //... und Stoppuhrprozess starten
-            exec = Executors.newSingleThreadScheduledExecutor();
-            clock = exec.scheduleAtFixedRate(TimerTask, 0, (int) Double.parseDouble(aktualisierung.getText()), TimeUnit.MILLISECONDS);
+            clock = executor.scheduleAtFixedRate(TimerTask, 0, (int) Double.parseDouble(aktualisierung.getText()), TimeUnit.MILLISECONDS);
             //Startbutton verbergen --> Starten nur einmal möglich
             //start.setVisible(false);
             //Wenn gestartet wurde, ist auch stoppen möglich
@@ -1046,8 +1067,7 @@ pane.getColumnConstraints().add(column1);*/
         //ggf. geänderte Werte noch einmal speichern
         android.werteFesthalten(lauf, kategorie);
         String[][] startnummern;
-        if (startmodus.equals(ConfigWindowController.alle_hintereinander)) {
-            /*Alert alert = new Alert(AlertType.CONFIRMATION);
+        /*Alert alert = new Alert(AlertType.CONFIRMATION);
             alert.setTitle("Protokollieren?");
             alert.setHeaderText("Protokoll des aktuellen Laufs erstellen?");
             alert.setContentText("Möchten Sie den aktuellen Lauf in einer Excel-Tabelle protokollieren?");
@@ -1056,8 +1076,8 @@ pane.getColumnConstraints().add(column1);*/
             if (result.get() == ButtonType.OK) {
                 
             }*/
-            conf.printResults(false);
-        }
+        //Auswertung nach JEDEM Lauf erzeugen
+        conf.printResults(false);
         if (lauf == 2) {
             weiter = false;
             if (result != null) {
@@ -1295,9 +1315,13 @@ pane.getColumnConstraints().add(column1);*/
      */
     @FXML
     private void changeRate(ActionEvent event) {
-        result.cancel(false);
+        if (result != null) {
+            result.cancel(false);
+        }
         result = exec.scheduleAtFixedRate(SyncTask, Integer.parseInt(aktualisierung.getText()), Integer.parseInt(aktualisierung.getText()), TimeUnit.MILLISECONDS);
-        clock.cancel(false);
-        clock = result = exec.scheduleAtFixedRate(TimerTask, Integer.parseInt(aktualisierung.getText()), Integer.parseInt(aktualisierung.getText()), TimeUnit.MILLISECONDS);
+        if (clock != null) {
+            clock.cancel(false);
+        }
+        clock = executor.scheduleAtFixedRate(TimerTask, Integer.parseInt(aktualisierung.getText()), Integer.parseInt(aktualisierung.getText()), TimeUnit.MILLISECONDS);
     }
 }
